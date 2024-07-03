@@ -17,7 +17,7 @@ dmesg_out=$(dmesg)
 cpu_number=$(echo "$lscpu_out"  | egrep "^CPU\(s\):" | awk '{print $2}' | xargs)
 cpu_architecture=$(echo "$lscpu_out" | egrep "Architecture:" | awk '{print $2}' | xargs)
 cpu_model=$(echo "$lscpu_out" | grep 'Model name' | cut -f 2 -d ":" | awk '{$1=$1}1' | xargs)
-cpu_mhz=$(echo "$dmesg" | grep MHz | awk '{print $5}')
+cpu_mhz=$(echo "$dmesg_out" | grep MHz | awk '{print $5}')
 l2_cache=$(echo "$lscpu_out" | egrep "L2 cache:" | awk '{print $3}' | xargs)
 total_mem=$(echo "$vmstat_mb" | tail -1 | awk '{print $4}')
 
@@ -25,7 +25,7 @@ total_mem=$(echo "$vmstat_mb" | tail -1 | awk '{print $4}')
 
 timestamp=$(date -u +"%Y-%m-%d %H:%M:%S")
 
-insert_stmt="INSERT INTO host_info (hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz, l2_cache, 'timestamp', total_mem) VALUES('$hostname', '$cpu_number', '$cpu_architecture', '$cpu_model', '$cpu_mhz', '$l2_cache', '$timestamp', '$total_mem');"
+insert_stmt="INSERT INTO host_info (hostname, cpu_number, cpu_architecture, cpu_model, cpu_mhz, l2_cache, \"timestamp\", total_mem) VALUES('$hostname', '$cpu_number', '$cpu_architecture', '$cpu_model', '$cpu_mhz', '$l2_cache', '$timestamp', '$total_mem');"
 
 export PGPASSWORD=$psql_password
 
