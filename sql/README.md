@@ -1,6 +1,6 @@
 # Introduction
 
-# SQL Quries
+# SQL Queries
 
 ###### Table Setup (DDL)
 
