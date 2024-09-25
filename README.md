@@ -32,17 +32,15 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer]
 
 
 ## Education
-**XYZ university (2012-2016)**, Bachelor of Applied Sciences, Electrical and Computer Engineering
-- Scholarship
-- Dean's List (2015, 2016): Ut enim ad minim veniam
-- GPA: 3.8/4.0
-
-**XYZ university (2016-2018)**, Master of Engineering, Electrical and Computer Engineering
+**University of Toronto (2015-2020)**, Honours Bachelor of Science, Neuroscience and Cell Biology
+- Workshops and Innovations Lead of NeuroTechUofT - Summer 2019
+- Member of UofT Public Speaking Club - 2018/2019
 
 
 ## Miscellaneous
-- Udacity Machine Learning (2019)
-- Winner
-- Basketball player
-- Competitive gaming
-- Volunteer, ABC Food bank: Ut enim ad minim veniam
+- Data Science with Python - DataCamp (March 2022)
+- Java Algorithms - LinkedIn (April 2024)
+- Agile Software Development: Clean Code Practices - LinkedIn (November 2023)
+- JavaScript Deep Dive - Scrimba (February 2024)
+- Rec League Basketball
+- Professional Musician - Live performances and studio recordings
