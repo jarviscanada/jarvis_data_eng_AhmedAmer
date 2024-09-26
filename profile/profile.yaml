@@ -40,7 +40,7 @@ jarvis_projects:
     git_url: "/linux_sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+    description: Designed and implemented a series of bash scripts that would monitor the usage data of a network of Linux machines and store that data within a relational database (PostGreSQL). Wrote a bash script to collect each terminal's usage data in intervals using the Linux shell and crontab. Developed script to automate connecting to PostGreSQL database and inserting data. Also developed script for the automation of starting/stopping the PostGreSQL docker. The scripts were built and tested through a Rocky Linux 9 VM provisioned through the Google Cloud Platform.
 #  - name: "Core Java Apps"
 #    git_url: "/core_java"
 #    description:
@@ -67,14 +67,19 @@ jarvis_projects:
 # Feel free to add more projects
 highlighted_projects:
     #project name
-  - name: "Web app for resturant"
+  - name: "React Website"
     #URL is optional
-    git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
+    git_url: ""
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
-  - name: "Machine Learning"
-    git_url:
-    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+    description: Developed a web app with React.js/JavaScript/CSS. Provisioned the use of React Router for the navigation layout. Created root CSS variables for efficient styling. Created React components such as an animated background hero, navbar, cards, and footer from scratch.
+  - name: "React Daily Tasks App"
+    #URL is optional
+    git_url: ""
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: Developed a simple, functional React web app for listing daily tasks and checking them off when they are completed. Wrote logic code in TypeScript for functions that implemented the add, delete, modify, and check off buttons. Created React component for real-time clock that updates each second.
+  - name: "Website Landing Page"
+    git_url: ""
+    description: Created simple HTML/Tailwind landing page. Ensured responsive design for all components and elements of the page. This project was meant as a simple learning tool for Tailwind CSS.
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
@@ -83,13 +88,17 @@ professional_experience:
   #Write your Jarvis role as a professional experience rather than training.
   - title: "Software Developer"
     company: "Jarvis"
-    duration: "2020-present"
+    duration: "Sep 2024-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
-  - title: "Tutor"
-    company: "XYZ Company"
-    duration: "2019"
-    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
+    description: "Attended agile scrum meetings daily. Worked as part of a team of developers to write Linux bash scripts that monitored memory usage within a network of Linux machines. Wrote scripts that stored that data in a PostGreSQL database in intervals of one minute."
+  - title: "Software Developer"
+    company: "Kambira"
+    duration: "Dec 2023-May 2024"
+    description: "Worked hand-in-hand with the founding developers of the company to propel their vision forward as a member of a team. Built the front-end portion of the React.js web app using Tailwind/TypeScript according to designs conceptualized beforehand on Figma. Adjusted and added to designs of over 10 different pages of the app using Figma. Finished coding logic for and styling over 10 pages of the web app, including buttons, alert messages, user information, and dropdown menus."
+  - title: "Application Editor"
+    company: "Top Offer"
+    duration: "Nov 2020-Apr 2021"
+    description: "Edited the spelling, grammar, and contents of over 300 professional letters, emails, and applications to graduate programs across the country for international students. Communicated with cross-functional teams in order to ensure client needs were met on a timely basis. Met extreme deadlines in cases where last minute edits were requested."
 
 #List of edcuation
 education: 
