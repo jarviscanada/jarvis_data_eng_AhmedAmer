@@ -20,6 +20,7 @@ CREATE TABLE cd.members(
     NULL
 );
 ```
+
 ```
 CREATE TABLE cd.bookings(
   bookid INTEGER NOT NULL, 
@@ -32,6 +33,7 @@ CREATE TABLE cd.bookings(
   CONSTRAINT fk_bookings_memid FOREIGN KEY (memid) REFERENCES cd.members(memid)
 );
 ```
+
 ```
 CREATE TABLE cd.facilities(
   facid INTEGER NOT NULL, 
@@ -44,13 +46,45 @@ CREATE TABLE cd.facilities(
 );
 ```
 
-###### Question 1: Show all members 
+###### Question 1: Show all members
 
-```sql SELECT * FROM cs.members```
+```sql SELECT * FROM members```
 
-###### Questions 2: Lorem ipsum...
+###### Question 2: Insert some data
 
-```sql SELECT blah blah```
+```
+INSERT INTO facilities (facid, name, membercost, guestcost, initialoutlay, monthlymaintenance) 
+    VALUES (9, 'Spa', 20, 30, 100000, 800);
+```
+
+###### Question 3: Insert calculated data
+
+```
+INSERT INTO cd.facilities (
+  facid, name, membercost, guestcost, 
+  initialoutlay, monthlymaintenance
+) 
+SELECT 
+  (
+    SELECT 
+      max(facid) 
+    FROM 
+      cd.facilities
+  )+ 1, 
+  'Spa', 
+  20, 
+  30, 
+  100000, 
+  800;
+```
+###### Question 4: Update some existing data
+
+``` 
+UPDATE cd.facilities
+SET initialoutlay = 10000
+WHERE facid = 1;
+```
+
 
 
 
