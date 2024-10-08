@@ -1,5 +1,7 @@
 # Introduction
 
+This project set up a database for a mock scenario of a newly created country club using PSQL/Docker. The goal was to learn SQL concepts such as DDL, DML, and DQL statements and additional clauses that filter for selected data (WHERE, HAVING, GROUP BY, etc). We also dove into the different forms of JOINs, aggregate functions, string manipulation, and advanced concepts such as window functions. The database sits locally on the JRD where each statement is run via the Linux CLI. It consists of three tables - members, bookings, and facilities. The DDL statements are listed below, as well as each SELECTION and data MODIFICATION statement after that.
+
 # SQL Queries
 
 ###### Table Setup (DDL)
