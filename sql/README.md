@@ -6,7 +6,7 @@ This project set up a database for a mock scenario of a newly created country cl
 
 ###### Table Setup (DDL)
 
-```
+```SQL
 CREATE TABLE cd.members(
   memid INTEGER NOT NULL,
   surname CHARACTER VARYING(200) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE cd.members(
 );
 ```
 
-```
+```SQL
 CREATE TABLE cd.bookings(
   bookid INTEGER NOT NULL,
   facid INTEGER NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE cd.bookings(
 );
 ```
 
-```
+```SQL
 CREATE TABLE cd.facilities(
   facid INTEGER NOT NULL,
   name CHARACTER VARYING(100) NOT NULL,
@@ -52,11 +52,13 @@ CREATE TABLE cd.facilities(
 
 ###### Question 1: Show all members
 
-`sql SELECT * FROM members`
+```SQL
+SELECT * FROM members
+```
 
 ###### Question 2: Insert some data
 
-```
+```SQL
 INSERT INTO
   cd.facilities (
     facid,
@@ -72,7 +74,7 @@ VALUES
 
 ###### Question 3: Insert calculated data
 
-```
+```SQL
 INSERT INTO
   cd.facilities (
     facid,
@@ -98,7 +100,7 @@ SELECT
 
 ###### Question 4: Update some existing data
 
-```
+```SQL
 UPDATE cd.facilities
 SET
   initialoutlay = 10000
@@ -109,7 +111,7 @@ WHERE
 
 ###### Question 5: Update a row based on contents of another
 
-```
+```SQL
 UPDATE cd.facilities
 SET
   membercost = (
@@ -134,13 +136,13 @@ WHERE
 
 ###### Question 6: Delete all bookings
 
-```
+```SQL
 DELETE FROM cd.bookings;
 ```
 
 ###### Question 7: Delete a member from the cd.members table
 
-```
+```SQL
 DELETE FROM cd.members
 WHERE
   memid = 37;
@@ -150,7 +152,7 @@ WHERE
 
 ###### Question 8: Control which rows are retrieved 2
 
-```
+```SQL
 SELECT
   facid,
   name,
@@ -165,7 +167,7 @@ WHERE
 
 ###### Question 9: Basic string searches
 
-```
+```SQL
 SELECT
   *
 FROM
@@ -176,7 +178,7 @@ WHERE
 
 ###### Question 10: Matching against multiple values
 
-```
+```SQL
 SELECT
   *
 FROM
@@ -187,7 +189,7 @@ WHERE
 
 ###### Question 11: Working with dates
 
-```
+```SQL
 SELECT
   memid,
   surname,
@@ -201,7 +203,7 @@ WHERE
 
 ###### Question 12: Combining results from multiple queries
 
-```
+```SQL
 SELECT
   surname
 FROM
@@ -219,7 +221,7 @@ UNION
 
 ###### Question 13: Start times of members' bookings
 
-```
+```SQL
 SELECT
   starttime
 FROM
@@ -232,7 +234,7 @@ WHERE
 
 ###### Question 14: Work out start times of bookings...
 
-```
+```SQL
 SELECT
   starttime as start,
   name
@@ -249,7 +251,7 @@ ORDER BY
 
 ###### Question 15: Members and their recommender
 
-```
+```SQL
 SELECT
   mem1.firstname as memfname,
   mem1.surname as memsname,
@@ -265,7 +267,7 @@ ORDER BY
 
 ###### Question 16: All members who recommended
 
-```
+```SQL
 SELECT DISTINCT
   mem1.firstname as firstname,
   mem1.surname as surname
@@ -279,7 +281,7 @@ ORDER BY
 
 ###### Question 17: All members, recommeders, no joins
 
-```
+```SQL
 SELECT DISTINCT
   mem1.firstname || ' ' || mem1.surname as member,
   (
@@ -300,7 +302,7 @@ ORDER BY
 
 ###### Question 18: Number of recommendations each member made
 
-```
+```SQL
 SELECT
   recommendedby,
   COUNT(*) as count
@@ -316,7 +318,7 @@ ORDER BY
 
 ###### Question 19: Total slots per facility
 
-```
+```SQL
 SELECT
   facid,
   SUM(slots) as "Total Slots"
@@ -330,7 +332,7 @@ ORDER BY
 
 ###### Question 20: Total slots per facility in one month
 
-```
+```SQL
 SELECT
   facid,
   SUM(slots) as "Total Slots"
@@ -347,7 +349,7 @@ ORDER BY
 
 ###### Question 21: Total slots per facility per month
 
-```
+```SQL
 SELECT
   facid,
   EXTRACT(
@@ -371,7 +373,7 @@ ORDER BY
 
 ###### Question 22: Count members with at least one booking
 
-```
+```SQL
 SELECT
   COUNT(DISTINCT memid) as count
 FROM
@@ -380,7 +382,7 @@ FROM
 
 ###### Question 23: Each member's first booking after 2012-09
 
-```
+```SQL
 SELECT
   mem.surname,
   mem.firstname,
@@ -401,7 +403,7 @@ ORDER BY
 
 ###### Question 24: Member names, with each row containing the total member count
 
-```
+```SQL
 SELECT
   COUNT(*) OVER (),
   firstname,
@@ -414,7 +416,7 @@ ORDER BY
 
 ###### Question 25: Numbered list of members
 
-```
+```SQL
 SELECT
   ROW_NUMBER() OVER (
     ORDER BY
@@ -428,7 +430,7 @@ FROM
 
 ###### Question 26: Facility id with highest number of slots
 
-```
+```SQL
 SELECT
   facid,
   total
@@ -454,7 +456,7 @@ WHERE
 
 ###### Question 27: Format names of members
 
-```
+```SQL
 SELECT
   surname || ', ' || firstname as name
 FROM
@@ -463,7 +465,7 @@ FROM
 
 ###### Question 28: Find telephone parentheses
 
-```
+```SQL
 SELECT
   memid,
   telephone
@@ -475,7 +477,7 @@ WHERE
 
 ###### Question 29: Count members by each surname letter
 
-```
+```SQL
 SELECT
   left (surname, 1) as letter,
   Count(*) as count
