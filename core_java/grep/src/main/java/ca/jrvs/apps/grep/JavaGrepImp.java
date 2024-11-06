@@ -24,7 +24,7 @@ public class JavaGrepImp implements JavaGrep {
 
     public static void main(String[] args) {
         if (args.length != 3) {
-            throw new IllegalArgumentException("USAGE: Java regex rootPath outFile");
+            throw new IllegalArgumentException("USAGE: java JavaGrepImp regex rootPath outFile");
         }
 
         // Is this a plugin or a dependency that needs to be imported?
@@ -80,11 +80,9 @@ public class JavaGrepImp implements JavaGrep {
     public List<String> readLines(File inputFile) {
         List<String> lines = new ArrayList<>();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(inputFile))) {
-
             while (bufferedReader.ready()) {
                 lines.add(bufferedReader.readLine());
             }
-
         } catch (IOException e) {
             logger.error("Error: unable to read file", e);
         }
