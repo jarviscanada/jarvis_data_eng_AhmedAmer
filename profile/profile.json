@@ -34,6 +34,11 @@
       "description": "Designed and implemented a series of bash scripts that would monitor the usage data of a network of Linux machines and store that data within a relational database (PostGreSQL). Wrote a bash script to collect each terminal's usage data in intervals using the Linux shell and crontab. Developed script to automate connecting to PostGreSQL database and inserting data. Also developed script for the automation of starting/stopping the PostGreSQL docker. The scripts were built and tested through a Rocky Linux 9 VM provisioned through the Google Cloud Platform.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
+    },
+    {
+      "description": "Grep App: Designed and implemented a Java application that mimics the Linux CLI grep command - effectively searches for string matches in a file directory and returns the lines associated with the pattern. App was implemented using the core Java util as well as Java nio library and Java Stream api. The app was developed, built, compiled, and packaged using Maven and a Docker image was built and distributed on Docker hub. Testing with JUnit occurred when implementing a method for matching regex expressions to strings.",
+      "git_url": "/core_java",
+      "name": "Core Java Apps"
     }
   ],
   "name": "Ahmed Amer",
@@ -82,7 +87,7 @@
       "Data Scraping/Cleaning",
       "Data Structures and Algorithms",
       "Linux Terminal/Bash Scripts",
-      "RDBMS/SQL"
+      "RDBMS/SQL Systems"
     ],
     "familiar": [
       "PostGreSQL",
@@ -96,7 +101,7 @@
       "Python",
       "React.js",
       "HTML/CSS",
-      "SQL",
+      "SQL Queries",
       "JavaScript"
     ]
   },

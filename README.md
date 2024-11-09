@@ -4,9 +4,9 @@ I am a self-taught programmer with over 40 certificates in Web Development, Obje
 
 ## Skills
 
-**Proficient:** Java, Python, React.js, HTML/CSS, SQL, JavaScript
+**Proficient:** Java, Python, React.js, HTML/CSS, SQL Queries, JavaScript
 
-**Competent:** TypeScript, Agile Software Development, Data Scraping/Cleaning, Data Structures and Algorithms, Linux Terminal/Bash Scripts, RDBMS/SQL
+**Competent:** TypeScript, Agile Software Development, Data Scraping/Cleaning, Data Structures and Algorithms, Linux Terminal/Bash Scripts, RDBMS/SQL Systems
 
 **Familiar:** PostGreSQL, ML Supervised/Unsupervised Learning, Tableau/Power BI, C#, Spring Boot
 
@@ -16,6 +16,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer]
 
 
 **Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer/tree/master/linux_sql)]: Designed and implemented a series of bash scripts that would monitor the usage data of a network of Linux machines and store that data within a relational database (PostGreSQL). Wrote a bash script to collect each terminal's usage data in intervals using the Linux shell and crontab. Developed script to automate connecting to PostGreSQL database and inserting data. Also developed script for the automation of starting/stopping the PostGreSQL docker. The scripts were built and tested through a Rocky Linux 9 VM provisioned through the Google Cloud Platform.
+
+**Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer/tree/master/core_java)]: Grep App: Designed and implemented a Java application that mimics the Linux CLI grep command - effectively searches for string matches in a file directory and returns the lines associated with the pattern. App was implemented using the core Java util as well as Java nio library and Java Stream api. The app was developed, built, compiled, and packaged using Maven and a Docker image was built and distributed on Docker hub. Testing with JUnit occurred when implementing a method for matching regex expressions to strings.
 
 
 ## Highlighted Projects
