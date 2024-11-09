@@ -36,9 +36,9 @@
       "name": "Cluster Monitor"
     },
     {
-      "description": "Grep App: Designed and implemented a Java application that mimics the Linux CLI grep command - effectively searches for string matches in a file directory and returns the lines associated with the pattern. App was implemented using the core Java util as well as Java nio library and Java Stream api. The app was developed, built, compiled, and packaged using Maven and a Docker image was built and distributed on Docker hub. Testing with JUnit occurred when implementing a method for matching regex expressions to strings.",
+      "description": "Designed and implemented a Java application that mimics the Linux CLI grep command - effectively searches for string matches in a file directory and returns the lines associated with the pattern. App was implemented using the core Java util as well as Java nio library and Java Stream api. The app was developed, built, compiled, and packaged using Maven and a Docker image was built and distributed on Docker hub. Testing with JUnit occurred when implementing a method for matching regex expressions to strings.",
       "git_url": "/core_java",
-      "name": "Core Java Apps"
+      "name": "Core Java Apps - Grep App"
     }
   ],
   "name": "Ahmed Amer",
