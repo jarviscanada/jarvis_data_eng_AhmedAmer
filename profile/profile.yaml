@@ -1,0 +1,127 @@
+# Preferred name (Characters only)
+name: "Ahmed Amer"
+# Your GitHub repo root URL
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer
+
+# Introduce yourself, your academic and professional background.
+# What excites you about the software industry and your passion. At least 80 words
+summary: I am a self-taught programmer with over 40 certificates in Web Development, Object-oriented Programming, Data Science, and Algorithms. After graduating from one of the most challenging programs at the University of Toronto, I decided to switch careers and pursue my true passion; coding. Throughout my learning journey, I realised the world of coding did not just challenge the growth of my technical skills, it also empowered the manifestation of my creative visions. The result was numerous solo projects and my involvement in building a novel finance-based mobile web app; my first experience as a developer within a team. The combination of my formal education and my single-handed pursuit of programming has helped me develop an ability to think both creatively and critically. Through my achievements thus far, I have also showcased a talent for absorbing complex knowledge in a short amount of time. I feel confident and excited knowing what lies ahead for me within the realms of software development.
+
+# Group your skills by level.
+# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
+skills:
+  # At least 5 skills
+  proficient:
+    - Java
+    - Python
+    - React.js
+    - HTML/CSS
+    - SQL Queries
+    - JavaScript
+  # At least 5 skills
+  competent:
+    - TypeScript
+    - Agile Software Development
+    - Data Scraping/Cleaning
+    - Data Structures and Algorithms
+    - Linux Terminal/Bash Scripts
+    - RDBMS/SQL Systems
+  # At least 5 skills
+  familiar:
+    - PostGreSQL
+    - ML Supervised/Unsupervised Learning
+    - Tableau/Power BI
+    - C#
+    - Spring Boot
+
+# List of Jarvis projects
+jarvis_projects:
+  - name: "Cluster Monitor"
+    git_url: "/linux_sql"
+    # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: Designed and implemented a series of bash scripts that would monitor the usage data of a network of Linux machines and store that data within a relational database (PostGreSQL). Wrote a bash script to collect each terminal's usage data in intervals using the Linux shell and crontab. Developed script to automate connecting to PostGreSQL database and inserting data. Also developed script for the automation of starting/stopping the PostGreSQL docker. The scripts were built and tested through a Rocky Linux 9 VM provisioned through the Google Cloud Platform.
+  - name: "Core Java Apps - Grep App"
+    git_url: "/core_java"
+    description: "Designed and implemented a Java application that mimics the Linux CLI grep command - effectively searches for string matches in a file directory and returns the lines associated with the pattern. App was implemented using the core Java util as well as Java nio library and Java Stream api. The app was developed, built, compiled, and packaged using Maven and a Docker image was built and distributed on Docker hub. Testing with JUnit occurred when implementing a method for matching regex expressions to strings."
+#  - name: "Springboot App"
+#    git_url: "/springboot"
+#    description: ""
+#  - name: "Python Data Analytics"
+#    git_url: "/python_data_anlytics"
+#    description: ""
+#  - name: "Hadoop"
+#    git_url: "/hadoop"
+#    description: ""
+#  - name: "Spark"
+#    git_url: "/spark"
+#    description: ""
+#  - name: "Cloud/DevOps"
+#    git_url: "/cloud_devops"
+#    description: ""
+
+# List of personal or academic projects
+# Feel free to add more projects
+highlighted_projects:
+    #project name
+  - name: "React Website"
+    #URL is optional
+    git_url: ""
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: Developed a web app with React.js/JavaScript/CSS. Provisioned the use of React Router for the navigation layout. Created root CSS variables for efficient styling. Created React components such as an animated background hero, navbar, cards, and footer from scratch.
+  - name: "React Daily Tasks App"
+    #URL is optional
+    git_url: ""
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: Developed a simple, functional React web app for listing daily tasks and checking them off when they are completed. Wrote logic code in TypeScript for functions that implemented the add, delete, modify, and check off buttons. Created React component for real-time clock that updates each second.
+  - name: "Website Landing Page"
+    git_url: ""
+    description: Created simple HTML/Tailwind landing page. Ensured responsive design for all components and elements of the page. This project was meant as a simple learning tool for Tailwind CSS.
+
+#List of professional experience
+#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
+professional_experience:
+  #Write your Jarvis role as a professional experience rather than training.
+  - title: "Software Developer"
+    company: "Jarvis"
+    duration: "Sep 2024-present"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "Attended agile scrum meetings daily. Worked as part of a team of developers to write Linux bash scripts that monitored memory usage within a network of Linux machines. Wrote scripts that stored that data in a PostGreSQL database in intervals of one minute."
+  - title: "Software Developer"
+    company: "Kambira"
+    duration: "Dec 2023-May 2024"
+    description: "Worked hand-in-hand with the founding developers of the company to propel their vision forward as a member of a team. Built the front-end portion of the React.js web app using Tailwind/TypeScript according to designs conceptualized beforehand on Figma. Adjusted and added to designs of over 10 different pages of the app using Figma. Finished coding logic for and styling over 10 pages of the web app, including buttons, alert messages, user information, and dropdown menus."
+  - title: "Application Editor"
+    company: "Top Offer"
+    duration: "Nov 2020-Apr 2021"
+    description: "Edited the spelling, grammar, and contents of over 300 professional letters, emails, and applications to graduate programs across the country for international students. Communicated with cross-functional teams in order to ensure client needs were met on a timely basis. Met extreme deadlines in cases where last minute edits were requested."
+
+#List of edcuation
+education: 
+  - school_name: "University of Toronto"
+    duration: "2015-2020"
+    degree: "Honours Bachelor of Science"
+    department: "Neuroscience and Cell Biology"
+    # optional
+    awards_achievements: 
+      - "Workshops and Innovations Lead of NeuroTechUofT - Summer 2019"
+      - "Member of UofT Public Speaking Club - 2018/2019"
+
+#Optional section
+others:
+    #category
+  - title: "Certificates"
+    #list of items
+    bullets:
+      - "Data Science with Python - DataCamp (March 2022)"
+      - "Java Algorithms - LinkedIn (April 2024)"
+      - "Agile Software Development: Clean Code Practices - LinkedIn (November 2023)"
+      - "JavaScript Deep Dive - Scrimba (February 2024)"
+#  - title: "Awards"
+#    bullets:
+#      - "Winner"
+  - title: "Activities/Hobbies"
+    bullets:
+      - "Rec League Basketball"
+      - "Professional Musician - Live performances and studio recordings"
