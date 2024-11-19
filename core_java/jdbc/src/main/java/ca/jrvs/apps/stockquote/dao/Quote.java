@@ -1,19 +1,43 @@
 package ca.jrvs.apps.stockquote.dao;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.sql.Date;
 import java.sql.Timestamp;
 
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class Quote {
+    @JsonProperty("01. symbol")
     private String ticker;
+
+    @JsonProperty("02. open")
     private double open;
+
+    @JsonProperty("03. high")
     private double high;
+
+    @JsonProperty("04. low")
     private double low;
+
+    @JsonProperty("05. price")
     private double price;
+
+    @JsonProperty("06. volume")
     private int volume;
+
+    @JsonProperty("07. latest trading day")
     private Date latestTradingDay;
+
+    @JsonProperty("08. previous close")
     private double previousClose;
+
+    @JsonProperty("09. change")
     private double change;
+
+    @JsonProperty("10. change percent")
     private String changePercent;
+
     private Timestamp timestamp;
 
     public String getTicker() {
@@ -30,22 +54,6 @@ public class Quote {
 
     public void setOpen(double open) {
         this.open = open;
-    }
-
-    public Timestamp getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public String getChangePercent() {
-        return changePercent;
-    }
-
-    public void setChangePercent(String changePercent) {
-        this.changePercent = changePercent;
     }
 
     public double getHigh() {
@@ -80,6 +88,14 @@ public class Quote {
         this.volume = volume;
     }
 
+    public double getPreviousClose() {
+        return previousClose;
+    }
+
+    public void setPreviousClose(double previousClose) {
+        this.previousClose = previousClose;
+    }
+
     public Date getLatestTradingDay() {
         return latestTradingDay;
     }
@@ -96,11 +112,36 @@ public class Quote {
         this.change = change;
     }
 
-    public double getPreviousClose() {
-        return previousClose;
+    public String getChangePercent() {
+        return changePercent;
     }
 
-    public void setPreviousClose(double previousClose) {
-        this.previousClose = previousClose;
+    public void setChangePercent(String changePercent) {
+        this.changePercent = changePercent;
+    }
+
+    public Timestamp getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Timestamp timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    @Override
+    public String toString() {
+        return "Stock Quote {" +
+                "symbol=" + ticker +
+                ", open=" + open +
+                ", high=" + high +
+                ", low=" + low +
+                ", price=" + price +
+                ", volume=" + volume +
+                ", latestTradingDay=" + latestTradingDay +
+                ", previousClose=" + previousClose +
+                ", change=" + change +
+                ", changePercent=" + changePercent +
+                ", timestamp=" + timestamp +
+                '}';
     }
 }

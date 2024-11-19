@@ -1,5 +1,6 @@
 package ca.jrvs.apps.stockquote.dao;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -8,7 +9,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.net.http.HttpRequest;
+import java.sql.Timestamp;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 
 public class QuoteHttpHelper {
     private String apiKey = System.getenv("ALPHA_VANTAGE_KEY");
@@ -17,9 +21,11 @@ public class QuoteHttpHelper {
     final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
     final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+
     /**
      * Fetch latest quote data from Alpha Vantage endpoint
-     * @param symbol - symbol of stock to fetch
+     * @param symbol symbol of stock to fetch
      * @return Quote with latest data
      * @throws IllegalArgumentException - if no data was found for the given symbol
      */
@@ -33,10 +39,24 @@ public class QuoteHttpHelper {
         try {
             Response response = httpClient.newCall(request).execute();
             ObjectMapper m = new ObjectMapper();
+            JsonNode jsonBody = m.readTree(response.body().string());
+            JsonNode quoteNode = jsonBody.get("Global Quote");
+            quote = m.convertValue(quoteNode, Quote.class);
 
-            infoLogger.info("API call successful");
+            quote.setTimestamp(quoteTimestamp());
+
+        } catch (IllegalArgumentException e) {
+            errorLogger.info("API call failed, symbol invalid or no data found.", e);
         } catch (IOException e) {
             errorLogger.error("Error fetching quote info from API call", e);
+            throw new RuntimeException(e);
         }
+
+        return quote;
     }
+
+    private Timestamp quoteTimestamp() {
+        return new Timestamp(Instant.now().toEpochMilli());
+    }
+
 }
