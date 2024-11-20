@@ -130,7 +130,7 @@ public class Quote {
 
     @Override
     public String toString() {
-        return "Stock Quote {" +
+        return "Stock Quote { " +
                 "symbol=" + ticker +
                 ", open=" + open +
                 ", high=" + high +
@@ -142,6 +142,6 @@ public class Quote {
                 ", change=" + change +
                 ", changePercent=" + changePercent +
                 ", timestamp=" + timestamp +
-                '}';
+                " }";
     }
 }

@@ -36,17 +36,18 @@ public class QuoteHttpHelper {
                 .header("X-RapidAPI-Key", apiKey)
                 .header("X-RapidAPI-Host", "alpha-vantage.p.rapidapi.com")
                 .build();
-        try {
-            Response response = httpClient.newCall(request).execute();
+        try (Response response = httpClient.newCall(request).execute()) {
             ObjectMapper m = new ObjectMapper();
             JsonNode jsonBody = m.readTree(response.body().string());
             JsonNode quoteNode = jsonBody.get("Global Quote");
             quote = m.convertValue(quoteNode, Quote.class);
-
+            if(quote.getTicker() == null) {
+                infoLogger.info("Invalid Stock Symbol.");
+                throw new IllegalArgumentException("Please provide a valid ticker symbol.");
+            } else {
+                infoLogger.info("Valid Ticker. Successful API call");
+            }
             quote.setTimestamp(quoteTimestamp());
-
-        } catch (IllegalArgumentException e) {
-            errorLogger.info("API call failed, symbol invalid or no data found.", e);
         } catch (IOException e) {
             errorLogger.error("Error fetching quote info from API call", e);
             throw new RuntimeException(e);
