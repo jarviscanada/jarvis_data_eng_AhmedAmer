@@ -10,7 +10,12 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class QuoteHttpHelper_Test {
 
-    QuoteHttpHelper helper = new QuoteHttpHelper();
+    QuoteHttpHelper helper;
+
+    @BeforeEach
+    void setUp() {
+        helper = new QuoteHttpHelper();
+    }
 
     @Test
     void test_fetchQuoteInfoGoodTicker() {

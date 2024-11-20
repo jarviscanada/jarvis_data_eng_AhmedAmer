@@ -17,10 +17,11 @@ public class PositionDao implements CrudDao<Position, String>{
     }
 
     private final String SELECT_ALL = "SELECT * FROM position";
-    private final String SELECT_BY_ID = "SELECT * FROM position WHERE symbol = ?";
+    private final String SELECT_BY_ID = "SELECT symbol, number_of_shares, " +
+            "value_paid FROM position WHERE symbol = ?";
     private final String INSERT = "INSERT INTO position (symbol, number_of_shares, value_paid)" +
             "VALUES (?, ?, ?)";
-    private final String UPDATE = "UPDATE position SET symbol = ?, number_of_shares = ?, " +
+    private final String UPDATE = "UPDATE position SET number_of_shares = ?, " +
             "value_paid = ? WHERE symbol = ?";
     private final String DELETE = "DELETE FROM position WHERE symbol = ?";
     private final String DELETE_ALL = "DELETE FROM position";
@@ -29,19 +30,27 @@ public class PositionDao implements CrudDao<Position, String>{
     public Position save(Position entity) throws IllegalArgumentException {
         String statement;
         if (this.findById(entity.getTicker()).isEmpty()) {
-            statement = INSERT;
+            try (PreparedStatement ps = this.connection.prepareStatement(INSERT)) {
+                ps.setString(1, entity.getTicker());
+                ps.setInt(2, entity.getNumOfShares());
+                ps.setDouble(3, entity.getValuePaid());
+                ps.execute();
+                return this.findById(entity.getTicker()).get();
+            } catch (SQLException e) {
+                logger.error("Could not INSERT position", e);
+            }
         } else {
-            statement = UPDATE;
+            try (PreparedStatement ps = this.connection.prepareStatement(UPDATE)) {
+                ps.setInt(1, entity.getNumOfShares());
+                ps.setDouble(2, entity.getValuePaid());
+                ps.setString(3, entity.getTicker());
+                ps.execute();
+                return this.findById(entity.getTicker()).get();
+            } catch (SQLException e) {
+                logger.error("Could not UPDATE position", e);
+            }
         }
-        try (PreparedStatement ps = this.connection.prepareStatement(statement)) {
-            ps.setString(1, entity.getTicker());
-            ps.setInt(2, entity.getNumOfShares());
-            ps.setDouble(3, entity.getValuePaid());
-            ps.execute();
-            return this.findById(entity.getTicker()).get();
-        } catch (SQLException e) {
-            logger.error("Could not CREATE/UPDATE position", e);
-        }
+
         return null;
     }
 
@@ -98,8 +107,9 @@ public class PositionDao implements CrudDao<Position, String>{
 
     @Override
     public void deleteAll() {
-        try (Statement s = this.connection.createStatement()) {
-            s.executeQuery(DELETE_ALL);
+        try (PreparedStatement ps = this.connection.prepareStatement(DELETE_ALL)) {
+            ps.execute();
+            logger.info("DELETE ALL statement executed.");
         } catch (SQLException e) {
             logger.error("Could not delete all entities", e);
         }

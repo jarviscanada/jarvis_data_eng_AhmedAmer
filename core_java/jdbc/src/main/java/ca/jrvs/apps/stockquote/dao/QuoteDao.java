@@ -21,7 +21,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
     private final String INSERT = "INSERT INTO quote (symbol, open, high, low, " +
             "price, volume, latest_trading_day, previous_close, change, change_percent, " +
             "timestamp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    private final String UPDATE = "UPDATE quote SET symbol = ?, open = ?, high = ?, " +
+    private final String UPDATE = "UPDATE quote SET open = ?, high = ?, " +
             "low = ?, price = ?, volume = ?, latest_trading_day = ?, previous_close = ?, " +
             "change = ?, change_percent = ?, timestamp = ? WHERE symbol = ?";
     private final String DELETE = "DELETE FROM quote WHERE symbol = ?";
@@ -31,28 +31,42 @@ public class QuoteDao implements CrudDao<Quote, String> {
 
     @Override
     public Quote save(Quote entity) throws IllegalArgumentException {
-        String statement;
         if (this.findById(entity.getTicker()).isEmpty()) {
-            statement = INSERT;
+            try (PreparedStatement ps = this.connection.prepareStatement(INSERT);) {
+                ps.setString(1, entity.getTicker());
+                ps.setDouble(2, entity.getOpen());
+                ps.setDouble(3, entity.getHigh());
+                ps.setDouble(4, entity.getLow());
+                ps.setDouble(5, entity.getPrice());
+                ps.setDouble(6, entity.getVolume());
+                ps.setDate(7, entity.getLatestTradingDay());
+                ps.setDouble(8, entity.getPreviousClose());
+                ps.setDouble(9, entity.getChange());
+                ps.setString(10, entity.getChangePercent());
+                ps.setTimestamp(11, entity.getTimestamp());
+                ps.execute();
+                return this.findById(entity.getTicker()).get();
+            } catch (SQLException e) {
+                logger.error("UPDATE Statement failure for provided entity", e);
+            }
         } else {
-            statement = UPDATE;
-        }
-        try (PreparedStatement ps = this.connection.prepareStatement(statement);) {
-            ps.setString(1, entity.getTicker());
-            ps.setDouble(2, entity.getOpen());
-            ps.setDouble(3, entity.getHigh());
-            ps.setDouble(4, entity.getLow());
-            ps.setDouble(5, entity.getPrice());
-            ps.setDouble(6, entity.getVolume());
-            ps.setDate(7, entity.getLatestTradingDay());
-            ps.setDouble(8, entity.getPreviousClose());
-            ps.setDouble(9, entity.getChange());
-            ps.setString(10, entity.getChangePercent());
-            ps.setTimestamp(11, entity.getTimestamp());
-            ps.execute();
-            return this.findById(entity.getTicker()).get();
-        } catch (SQLException e) {
-                logger.error("UPDATE/CREATE Statement failure for provided entity", e);
+            try (PreparedStatement ps = this.connection.prepareStatement(UPDATE);) {
+                ps.setDouble(1, entity.getOpen());
+                ps.setDouble(2, entity.getHigh());
+                ps.setDouble(3, entity.getLow());
+                ps.setDouble(4, entity.getPrice());
+                ps.setDouble(5, entity.getVolume());
+                ps.setDate(6, entity.getLatestTradingDay());
+                ps.setDouble(7, entity.getPreviousClose());
+                ps.setDouble(8, entity.getChange());
+                ps.setString(9, entity.getChangePercent());
+                ps.setTimestamp(10, entity.getTimestamp());
+                ps.setString(11, entity.getTicker());
+                ps.execute();
+                return this.findById(entity.getTicker()).get();
+            } catch (SQLException e) {
+                logger.error("UPDATE Statement failure for provided entity", e);
+            }
         }
         return null;
     }
