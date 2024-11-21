@@ -11,7 +11,7 @@ import java.net.http.HttpResponse;
 
 public class APITest {
     final static String symbol = "MSFT";
-    final static String apiKey = System.getenv("ALPHA_VANTAGE_API_KEY");
+    final static String apiKey = System.getenv("ALPHA_VANTAGE_KEY");
     public static void main(String[] args) {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://alpha-vantage.p.rapidapi.com/query?function=GLOBAL_QUOTE&symbol="+symbol+"&datatype=json"))
