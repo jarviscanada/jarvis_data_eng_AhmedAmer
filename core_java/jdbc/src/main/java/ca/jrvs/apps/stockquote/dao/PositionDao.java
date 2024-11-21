@@ -35,6 +35,7 @@ public class PositionDao implements CrudDao<Position, String>{
                 ps.setInt(2, entity.getNumOfShares());
                 ps.setDouble(3, entity.getValuePaid());
                 ps.execute();
+                logger.info("INSERT statement running for {} position", entity.getTicker());
                 return this.findById(entity.getTicker()).get();
             } catch (SQLException e) {
                 logger.error("Could not INSERT position", e);
@@ -45,6 +46,7 @@ public class PositionDao implements CrudDao<Position, String>{
                 ps.setDouble(2, entity.getValuePaid());
                 ps.setString(3, entity.getTicker());
                 ps.execute();
+                logger.info("UPDATE statement running for {} position", entity.getTicker());
                 return this.findById(entity.getTicker()).get();
             } catch (SQLException e) {
                 logger.error("Could not UPDATE position", e);
@@ -65,13 +67,15 @@ public class PositionDao implements CrudDao<Position, String>{
                 position.setNumOfShares(rs.getInt("number_of_shares"));
                 position.setValuePaid(rs.getDouble("value_paid"));
             }
-            return Optional.of(position);
+            if (position.getTicker() == null) {
+                return Optional.empty();
+            }
         } catch (SQLException e) {
             logger.error("Could not retrieve position with id: {}", s, e);
         } catch (IllegalArgumentException e) {
             logger.error("Please provide a valid ticker symbol.", e);
         }
-        return Optional.empty();
+        return Optional.of(position);
     }
 
     @Override

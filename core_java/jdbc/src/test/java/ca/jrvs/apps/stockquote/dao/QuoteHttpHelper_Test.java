@@ -1,5 +1,6 @@
 package ca.jrvs.apps.stockquote.dao;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -21,6 +22,7 @@ class QuoteHttpHelper_Test {
     void test_fetchQuoteInfoGoodTicker() {
         assertNotNull(helper);
         Quote quote = helper.fetchQuoteInfo("IBM");
+        Assertions.assertNotNull(quote.getTicker());
         System.out.println(quote);
     }
 

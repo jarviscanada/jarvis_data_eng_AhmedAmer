@@ -45,7 +45,7 @@ public class QuoteHttpHelper {
                 infoLogger.info("Invalid Stock Symbol.");
                 throw new IllegalArgumentException("Please provide a valid ticker symbol.");
             } else {
-                infoLogger.info("Valid Ticker. Successful API call");
+                infoLogger.info("Valid Ticker: {}. API call successful.", symbol);
             }
             quote.setTimestamp(quoteTimestamp());
         } catch (IOException e) {

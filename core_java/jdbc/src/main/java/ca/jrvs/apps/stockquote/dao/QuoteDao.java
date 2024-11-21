@@ -89,14 +89,16 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 quote.setChange(rs.getDouble("change"));
                 quote.setChangePercent(rs.getString("change_percent"));
                 quote.setTimestamp(rs.getTimestamp("timestamp"));
-                return Optional.of(quote);
+            }
+            if (quote.getTicker() == null) {
+                return Optional.empty();
             }
         } catch (SQLException e) {
             logger.error("Could not retrieve quote from ticker {}", s, e);
         } catch (IllegalArgumentException e) {
             logger.error("Please provide a valid ticker symbol.", e);
         }
-        return Optional.empty();
+        return Optional.of(quote);
     }
 
     @Override
