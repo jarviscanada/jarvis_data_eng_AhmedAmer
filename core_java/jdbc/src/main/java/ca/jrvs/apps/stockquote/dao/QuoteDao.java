@@ -45,6 +45,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 ps.setString(10, entity.getChangePercent());
                 ps.setTimestamp(11, entity.getTimestamp());
                 ps.execute();
+                logger.info("Executed INSERT statement on ticker: {}", entity.getTicker());
                 return this.findById(entity.getTicker()).get();
             } catch (SQLException e) {
                 logger.error("UPDATE Statement failure for provided entity", e);
@@ -63,6 +64,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 ps.setTimestamp(10, entity.getTimestamp());
                 ps.setString(11, entity.getTicker());
                 ps.execute();
+                logger.info("Executed UPDATE statement on ticker: {}", entity.getTicker());
                 return this.findById(entity.getTicker()).get();
             } catch (SQLException e) {
                 logger.error("UPDATE Statement failure for provided entity", e);
@@ -108,7 +110,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
              ResultSet rs = s.executeQuery(SELECT_ALL)) {
             while(rs.next()) {
                 Quote quote = new Quote();
-                quote.setTicker(rs.getString("ticker"));
+                quote.setTicker(rs.getString("symbol"));
                 quote.setOpen(rs.getDouble("open"));
                 quote.setHigh(rs.getDouble("high"));
                 quote.setLow(rs.getDouble("low"));

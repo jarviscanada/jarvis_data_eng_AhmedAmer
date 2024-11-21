@@ -1,6 +1,7 @@
 package ca.jrvs.apps.stockquote.dao;
 
 import ca.jrvs.apps.jdbc.DatabaseConnectionManager;
+import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,12 +28,11 @@ public class PositionDao_Test {
     Quote testQuote1;
     Quote testQuote2;
     Quote testQuote3;
-    QuoteHttpHelper quoteHttpHelper;
 
     Logger logger = LoggerFactory.getLogger(PositionDao_Test.class);
 
     @BeforeEach
-    void setUp() throws SQLException {
+    void setUp() {
         dcm = new DatabaseConnectionManager("localhost", "stock_quote",
                 "postgres", "password");
         testPosition1 = new Position();
@@ -41,7 +41,6 @@ public class PositionDao_Test {
         testQuote1 = new Quote();
         testQuote2 = new Quote();
         testQuote3 = new Quote();
-        quoteHttpHelper = new QuoteHttpHelper();
 
         testPosition1.setTicker("FAKE1");
         testPosition1.setNumOfShares(34);
@@ -101,7 +100,7 @@ public class PositionDao_Test {
             positionDao.save(testPosition2);
             logger.info("Setup complete, DAOs intialized and data saved.");
         } catch (SQLException e) {
-            logger.error("Could not connect to db for test setup", e);
+            logger.error("Could not complete setup", e);
         }
 
     }
@@ -114,7 +113,7 @@ public class PositionDao_Test {
         quoteDao.deleteById(testQuote2.getTicker());
         quoteDao.deleteById(testQuote3.getTicker());
         connection.close();
-        logger.info("Test teardown complete.");
+        logger.info("Teardown Complete.");
     }
 
     @Test
@@ -141,14 +140,21 @@ public class PositionDao_Test {
     }
 
     @Test
-    public void test_findById() throws SQLException {
+    public void test_findById() {
         Optional<Position> position = positionDao.findById(testPosition1.getTicker());
         Assertions.assertTrue(position.isPresent());
+        Assertions.assertEquals(position.get().getTicker(),
+                testPosition1.getTicker());
+        Assertions.assertEquals(position.get().getValuePaid(),
+                testPosition1.getValuePaid());
+        Assertions.assertEquals(position.get().getNumOfShares(),
+                testPosition1.getNumOfShares());
     }
 
     @Test
     public void test_deleteById() {
         positionDao.save(testPosition3);
+        Assertions.assertTrue(positionDao.findById("FAKE3").isPresent());
         positionDao.deleteById("FAKE3");
         Assertions.assertFalse(positionDao.findById("FAKE3").isPresent());
     }
