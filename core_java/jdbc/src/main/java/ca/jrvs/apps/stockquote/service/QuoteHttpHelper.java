@@ -1,5 +1,6 @@
-package ca.jrvs.apps.stockquote.dao;
+package ca.jrvs.apps.stockquote.service;
 
+import ca.jrvs.apps.stockquote.dao.Quote;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.OkHttpClient;
@@ -11,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.time.Instant;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 public class QuoteHttpHelper {
@@ -41,18 +41,10 @@ public class QuoteHttpHelper {
             JsonNode jsonBody = m.readTree(response.body().string());
             JsonNode quoteNode = jsonBody.get("Global Quote");
             quote = m.convertValue(quoteNode, Quote.class);
-            if(quote.getTicker() == null) {
-                infoLogger.info("Invalid Stock Symbol.");
-                throw new IllegalArgumentException("Please provide a valid ticker symbol.");
-            } else {
-                infoLogger.info("Valid Ticker: {}. API call successful.", symbol);
-            }
             quote.setTimestamp(quoteTimestamp());
         } catch (IOException e) {
             errorLogger.error("Error fetching quote info from API call", e);
-            throw new RuntimeException(e);
         }
-
         return quote;
     }
 

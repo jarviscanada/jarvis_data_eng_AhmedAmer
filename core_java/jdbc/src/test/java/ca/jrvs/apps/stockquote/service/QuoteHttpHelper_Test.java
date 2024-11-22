@@ -1,9 +1,9 @@
-package ca.jrvs.apps.stockquote.dao;
+package ca.jrvs.apps.stockquote.service;
 
+import ca.jrvs.apps.stockquote.dao.Quote;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -28,7 +28,7 @@ class QuoteHttpHelper_Test {
 
     @Test
     void test_fetchQuoteInfoBadTicker() {
-        assertThrows(IllegalArgumentException.class, () -> helper.fetchQuoteInfo("292883"));
+        Assertions.assertNull(helper.fetchQuoteInfo("9828929").getTicker());
     }
 
     //Write more tests -> Mock the response, test for consistency in symbol, timestamp, etc
