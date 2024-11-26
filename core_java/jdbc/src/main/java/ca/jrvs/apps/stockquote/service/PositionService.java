@@ -61,8 +61,8 @@ public class PositionService {
         Optional<Position> ownedStockOpt = dao.findById(ticker);
         Optional<Quote> quoteOfOwnedStockOpt = quoteService.fetchQuoteDataFromAPI(ticker);
         if (quoteOfOwnedStockOpt.isEmpty()) {
-            logger.error("There was a problem fetching latest stock quote!");
-            throw new RuntimeException("Could not complete stock sale");
+            logger.error("There was a problem fetching latest stock quote from the API!");
+            throw new IllegalArgumentException("Try using a valid ticker symbol for a stock that exists.");
         }
         if (ownedStockOpt.isEmpty()) {
             throw new IllegalArgumentException("You do not own this stock. Please provide a " +
@@ -77,6 +77,7 @@ public class PositionService {
             logger.info("Selling all {} shares of {} at total price: {}", numberOfShares,
                     ticker, newTotalPrice);
             logger.info("Net gain/loss: {}", newTotalPrice - ownedStock.getValuePaid());
+            dao.deleteById(ticker);
         }
 
     }
