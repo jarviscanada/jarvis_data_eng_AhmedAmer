@@ -66,13 +66,13 @@ public class PositionService_UnitTest {
     public void test_buy_invalidNumberOfShares() {
         when(mockQuoteService.fetchQuoteDataFromAPI("FAKE1")).thenReturn(Optional.of(testQuote));
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-           positionService.buy("FAKE1", 12125, 10);
+            positionService.buy("FAKE1", 12125, 10);
         }); // numOfShares over volume amount
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-           positionService.buy("FAKE1", 0 ,10);
+            positionService.buy("FAKE1", 0 ,10);
         }); // numOfShares input 0
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-           positionService.buy("FAKE1", -2 ,10);
+            positionService.buy("FAKE1", -2 ,10);
         }); // numOfShares negative
     }
 

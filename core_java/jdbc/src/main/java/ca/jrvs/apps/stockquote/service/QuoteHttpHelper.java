@@ -41,6 +41,9 @@ public class QuoteHttpHelper {
             JsonNode jsonBody = m.readTree(response.body().string());
             JsonNode quoteNode = jsonBody.get("Global Quote");
             quote = m.convertValue(quoteNode, Quote.class);
+            if (quote == null) {
+                errorLogger.error("API returned null quote possibly because limit of calls has been reached.");
+            }
             quote.setTimestamp(quoteTimestamp());
         } catch (IOException e) {
             errorLogger.error("Error fetching quote info from API call", e);

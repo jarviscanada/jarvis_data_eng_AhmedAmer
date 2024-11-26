@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 import java.util.Optional;
 
 public class PositionService {
-    private final PositionDao dao;
-    private final QuoteService quoteService;
+    final PositionDao dao;
+    final QuoteService quoteService;
     final Logger logger = LoggerFactory.getLogger(PositionService.class);
 
     public PositionService(PositionDao dao, QuoteService quoteService) {
