@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public class PositionDao implements CrudDao<Position, String>{
@@ -77,6 +78,8 @@ public class PositionDao implements CrudDao<Position, String>{
             logger.error("Could not retrieve position with id: {}", s, e);
         } catch (IllegalArgumentException e) {
             logger.error("Please provide a valid ticker symbol.", e);
+        } catch (NoSuchElementException e) {
+            logger.error("Could not retrieve position with id: {} because it doesn't exist", s, e);
         }
         return Optional.of(position);
     }

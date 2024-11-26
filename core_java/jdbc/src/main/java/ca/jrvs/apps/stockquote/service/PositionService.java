@@ -6,16 +6,16 @@ import ca.jrvs.apps.stockquote.dao.Quote;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.SQLException;
 import java.util.Optional;
 
 public class PositionService {
     private final PositionDao dao;
-    private QuoteService quoteService;
+    private final QuoteService quoteService;
     final Logger logger = LoggerFactory.getLogger(PositionService.class);
 
-    public PositionService(PositionDao dao) {
+    public PositionService(PositionDao dao, QuoteService quoteService) {
         this.dao = dao;
+        this.quoteService = quoteService;
     }
 
     /**
@@ -27,11 +27,11 @@ public class PositionService {
      */
     public Position buy(String ticker, int numberOfShares, double price) {
         Position position = new Position();
-        Optional<Quote> quote = quoteService.fetchQuoteDataFromAPI(ticker);
-        if (quote.isEmpty()) {
+        Optional<Quote> optionalQuote = quoteService.fetchQuoteDataFromAPI(ticker);
+        if (optionalQuote.isEmpty()) {
             throw new IllegalArgumentException("Please use a valid ticker symbol.");
         }
-        int stockVolume = quote.get().getVolume();
+        int stockVolume = optionalQuote.get().getVolume();
         if (numberOfShares <= 0) {
             throw new IllegalArgumentException("Number of shares must be greater than zero.");
         }
@@ -43,11 +43,13 @@ public class PositionService {
         if (price <= 0) {
             throw new IllegalArgumentException("Share price must be greater than zero.");
         }
-
+        position.setTicker(optionalQuote.get().getTicker());
+        position.setValuePaid(numberOfShares*price);
+        position.setNumOfShares(numberOfShares);
         dao.save(position);
-        Position updatedPosition = dao.findById(position.getTicker()).get();
+        Position updatedPosition = dao.findById(ticker).get();
         logger.info("Successfully purchased stock: {} at price {} per share.", ticker, price);
-        logger.info("New numOfShares, valuePaid: {}, {}", updatedPosition.getNumOfShares(),
+        logger.info("New numOfShares: {}. New valuePaid: {}", updatedPosition.getNumOfShares(),
                 updatedPosition.getValuePaid());
 
         return position;
