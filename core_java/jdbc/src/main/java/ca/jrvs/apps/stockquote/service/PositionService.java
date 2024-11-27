@@ -26,23 +26,21 @@ public class PositionService {
      * @return The position in our database after processing the buy
      */
     public Position buy(String ticker, int numberOfShares, double price) {
-        Position position = new Position();
+        if (price <= 0) {
+            throw new IllegalArgumentException("Share price must be greater than zero.");
+        }
+        if (numberOfShares <= 0) {
+            throw new IllegalArgumentException("Number of shares must be greater than zero.");
+        }
         Optional<Quote> optionalQuote = quoteService.fetchQuoteDataFromAPI(ticker);
         if (optionalQuote.isEmpty()) {
             throw new IllegalArgumentException("Please use a valid ticker symbol.");
         }
         int stockVolume = optionalQuote.get().getVolume();
-        if (numberOfShares <= 0) {
-            throw new IllegalArgumentException("Number of shares must be greater than zero.");
-        }
-        // If a user purchases a set amount of shares of a stock it is assumed that the API is updated fast enough
-        // to reflect the new amount of shares available currently, thus no other checks are needed other than below
         if (numberOfShares > stockVolume) {
             throw new IllegalArgumentException("Number of shares must be less than the volume of the stock.");
         }
-        if (price <= 0) {
-            throw new IllegalArgumentException("Share price must be greater than zero.");
-        }
+        Position position = new Position();
         position.setTicker(optionalQuote.get().getTicker());
         position.setValuePaid(numberOfShares*price);
         position.setNumOfShares(numberOfShares);
