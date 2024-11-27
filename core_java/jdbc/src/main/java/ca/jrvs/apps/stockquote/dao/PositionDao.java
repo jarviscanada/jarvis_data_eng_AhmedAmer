@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public class PositionDao implements CrudDao<Position, String>{
@@ -29,7 +30,8 @@ public class PositionDao implements CrudDao<Position, String>{
     @Override
     public Position save(Position entity) throws IllegalArgumentException {
         String statement;
-        if (this.findById(entity.getTicker()).isEmpty()) {
+        Optional<Position> oldPosition = this.findById(entity.getTicker());
+        if (oldPosition.isEmpty()) {
             try (PreparedStatement ps = this.connection.prepareStatement(INSERT)) {
                 ps.setString(1, entity.getTicker());
                 ps.setInt(2, entity.getNumOfShares());
@@ -42,8 +44,10 @@ public class PositionDao implements CrudDao<Position, String>{
             }
         } else {
             try (PreparedStatement ps = this.connection.prepareStatement(UPDATE)) {
-                ps.setInt(1, entity.getNumOfShares());
-                ps.setDouble(2, entity.getValuePaid());
+                int newNumOfShares = oldPosition.get().getNumOfShares() + entity.getNumOfShares();
+                double newValuePaid = oldPosition.get().getValuePaid() + entity.getValuePaid();
+                ps.setInt(1, newNumOfShares);
+                ps.setDouble(2, newValuePaid);
                 ps.setString(3, entity.getTicker());
                 ps.execute();
                 logger.info("UPDATE statement running for {} position", entity.getTicker());
@@ -74,6 +78,8 @@ public class PositionDao implements CrudDao<Position, String>{
             logger.error("Could not retrieve position with id: {}", s, e);
         } catch (IllegalArgumentException e) {
             logger.error("Please provide a valid ticker symbol.", e);
+        } catch (NoSuchElementException e) {
+            logger.error("Could not retrieve position with id: {} because it doesn't exist", s, e);
         }
         return Optional.of(position);
     }
