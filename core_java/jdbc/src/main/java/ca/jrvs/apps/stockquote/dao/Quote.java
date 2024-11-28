@@ -130,18 +130,17 @@ public class Quote {
 
     @Override
     public String toString() {
-        return "{" +
-                "\nStock Symbol =" + ticker +
-                "\nOpening Price =" + open +
-                "\nHighest Price of the Day =" + high +
-                "\nLowest Price of the Day =" + low +
-                "\nCurrent Price =" + price +
-                "\nStock Volume =" + volume +
-                "\nLatest Trading Day =" + latestTradingDay +
-                "\nPrevious Closing Price =" + previousClose +
-                "\nChange =" + change +
-                "\nChange Percentage =" + changePercent +
-                "\nTime Updated =" + timestamp +
-                "}";
+        return
+                "\nStock Symbol = " + ticker +
+                "\n   Opening Price = " + open +
+                "\n   Highest Price of the Day = " + high +
+                "\n   Lowest Price of the Day = " + low +
+                "\n   Current Price = " + price +
+                "\n   Stock Volume = " + volume +
+                "\n   Latest Trading Day = " + latestTradingDay +
+                "\n   Previous Closing Price = " + previousClose +
+                "\n   Change = " + change +
+                "\n   Change Percentage = " + changePercent +
+                "\n   Time Updated = " + timestamp;
     }
 }

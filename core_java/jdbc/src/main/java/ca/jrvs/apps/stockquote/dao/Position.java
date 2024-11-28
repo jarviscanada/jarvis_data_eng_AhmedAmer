@@ -32,10 +32,9 @@ public class Position {
 
     @Override
     public String toString() {
-        return "Position { " +
-                "ticker='" + ticker + '\'' +
-                ", numOfShares=" + numOfShares +
-                ", valuePaid=" + valuePaid +
-                " }";
+        return
+                "\nStock Symbol = " + ticker +
+                "\n   Number of Shares Owned = " + numOfShares +
+                "\n   Value Paid = " + valuePaid;
     }
 }

@@ -61,12 +61,12 @@ public class StockQuoteController {
     public void buyMenu() {
         String input;
         Optional<Quote> fetchedOptional;
-        Double price = 0.0;
+        Double price;
         do {
             System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
             System.out.print("Quote Menu: \n\n");
             System.out.println("Enter a ticker symbol - this is the symbol for the stock you wish to view.\n");
-            System.out.println("To return to the main menu, type quit");
+            System.out.println("To return to the main menu, type back");
             input = scanner.nextLine();
             if (input.equals("quit")) {
                 break;
@@ -76,7 +76,7 @@ public class StockQuoteController {
                 Quote quote = fetchedOptional.get();
                 price = quote.getPrice();
                 System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n");
-                System.out.printf("Quote for %s: \n\n", quote.getTicker());
+                System.out.printf("Quote for %s: \n", quote.getTicker());
                 System.out.println(quote);
                 System.out.print("\n\nWould you like to purchase this stock? Type yes or no.");
                 input = scanner.nextLine();
@@ -91,5 +91,9 @@ public class StockQuoteController {
     }
 
     public void sellMenu() {}
-    public void allOwnedStock() {}
+    public void allOwnedStock() {
+        System.out.print("\n\n\n\n\n\n\n\n\n\n\n");
+        System.out.print("Here is all the stock you own currently: ");
+
+    }
 }

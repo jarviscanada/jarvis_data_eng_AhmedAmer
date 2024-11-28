@@ -40,10 +40,10 @@ public class Main {
             mainQuoteService = new QuoteService(mainQuoteDao, mainHttpHelper);
             mainPositionService = new PositionService(mainPositionDao, mainQuoteService);
             controller = new StockQuoteController(mainQuoteService, mainPositionService);
+            controller.initClient();
         } catch (SQLException error) {
             logger.error("Could not establish connection to db", error);
         }
-        controller.initClient();
     }
 
     public static void parseProperties() {
