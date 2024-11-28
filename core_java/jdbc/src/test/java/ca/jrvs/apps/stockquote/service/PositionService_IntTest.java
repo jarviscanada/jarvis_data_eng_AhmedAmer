@@ -1,6 +1,5 @@
 package ca.jrvs.apps.stockquote.service;
 
-import ca.jrvs.apps.jdbc.DatabaseConnectionManager;
 import ca.jrvs.apps.stockquote.dao.Position;
 import ca.jrvs.apps.stockquote.dao.PositionDao;
 import ca.jrvs.apps.stockquote.dao.QuoteDao;

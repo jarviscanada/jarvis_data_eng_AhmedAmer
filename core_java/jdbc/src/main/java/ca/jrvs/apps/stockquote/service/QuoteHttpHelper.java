@@ -15,13 +15,9 @@ import java.time.Instant;
 import java.time.format.DateTimeFormatter;
 
 public class QuoteHttpHelper {
-    private String apiKey = System.getenv("ALPHA_VANTAGE_KEY");
-    private OkHttpClient httpClient = new OkHttpClient();
-
-    final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
+    private final String apiKey = System.getenv("ALPHA_VANTAGE_KEY");
+    private final OkHttpClient httpClient = new OkHttpClient();
     final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
-
-    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
     /**
      * Fetch latest quote data from Alpha Vantage endpoint

@@ -1,7 +1,6 @@
 package ca.jrvs.apps.stockquote.dao;
 
-import ca.jrvs.apps.jdbc.DatabaseConnectionManager;
-import org.junit.Assert;
+import ca.jrvs.apps.stockquote.service.DatabaseConnectionManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
