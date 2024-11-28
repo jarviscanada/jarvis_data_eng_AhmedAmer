@@ -58,18 +58,18 @@ public class PositionService {
      * @param ticker symbol of stock
      */
     public void sell(String ticker) {
-        Optional<Position> ownedStockOpt = dao.findById(ticker);
-        Optional<Quote> quoteOfOwnedStockOpt = quoteService.fetchQuoteDataFromAPI(ticker);
-        if (quoteOfOwnedStockOpt.isEmpty()) {
+        Optional<Position> ownedStockOptional = dao.findById(ticker);
+        if (ownedStockOptional.isEmpty()) {
+            throw new IllegalArgumentException("You do not own this stock. Please provide a " +
+                    "ticker symbol for a stock you do own.");
+        }
+        Optional<Quote> quoteOfOwnedStockOptional = quoteService.fetchQuoteDataFromAPI(ticker);
+        if (quoteOfOwnedStockOptional.isEmpty()) {
             logger.error("There was a problem fetching latest stock quote from the API!");
             throw new IllegalArgumentException("Try using a valid ticker symbol for a stock that exists.");
         }
-        if (ownedStockOpt.isEmpty()) {
-            throw new IllegalArgumentException("You do not own this stock. Please provide a " +
-                    "ticker symbol for a stock you do own.");
-        } else {
-            Position ownedStock = ownedStockOpt.get();
-            Quote quoteOfOwnedStock = quoteOfOwnedStockOpt.get();
+            Position ownedStock = ownedStockOptional.get();
+            Quote quoteOfOwnedStock = quoteOfOwnedStockOptional.get();
             double stockPrice = quoteOfOwnedStock.getPrice();
             double newTotalPrice = stockPrice * ownedStock.getNumOfShares();
             int numberOfShares = ownedStock.getNumOfShares();
@@ -78,7 +78,5 @@ public class PositionService {
                     ticker, newTotalPrice);
             logger.info("Net gain/loss: {}", newTotalPrice - ownedStock.getValuePaid());
             dao.deleteById(ticker);
-        }
-
     }
 }
