@@ -60,6 +60,7 @@ public class PositionService_UnitTest {
     public void tearDown() {
         testPosition = null;
         positionService = null;
+        testQuote = null;
     }
 
     @Test
@@ -78,9 +79,9 @@ public class PositionService_UnitTest {
 
     @Test
     public void test_buy_simulateBadTicker() {
-        when(mockQuoteService.fetchQuoteDataFromAPI("!?@#!")).thenReturn(Optional.empty());
+        when(mockQuoteService.fetchQuoteDataFromAPI("badTick")).thenReturn(Optional.empty());
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("!?@#!", 0 ,10);
+            positionService.buy("badTick", 120 ,10);
         });
     }
 
@@ -102,5 +103,32 @@ public class PositionService_UnitTest {
         verify(mockPositionDao).save(any(Position.class));
         verify(mockPositionDao).findById(anyString());
         Assertions.assertEquals(result.getTicker(), testQuote.getTicker());
+    }
+
+    @Test
+    public void test_sell_stockNotOwned() {
+        when(mockPositionDao.findById("FAKE1")).thenReturn(Optional.empty());
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            positionService.sell("FAKE1");
+        });
+    }
+
+    @Test
+    public void test_sell_invalidTicker() {
+        when(mockPositionDao.findById("FAKE1")).thenReturn(Optional.of(testPosition));
+        when(mockQuoteService.fetchQuoteDataFromAPI("FAKE1")).thenReturn(Optional.empty());
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            positionService.sell("FAKE1");
+        });
+    }
+
+//    -- Note -- at this point, if your API subscription only allows 5 requests per min, you get a failed test
+//               try running this test separately and it will succeed.
+    @Test
+    public void test_sell_validTicker() {
+        when(mockPositionDao.findById("FAKE1")).thenReturn(Optional.of(testPosition));
+        when(mockQuoteService.fetchQuoteDataFromAPI("FAKE1")).thenReturn(Optional.of(testQuote));
+        positionService.sell("FAKE1");
+        verify(mockPositionDao).deleteById("FAKE1");
     }
 }
