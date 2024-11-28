@@ -6,6 +6,7 @@ import ca.jrvs.apps.stockquote.dao.Quote;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.List;
 import java.util.Optional;
 
 public class PositionService {
@@ -79,4 +80,18 @@ public class PositionService {
             logger.info("Net gain/loss: {}", newTotalPrice - ownedStock.getValuePaid());
             dao.deleteById(ticker);
     }
+
+    // Helper method for Stock App Controller
+    public void displayAll() {
+        List<Position> positions = dao.findAll();
+        if (positions.isEmpty()) {
+            System.out.println("You currently do not own any stock!");
+        } else {
+            for (Position p : positions) {
+                System.out.println(p);
+                System.out.print("\n");
+            }
+        }
+    }
+
 }
