@@ -121,4 +121,14 @@ public class PositionService_UnitTest {
             positionService.sell("FAKE1");
         });
     }
+
+//    -- Note -- at this point, if your API subscription only allows 5 requests per min, you get a failed test
+//               try running this test separately and it will succeed.
+    @Test
+    public void test_sell_validTicker() {
+        when(mockPositionDao.findById("FAKE1")).thenReturn(Optional.of(testPosition));
+        when(mockQuoteService.fetchQuoteDataFromAPI("FAKE1")).thenReturn(Optional.of(testQuote));
+        positionService.sell("FAKE1");
+        verify(mockPositionDao).deleteById("FAKE1");
+    }
 }

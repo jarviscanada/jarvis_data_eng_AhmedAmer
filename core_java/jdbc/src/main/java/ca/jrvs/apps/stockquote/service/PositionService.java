@@ -66,7 +66,7 @@ public class PositionService {
         Optional<Quote> quoteOfOwnedStockOptional = quoteService.fetchQuoteDataFromAPI(ticker);
         if (quoteOfOwnedStockOptional.isEmpty()) {
             logger.error("There was a problem fetching latest stock quote from the API!");
-            throw new IllegalArgumentException("Try using a valid ticker symbol for a stock that exists.");
+            throw new IllegalArgumentException("Try using a valid ticker symbol for a stock that you own.");
         }
             Position ownedStock = ownedStockOptional.get();
             Quote quoteOfOwnedStock = quoteOfOwnedStockOptional.get();
