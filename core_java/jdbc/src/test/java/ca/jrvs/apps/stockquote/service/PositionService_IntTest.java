@@ -1,6 +1,5 @@
 package ca.jrvs.apps.stockquote.service;
 
-import ca.jrvs.apps.jdbc.DatabaseConnectionManager;
 import ca.jrvs.apps.stockquote.dao.Position;
 import ca.jrvs.apps.stockquote.dao.PositionDao;
 import ca.jrvs.apps.stockquote.dao.QuoteDao;
@@ -13,6 +12,10 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Optional;
+
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 
 public class PositionService_IntTest {
@@ -83,5 +86,28 @@ public class PositionService_IntTest {
         Position result = positionService.buy("AAPL", 19 ,10);
         Assertions.assertEquals(result.getTicker(), "AAPL");
         Assertions.assertTrue(positionDao.findById("AAPL").isPresent());
+    }
+
+    @Test
+    public void test_sell_stockNotOwned() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            positionService.sell("AAPL");
+        });
+    }
+
+//    @Test
+//    public void test_sell_invalidTicker() {
+//        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+//            positionService.sell("FAKE1");
+//        });
+//    }
+//     -- Note -- it might be the case that this test is redundant as an invalid ticker always results
+//                in the IllegalArgumentException being thrown for the stock position not being found - the app
+//                checks for this first
+
+    @Test
+    public void test_sell_validTicker() {
+        positionService.sell("AAPL");
+        Assertions.assertTrue(positionDao.findById("AAPL").isEmpty());
     }
 }

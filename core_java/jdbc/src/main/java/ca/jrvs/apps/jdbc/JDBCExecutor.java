@@ -3,6 +3,7 @@ package ca.jrvs.apps.jdbc;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import ca.jrvs.apps.stockquote.service.DatabaseConnectionManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

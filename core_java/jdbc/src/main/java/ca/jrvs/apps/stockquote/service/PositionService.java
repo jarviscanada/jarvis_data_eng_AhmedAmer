@@ -6,6 +6,7 @@ import ca.jrvs.apps.stockquote.dao.Quote;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.List;
 import java.util.Optional;
 
 public class PositionService {
@@ -58,18 +59,18 @@ public class PositionService {
      * @param ticker symbol of stock
      */
     public void sell(String ticker) {
-        Optional<Position> ownedStockOpt = dao.findById(ticker);
-        Optional<Quote> quoteOfOwnedStockOpt = quoteService.fetchQuoteDataFromAPI(ticker);
-        if (quoteOfOwnedStockOpt.isEmpty()) {
-            logger.error("There was a problem fetching latest stock quote from the API!");
-            throw new IllegalArgumentException("Try using a valid ticker symbol for a stock that exists.");
-        }
-        if (ownedStockOpt.isEmpty()) {
+        Optional<Position> ownedStockOptional = dao.findById(ticker);
+        if (ownedStockOptional.isEmpty()) {
             throw new IllegalArgumentException("You do not own this stock. Please provide a " +
                     "ticker symbol for a stock you do own.");
-        } else {
-            Position ownedStock = ownedStockOpt.get();
-            Quote quoteOfOwnedStock = quoteOfOwnedStockOpt.get();
+        }
+        Optional<Quote> quoteOfOwnedStockOptional = quoteService.fetchQuoteDataFromAPI(ticker);
+        if (quoteOfOwnedStockOptional.isEmpty()) {
+            logger.error("There was a problem fetching latest stock quote from the API!");
+            throw new IllegalArgumentException("Try using a valid ticker symbol for a stock that you own.");
+        }
+            Position ownedStock = ownedStockOptional.get();
+            Quote quoteOfOwnedStock = quoteOfOwnedStockOptional.get();
             double stockPrice = quoteOfOwnedStock.getPrice();
             double newTotalPrice = stockPrice * ownedStock.getNumOfShares();
             int numberOfShares = ownedStock.getNumOfShares();
@@ -78,7 +79,26 @@ public class PositionService {
                     ticker, newTotalPrice);
             logger.info("Net gain/loss: {}", newTotalPrice - ownedStock.getValuePaid());
             dao.deleteById(ticker);
-        }
+    }
 
+    // StockQuoteController helper functions - fetching positions from database
+
+    /**
+     * Helper function that fetches a position from the database
+     * and used in conjunction with the sell menu
+     * @param ticker symbol of owned stock position
+     * @return optional of position from database or empty optional
+     */
+    public Optional<Position> fetchPosition(String ticker) {
+        return dao.findById(ticker);
+    }
+
+    /**
+     * Helper function that fetches all owned stock positions
+     * and is used in conjunction with the display all stock menu
+     * @return list of positions from database
+     */
+    public List<Position> fetchAllPositions() {
+        return dao.findAll();
     }
 }
