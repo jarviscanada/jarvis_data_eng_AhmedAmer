@@ -41,4 +41,16 @@ public class QuoteService {
         }
         return Optional.of(quote);
     }
+
+    //StockQuoteController helper functions - get quote from database instead
+
+    /**
+     * Fetches quote info from database if available when API fails
+     * @param ticker symbol of stock quote
+     * @return optional of quote in db or empty optional
+     */
+    public Optional<Quote> fetchQuoteDataFromDB(String ticker) {
+        logger.info("Fetching quote data from DB");
+        return quoteDao.findById(ticker);
+    }
 }

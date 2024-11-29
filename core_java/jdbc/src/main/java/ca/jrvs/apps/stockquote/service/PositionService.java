@@ -81,17 +81,24 @@ public class PositionService {
             dao.deleteById(ticker);
     }
 
-    // Helper method for Stock App Controller
-    public void displayAll() {
-        List<Position> positions = dao.findAll();
-        if (positions.isEmpty()) {
-            System.out.println("You currently do not own any stock!");
-        } else {
-            for (Position p : positions) {
-                System.out.println(p);
-                System.out.print("\n");
-            }
-        }
+    // StockQuoteController helper functions - fetching positions from database
+
+    /**
+     * Helper function that fetches a position from the database
+     * and used in conjunction with the sell menu
+     * @param ticker symbol of owned stock position
+     * @return optional of position from database or empty optional
+     */
+    public Optional<Position> fetchPosition(String ticker) {
+        return dao.findById(ticker);
     }
 
+    /**
+     * Helper function that fetches all owned stock positions
+     * and is used in conjunction with the display all stock menu
+     * @return list of positions from database
+     */
+    public List<Position> fetchAllPositions() {
+        return dao.findAll();
+    }
 }
