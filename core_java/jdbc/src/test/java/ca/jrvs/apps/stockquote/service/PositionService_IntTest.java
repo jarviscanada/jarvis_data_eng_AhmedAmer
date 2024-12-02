@@ -24,7 +24,7 @@ public class PositionService_IntTest {
     QuoteService quoteService;
     QuoteDao quoteDao;
     QuoteHttpHelper httpHelper;
-    final Logger logger = LoggerFactory.getLogger(PositionService_IntTest.class);
+    final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     Connection connection;
     DatabaseConnectionManager dcm;
@@ -42,7 +42,7 @@ public class PositionService_IntTest {
             quoteService = new QuoteService(quoteDao, httpHelper);
             positionService = new PositionService(positionDao, quoteService);
         } catch (SQLException e) {
-            logger.error("Could not set up test environment", e);
+            errorLogger.error("PositionServiceIntTest: Could not set up test environment", e);
         }
     }
 

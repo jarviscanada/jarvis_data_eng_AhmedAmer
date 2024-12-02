@@ -12,6 +12,7 @@ public class QuoteService {
     private final QuoteDao quoteDao;
     private final QuoteHttpHelper quoteHttpHelper;
     private final Logger logger = LoggerFactory.getLogger(QuoteService.class);
+    private final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     public QuoteService(QuoteDao quoteDao, QuoteHttpHelper quoteHttpHelper) {
         this.quoteDao = quoteDao;
@@ -36,7 +37,7 @@ public class QuoteService {
             try {
                 quoteDao.save(quote);
             } catch (Exception e) {
-                logger.error("Error updating stock info", e);
+                errorLogger.error("Error updating stock info", e);
             }
         }
         return Optional.of(quote);

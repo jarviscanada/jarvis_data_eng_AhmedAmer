@@ -13,6 +13,7 @@ public class PositionService {
     final PositionDao dao;
     final QuoteService quoteService;
     final Logger logger = LoggerFactory.getLogger(PositionService.class);
+    final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     public PositionService(PositionDao dao, QuoteService quoteService) {
         this.dao = dao;
@@ -28,17 +29,21 @@ public class PositionService {
      */
     public Position buy(String ticker, int numberOfShares, double price) {
         if (price <= 0) {
+            errorLogger.error("Share price must be greater than zero.");
             throw new IllegalArgumentException("Share price must be greater than zero.");
         }
         if (numberOfShares <= 0) {
+            errorLogger.error("Number of shares must be greater than zero.");
             throw new IllegalArgumentException("Number of shares must be greater than zero.");
         }
         Optional<Quote> optionalQuote = quoteService.fetchQuoteDataFromAPI(ticker);
         if (optionalQuote.isEmpty()) {
+            errorLogger.error("Quote not found.");
             throw new IllegalArgumentException("Please use a valid ticker symbol.");
         }
         int stockVolume = optionalQuote.get().getVolume();
         if (numberOfShares > stockVolume) {
+            errorLogger.error("Number of shares exceeds stock volume.");
             throw new IllegalArgumentException("Number of shares must be less than the volume of the stock.");
         }
         Position position = new Position();
@@ -66,7 +71,7 @@ public class PositionService {
         }
         Optional<Quote> quoteOfOwnedStockOptional = quoteService.fetchQuoteDataFromAPI(ticker);
         if (quoteOfOwnedStockOptional.isEmpty()) {
-            logger.error("There was a problem fetching latest stock quote from the API!");
+            errorLogger.error("There was a problem fetching latest stock quote from the API!");
             throw new IllegalArgumentException("Try using a valid ticker symbol for a stock that you own.");
         }
             Position ownedStock = ownedStockOptional.get();

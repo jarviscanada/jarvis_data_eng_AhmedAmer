@@ -1,0 +1,13 @@
+2024-12-02 16:52:52 INFO  Main:60 - Imported properties from properties.txt file.
+2024-12-02 16:52:53 INFO  Main:44 - App resources initialized
+2024-12-02 16:53:00 INFO  StockQuoteController:42 - User navigated to sell menu.
+2024-12-02 16:53:49 INFO  StockQuoteController:38 - User navigated to buy menu.
+2024-12-02 16:53:54 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-02 16:53:55 INFO  QuoteService:31 - Stock ticker symbol not found! Returning empty Optional.
+2024-12-02 16:54:00 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-02 16:54:00 INFO  QuoteService:36 - Stock ticker: USD accepted. Updating stock info to DB.
+2024-12-02 16:54:00 INFO  QuoteDao:49 - Executed INSERT statement on ticker: USD
+2024-12-02 16:54:28 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-02 16:54:28 INFO  QuoteService:36 - Stock ticker: USD accepted. Updating stock info to DB.
+2024-12-02 16:54:28 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: USD
+2024-12-02 16:54:28 ERROR errorLogger:46 - Number of shares exceeds stock volume.

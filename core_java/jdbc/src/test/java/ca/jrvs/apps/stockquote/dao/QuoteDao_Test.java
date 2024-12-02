@@ -26,6 +26,7 @@ public class QuoteDao_Test {
     Quote testQuote4;
 
     Logger logger = LoggerFactory.getLogger(QuoteDao_Test.class);
+    Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     @BeforeEach
     void setUp() {
@@ -91,9 +92,9 @@ public class QuoteDao_Test {
             quoteDao.save(testQuote1);
             quoteDao.save(testQuote2);
             quoteDao.save(testQuote3);
-            logger.info("Setup Complete. Testing quotes inserted.");
+            logger.info("TEST-QuoteDao: Setup Complete. Testing quotes inserted.");
         } catch (SQLException e) {
-            logger.error("Could not complete setup", e);
+            errorLogger.error("TEST-QuoteDao: Could not complete setup", e);
         }
     }
 
@@ -103,7 +104,7 @@ public class QuoteDao_Test {
         quoteDao.deleteById(testQuote2.getTicker());
         quoteDao.deleteById(testQuote3.getTicker());
         connection.close();
-        logger.info("Teardown Complete.");
+        logger.info("TEST-QuoteDao: Teardown Complete.");
     }
 
     @Test
@@ -122,7 +123,7 @@ public class QuoteDao_Test {
         testQuote4.setHigh(17.7);
         testQuote4.setLow(10.3);
         testQuote4.setPrice(15.8);
-        logger.info("Changed testQuote4's High, Low, Price attributes -> " +
+        logger.info("TEST-QuoteDao: Changed testQuote4's High, Low, Price attributes -> " +
                 "{} {} {}", testQuote4.getHigh(), testQuote4.getLow(), testQuote4.getPrice());
         quoteDao.save(testQuote4);
         Optional<Quote> quoteAfterUpdate = quoteDao.findById(testQuote4.getTicker());
