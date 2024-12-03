@@ -1,0 +1,12 @@
+2024-12-02 21:57:02 INFO  testLogger:100 - TEST-PositionDao: Setup complete, DAOs initialized and data saved.
+2024-12-02 21:57:02 INFO  testLogger:115 - TEST-PositionDao: Teardown Complete.
+2024-12-02 21:57:02 INFO  testLogger:100 - TEST-PositionDao: Setup complete, DAOs initialized and data saved.
+2024-12-02 21:57:02 INFO  testLogger:115 - TEST-PositionDao: Teardown Complete.
+2024-12-02 21:57:02 INFO  testLogger:100 - TEST-PositionDao: Setup complete, DAOs initialized and data saved.
+2024-12-02 21:57:02 INFO  testLogger:115 - TEST-PositionDao: Teardown Complete.
+2024-12-02 21:57:02 INFO  testLogger:100 - TEST-PositionDao: Setup complete, DAOs initialized and data saved.
+2024-12-02 21:57:02 INFO  testLogger:132 - TEST-PositionDao: Changed numOfShares for testPosition3: 100
+2024-12-02 21:57:02 INFO  testLogger:138 - TEST-PositionDao: Updated numOfShares after UPDATE statement: 136
+2024-12-02 21:57:02 INFO  testLogger:115 - TEST-PositionDao: Teardown Complete.
+2024-12-02 21:57:02 INFO  testLogger:100 - TEST-PositionDao: Setup complete, DAOs initialized and data saved.
+2024-12-02 21:57:03 INFO  testLogger:115 - TEST-PositionDao: Teardown Complete.

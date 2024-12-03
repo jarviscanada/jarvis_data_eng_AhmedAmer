@@ -25,8 +25,7 @@ public class QuoteDao_Test {
     Quote testQuote3;
     Quote testQuote4;
 
-    Logger logger = LoggerFactory.getLogger(QuoteDao_Test.class);
-    Logger errorLogger = LoggerFactory.getLogger("errorLogger");
+    Logger logger = LoggerFactory.getLogger("testLogger");
 
     @BeforeEach
     void setUp() {
@@ -94,7 +93,7 @@ public class QuoteDao_Test {
             quoteDao.save(testQuote3);
             logger.info("TEST-QuoteDao: Setup Complete. Testing quotes inserted.");
         } catch (SQLException e) {
-            errorLogger.error("TEST-QuoteDao: Could not complete setup", e);
+            logger.error("TEST-QuoteDao: Could not complete setup", e);
         }
     }
 

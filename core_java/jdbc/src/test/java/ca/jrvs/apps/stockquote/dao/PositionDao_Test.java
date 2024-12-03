@@ -28,8 +28,7 @@ public class PositionDao_Test {
     Quote testQuote2;
     Quote testQuote3;
 
-    Logger logger = LoggerFactory.getLogger(PositionDao_Test.class);
-    Logger errorLogger = LoggerFactory.getLogger("errorLogger");
+    Logger logger = LoggerFactory.getLogger("testLogger");
 
     @BeforeEach
     void setUp() {
@@ -100,7 +99,7 @@ public class PositionDao_Test {
             positionDao.save(testPosition2);
             logger.info("TEST-PositionDao: Setup complete, DAOs initialized and data saved.");
         } catch (SQLException e) {
-            errorLogger.error("TEST-PositionDao: Could not complete setup", e);
+            logger.error("TEST-PositionDao: Could not complete setup", e);
         }
 
     }

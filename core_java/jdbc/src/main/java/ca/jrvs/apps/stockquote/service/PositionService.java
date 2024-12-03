@@ -12,7 +12,7 @@ import java.util.Optional;
 public class PositionService {
     final PositionDao dao;
     final QuoteService quoteService;
-    final Logger logger = LoggerFactory.getLogger(PositionService.class);
+    final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
     final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     public PositionService(PositionDao dao, QuoteService quoteService) {
@@ -52,8 +52,8 @@ public class PositionService {
         position.setNumOfShares(numberOfShares);
         dao.save(position);
         Position updatedPosition = dao.findById(ticker).get();
-        logger.info("Successfully purchased stock: {} at price {} per share.", ticker, price);
-        logger.info("New numOfShares: {}. New valuePaid: {}", updatedPosition.getNumOfShares(),
+        infoLogger.info("Successfully purchased stock: {} at price {} per share.", ticker, price);
+        infoLogger.info("New numOfShares: {}. New valuePaid: {}", updatedPosition.getNumOfShares(),
                 updatedPosition.getValuePaid());
 
         return position;
@@ -79,10 +79,10 @@ public class PositionService {
             double stockPrice = quoteOfOwnedStock.getPrice();
             double newTotalPrice = stockPrice * ownedStock.getNumOfShares();
             int numberOfShares = ownedStock.getNumOfShares();
-            logger.info("The new price of {} is: {}", ticker, stockPrice);
-            logger.info("Selling all {} shares of {} at total price: {}", numberOfShares,
+            infoLogger.info("The new price of {} is: {}", ticker, stockPrice);
+            infoLogger.info("Selling all {} shares of {} at total price: {}", numberOfShares,
                     ticker, newTotalPrice);
-            logger.info("Net gain/loss: {}", newTotalPrice - ownedStock.getValuePaid());
+            infoLogger.info("Net gain/loss: {}", newTotalPrice - ownedStock.getValuePaid());
             dao.deleteById(ticker);
     }
 

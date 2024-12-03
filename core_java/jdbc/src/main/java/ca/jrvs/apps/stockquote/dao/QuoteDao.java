@@ -10,7 +10,7 @@ import java.util.Optional;
 
 public class QuoteDao implements CrudDao<Quote, String> {
     private final Connection connection;
-    private final Logger logger = LoggerFactory.getLogger(QuoteDao.class);
+    private final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
     private final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     public QuoteDao(Connection connection) {
@@ -46,7 +46,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 ps.setString(10, entity.getChangePercent());
                 ps.setTimestamp(11, entity.getTimestamp());
                 ps.execute();
-                logger.info("Executed INSERT statement on ticker: {}", entity.getTicker());
+                infoLogger.info("Executed INSERT statement on ticker: {}", entity.getTicker());
                 return this.findById(entity.getTicker()).get();
             } catch (SQLException e) {
                 errorLogger.error("UPDATE Statement failure for provided entity", e);
@@ -65,7 +65,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 ps.setTimestamp(10, entity.getTimestamp());
                 ps.setString(11, entity.getTicker());
                 ps.execute();
-                logger.info("Executed UPDATE statement on ticker: {}", entity.getTicker());
+                infoLogger.info("Executed UPDATE statement on ticker: {}", entity.getTicker());
                 return this.findById(entity.getTicker()).get();
             } catch (SQLException e) {
                 errorLogger.error("UPDATE Statement failure for provided entity", e);

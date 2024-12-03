@@ -23,7 +23,7 @@ public class Main {
     private static QuoteHttpHelper mainHttpHelper;
     private static StockQuoteController controller;
 
-    final static Logger logger = LoggerFactory.getLogger(Main.class);
+    final static Logger infoLogger = LoggerFactory.getLogger(Main.class);
     final static Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     private static String server;
@@ -41,7 +41,7 @@ public class Main {
             mainQuoteService = new QuoteService(mainQuoteDao, mainHttpHelper);
             mainPositionService = new PositionService(mainPositionDao, mainQuoteService);
             controller = new StockQuoteController(mainQuoteService, mainPositionService);
-            logger.info("App resources initialized");
+            infoLogger.info("App resources initialized");
             controller.initClient();
         } catch (SQLException error) {
             errorLogger.error("Could not establish connection to db", error);
@@ -57,7 +57,7 @@ public class Main {
             username = props.getProperty("username");
             password = props.getProperty("password");
 //            apiKey = props.getProperty("apiKey");
-            logger.info("Imported properties from properties.txt file.");
+            infoLogger.info("Imported properties from properties.txt file.");
         } catch (IOException error) {
             errorLogger.error("Could not read properties file to initialize app resources.", error);
         }

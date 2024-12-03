@@ -15,7 +15,7 @@ public class StockQuoteController {
     Scanner scanner = new Scanner(System.in);
     private final QuoteService quoteService;
     private final PositionService positionService;
-    private final Logger logger = LoggerFactory.getLogger(StockQuoteController.class);
+    private final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
 
 
     public StockQuoteController(QuoteService quoteService, PositionService positionService) {
@@ -35,19 +35,19 @@ public class StockQuoteController {
             scanner.nextLine();
             switch (option) {
                 case 1:
-                    logger.info("User navigated to buy menu.");
+                    infoLogger.info("User navigated to buy menu.");
                     buyMenu();
                     break;
                 case 2:
-                    logger.info("User navigated to sell menu.");
+                    infoLogger.info("User navigated to sell menu.");
                     sellMenu();
                     break;
                 case 3:
-                    logger.info("User asked to print all owned stock.");
+                    infoLogger.info("User asked to print all owned stock.");
                     allOwnedStock();
                     break;
                 case 4:
-                    logger.info("User asked to exit application.");
+                    infoLogger.info("User asked to exit application.");
                     System.out.println("Exiting. Thank you for using the Stock Quote Application.");
                     break;
                 default:
@@ -79,6 +79,7 @@ public class StockQuoteController {
             System.out.println("To return to the main menu, type back");
             input = scanner.nextLine();
             if (input.equals("back")) {
+                infoLogger.info("User navigated to main menu.");
                 break;
             }
             quoteOptional = quoteService.fetchQuoteDataFromAPI(input);
@@ -115,6 +116,7 @@ public class StockQuoteController {
             System.out.println("To return to the main menu, type back");
             input = scanner.nextLine();
             if (input.equals("back")) {
+                infoLogger.info("User navigated to main menu.");
                 break;
             }
             posOptional = positionService.fetchPosition(input);

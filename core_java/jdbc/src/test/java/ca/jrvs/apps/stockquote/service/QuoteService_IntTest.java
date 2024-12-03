@@ -18,7 +18,7 @@ public class QuoteService_IntTest {
     QuoteService service;
     QuoteDao quoteDao;
     QuoteHttpHelper httpHelper;
-    final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
+    final Logger logger = LoggerFactory.getLogger("testLogger");
 
     Connection connection;
     DatabaseConnectionManager dcm;
@@ -34,7 +34,7 @@ public class QuoteService_IntTest {
             quoteDao = new QuoteDao(connection);
             service = new QuoteService(quoteDao, httpHelper);
         } catch (SQLException e) {
-            errorLogger.error("QuoteServiceIntTest: Could not set up test environment", e);
+            logger.error("QuoteServiceIntTest: Could not set up test environment", e);
         }
     }
 
