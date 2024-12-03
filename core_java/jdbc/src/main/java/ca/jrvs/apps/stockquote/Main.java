@@ -23,7 +23,7 @@ public class Main {
     private static QuoteHttpHelper mainHttpHelper;
     private static StockQuoteController controller;
 
-    final static Logger infoLogger = LoggerFactory.getLogger(Main.class);
+    final static Logger infoLogger = LoggerFactory.getLogger("infoLogger");
     final static Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     private static String server;
