@@ -40,7 +40,7 @@ public class PositionService_IntTest {
             quoteService = new QuoteService(quoteDao, httpHelper);
             positionService = new PositionService(positionDao, quoteService);
         } catch (SQLException e) {
-            logger.error("PositionServiceIntTest: Could not set up test environment", e);
+            logger.error("Could not set up test environment", e);
         }
     }
 

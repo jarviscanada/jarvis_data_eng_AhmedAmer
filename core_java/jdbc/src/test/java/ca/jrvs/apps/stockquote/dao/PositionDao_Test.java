@@ -97,9 +97,9 @@ public class PositionDao_Test {
             quoteDao.save(testQuote3);
             positionDao.save(testPosition1);
             positionDao.save(testPosition2);
-            logger.info("TEST-PositionDao: Setup complete, DAOs initialized and data saved.");
+            logger.info("Setup complete, DAOs initialized and data saved.");
         } catch (SQLException e) {
-            logger.error("TEST-PositionDao: Could not complete setup", e);
+            logger.error("Could not complete setup", e);
         }
 
     }
@@ -112,7 +112,7 @@ public class PositionDao_Test {
         quoteDao.deleteById(testQuote2.getTicker());
         quoteDao.deleteById(testQuote3.getTicker());
         connection.close();
-        logger.info("TEST-PositionDao: Teardown Complete.");
+        logger.info("Teardown Complete.");
     }
 
     @Test
@@ -129,13 +129,13 @@ public class PositionDao_Test {
         Optional<Position> positionBeforeUpdate = positionDao.findById(testPosition3.getTicker());
         Assertions.assertTrue(positionBeforeUpdate.isPresent());
         testPosition3.setNumOfShares(100);
-        logger.info("TEST-PositionDao: Changed numOfShares for testPosition3: {}", testPosition3.getNumOfShares());
+        logger.info("Changed numOfShares for testPosition3: {}", testPosition3.getNumOfShares());
         positionDao.save(testPosition3);
         Optional<Position> positionAfterUpdate = positionDao.findById(testPosition3.getTicker());
         Assertions.assertTrue(positionAfterUpdate.isPresent());
         Assertions.assertNotEquals(positionBeforeUpdate.get().getNumOfShares(),
                 positionAfterUpdate.get().getNumOfShares());
-        logger.info("TEST-PositionDao: Updated numOfShares after UPDATE statement: {}",
+        logger.info("Updated numOfShares after UPDATE statement: {}",
                 positionAfterUpdate.get().getNumOfShares());
         positionDao.deleteById(testPosition3.getTicker());
     }

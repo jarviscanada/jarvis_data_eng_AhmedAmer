@@ -34,7 +34,7 @@ public class QuoteService_IntTest {
             quoteDao = new QuoteDao(connection);
             service = new QuoteService(quoteDao, httpHelper);
         } catch (SQLException e) {
-            logger.error("QuoteServiceIntTest: Could not set up test environment", e);
+            logger.error("Could not set up test environment", e);
         }
     }
 
