@@ -7,6 +7,7 @@ import ca.jrvs.apps.stockquote.service.QuoteService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
@@ -16,6 +17,7 @@ public class StockQuoteController {
     private final QuoteService quoteService;
     private final PositionService positionService;
     private final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
+    private final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
 
     public StockQuoteController(QuoteService quoteService, PositionService positionService) {
@@ -85,22 +87,45 @@ public class StockQuoteController {
             quoteOptional = quoteService.fetchQuoteDataFromAPI(input);
             if (quoteOptional.isPresent()) {
                 Quote quote = quoteOptional.get();
-                price = quote.getPrice();
-                System.out.print("\n\n\n\n\n");
-                System.out.printf("Quote for %s: \n", quote.getTicker());
-                System.out.println(quote);
-                System.out.print("\nWould you like to purchase this stock? Type yes or no.");
-                input = scanner.nextLine();
-                if (input.equals("yes")) {
-                    System.out.print("\n\nHow many shares of this stock do you want to purchase? enter the amount below:");
-                    int amount = scanner.nextInt();
-                    System.out.print("\nPurchasing...");
-                    positionService.buy(quote.getTicker(), amount, price);
-                }
+                buyMenuStockFound(quote);
             } else {
                 System.out.print("\n\nYou need to enter a valid stock symbol. Try again!");
             }
         } while (quoteOptional.isEmpty());
+    }
+
+    public void buyMenuStockFound(Quote quote) {
+        double price = quote.getPrice();
+        String input;
+        boolean validEntry = false;
+        boolean validNumOfShares = false;
+        do {
+            System.out.print("\n\n\n\n\n");
+            System.out.printf("Quote for %s: \n", quote.getTicker());
+            System.out.println(quote);
+            System.out.print("\nWould you like to purchase this stock? Type yes or no.");
+            input = scanner.nextLine();
+            if (input.equals("yes")) {
+                do {
+                    System.out.print("\n\nHow many shares of this stock do you want to purchase? enter the amount below:");
+                    try {
+                        int amount = scanner.nextInt();
+                        System.out.print("\nPurchasing...");
+                        positionService.buy(quote.getTicker(), amount, price);
+                        validNumOfShares = true;
+                        validEntry = true;
+                    } catch (InputMismatchException e) {
+                        System.out.println("\nInvalid entry. Please enter a valid integer smaller than 10 digits.");
+                        errorLogger.error("Valid integer required for inputting number of shares to buy", e);
+                    }
+                } while (!validNumOfShares);
+            } else if (input.equals("no")) {
+                System.out.println("\nReturning to buy menu.");
+                validEntry = true;
+            } else {
+                System.out.println("\nPlease enter 'yes' or 'no'!");
+            }
+        } while (!validEntry);
     }
 
     public void sellMenu() {
