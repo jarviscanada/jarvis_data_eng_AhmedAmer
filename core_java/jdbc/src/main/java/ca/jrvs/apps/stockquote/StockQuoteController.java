@@ -4,6 +4,8 @@ import ca.jrvs.apps.stockquote.dao.Position;
 import ca.jrvs.apps.stockquote.dao.Quote;
 import ca.jrvs.apps.stockquote.service.PositionService;
 import ca.jrvs.apps.stockquote.service.QuoteService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +15,7 @@ public class StockQuoteController {
     Scanner scanner = new Scanner(System.in);
     private final QuoteService quoteService;
     private final PositionService positionService;
+    private final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
 
 
     public StockQuoteController(QuoteService quoteService, PositionService positionService) {
@@ -25,22 +28,26 @@ public class StockQuoteController {
      */
     public void initClient() {
         int option;
-        System.out.print("Welcome to the Stock Quote App main menu!\n\n");
+        System.out.print("\n\n\nWelcome to the Stock Quote App main menu!");
         do {
             mainMenu();
             option = scanner.nextInt();
             scanner.nextLine();
             switch (option) {
                 case 1:
+                    infoLogger.info("User navigated to buy menu.");
                     buyMenu();
                     break;
                 case 2:
+                    infoLogger.info("User navigated to sell menu.");
                     sellMenu();
                     break;
                 case 3:
+                    infoLogger.info("User asked to print all owned stock.");
                     allOwnedStock();
                     break;
                 case 4:
+                    infoLogger.info("User asked to exit application.");
                     System.out.println("Exiting. Thank you for using the Stock Quote Application.");
                     break;
                 default:
@@ -52,7 +59,7 @@ public class StockQuoteController {
     }
 
     public void mainMenu() {
-        System.out.print("\n\n\n\n\n");
+        System.out.print("\n\n\n");
         System.out.println("Please select an option by inputting its number: ");
         System.out.println("1 - Look up and buy new stock.");
         System.out.println("2 - View and sell owned stock.");
@@ -72,6 +79,7 @@ public class StockQuoteController {
             System.out.println("To return to the main menu, type back");
             input = scanner.nextLine();
             if (input.equals("back")) {
+                infoLogger.info("User navigated to main menu.");
                 break;
             }
             quoteOptional = quoteService.fetchQuoteDataFromAPI(input);
@@ -108,6 +116,7 @@ public class StockQuoteController {
             System.out.println("To return to the main menu, type back");
             input = scanner.nextLine();
             if (input.equals("back")) {
+                infoLogger.info("User navigated to main menu.");
                 break;
             }
             posOptional = positionService.fetchPosition(input);

@@ -18,7 +18,7 @@ public class QuoteService_IntTest {
     QuoteService service;
     QuoteDao quoteDao;
     QuoteHttpHelper httpHelper;
-    final Logger logger = LoggerFactory.getLogger(QuoteService_IntTest.class);
+    final Logger logger = LoggerFactory.getLogger("testLogger");
 
     Connection connection;
     DatabaseConnectionManager dcm;

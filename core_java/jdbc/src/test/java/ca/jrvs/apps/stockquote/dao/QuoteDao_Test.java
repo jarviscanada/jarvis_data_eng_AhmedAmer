@@ -25,7 +25,7 @@ public class QuoteDao_Test {
     Quote testQuote3;
     Quote testQuote4;
 
-    Logger logger = LoggerFactory.getLogger(QuoteDao_Test.class);
+    Logger logger = LoggerFactory.getLogger("testLogger");
 
     @BeforeEach
     void setUp() {

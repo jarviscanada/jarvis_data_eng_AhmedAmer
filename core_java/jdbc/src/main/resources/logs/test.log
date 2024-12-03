@@ -1,0 +1,12 @@
+2024-12-03 10:15:08 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-03 10:15:08 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-03 10:15:08 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-03 10:15:08 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-03 10:15:09 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-03 10:15:09 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-03 10:15:09 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-03 10:15:09 INFO  PositionDao_Test:132 - Changed numOfShares for testPosition3: 100
+2024-12-03 10:15:09 INFO  PositionDao_Test:138 - Updated numOfShares after UPDATE statement: 136
+2024-12-03 10:15:09 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-03 10:15:09 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-03 10:15:09 INFO  PositionDao_Test:115 - Teardown Complete.

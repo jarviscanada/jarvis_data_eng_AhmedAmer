@@ -12,10 +12,8 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Optional;
 
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 
 public class PositionService_IntTest {
@@ -24,7 +22,7 @@ public class PositionService_IntTest {
     QuoteService quoteService;
     QuoteDao quoteDao;
     QuoteHttpHelper httpHelper;
-    final Logger logger = LoggerFactory.getLogger(PositionService_IntTest.class);
+    final Logger logger = LoggerFactory.getLogger("testLogger");
 
     Connection connection;
     DatabaseConnectionManager dcm;

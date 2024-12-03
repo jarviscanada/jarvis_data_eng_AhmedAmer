@@ -10,7 +10,8 @@ import java.util.Optional;
 
 public class QuoteDao implements CrudDao<Quote, String> {
     private final Connection connection;
-    private final Logger logger = LoggerFactory.getLogger(QuoteDao.class);
+    private final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
+    private final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     public QuoteDao(Connection connection) {
         this.connection = connection;
@@ -45,10 +46,10 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 ps.setString(10, entity.getChangePercent());
                 ps.setTimestamp(11, entity.getTimestamp());
                 ps.execute();
-                logger.info("Executed INSERT statement on ticker: {}", entity.getTicker());
+                infoLogger.info("Executed INSERT statement on ticker: {}", entity.getTicker());
                 return this.findById(entity.getTicker()).get();
             } catch (SQLException e) {
-                logger.error("UPDATE Statement failure for provided entity", e);
+                errorLogger.error("UPDATE Statement failure for provided entity", e);
             }
         } else {
             try (PreparedStatement ps = this.connection.prepareStatement(UPDATE);) {
@@ -64,10 +65,10 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 ps.setTimestamp(10, entity.getTimestamp());
                 ps.setString(11, entity.getTicker());
                 ps.execute();
-                logger.info("Executed UPDATE statement on ticker: {}", entity.getTicker());
+                infoLogger.info("Executed UPDATE statement on ticker: {}", entity.getTicker());
                 return this.findById(entity.getTicker()).get();
             } catch (SQLException e) {
-                logger.error("UPDATE Statement failure for provided entity", e);
+                errorLogger.error("UPDATE Statement failure for provided entity", e);
             }
         }
         return null;
@@ -96,9 +97,9 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 return Optional.empty();
             }
         } catch (SQLException e) {
-            logger.error("Could not retrieve quote from ticker {}", s, e);
+            errorLogger.error("Could not retrieve quote from ticker {}", s, e);
         } catch (IllegalArgumentException e) {
-            logger.error("Please provide a valid ticker symbol.", e);
+            errorLogger.error("Please provide a valid ticker symbol.", e);
         }
         return Optional.of(quote);
     }
@@ -124,7 +125,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 quotes.add(quote);
             }
         } catch (SQLException e) {
-            logger.error("Could not complete request: Find All Entities", e);
+            errorLogger.error("Could not complete request: Find All Entities", e);
         }
         return quotes;
     }
@@ -138,7 +139,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
             ps.setString(1, s);
             ps.execute();
         } catch (SQLException e) {
-            logger.error("Could not delete quote from ticker {}", s, e);
+            errorLogger.error("Could not delete quote from ticker {}", s, e);
         }
     }
 
@@ -147,7 +148,7 @@ public class QuoteDao implements CrudDao<Quote, String> {
         try (Statement s = this.connection.createStatement()) {
             s.executeQuery(DELETE_ALL);
         } catch (SQLException e) {
-            logger.error("Could not delete all entities", e);
+            errorLogger.error("Could not delete all entities", e);
         }
     }
 }

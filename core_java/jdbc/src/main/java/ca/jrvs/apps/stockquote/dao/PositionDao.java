@@ -11,7 +11,8 @@ import java.util.Optional;
 
 public class PositionDao implements CrudDao<Position, String>{
     private final Connection connection;
-    private final Logger logger = LoggerFactory.getLogger(PositionDao.class);
+    private final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
+    private final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     public PositionDao(Connection connection) {
         this.connection = connection;
@@ -37,10 +38,10 @@ public class PositionDao implements CrudDao<Position, String>{
                 ps.setInt(2, entity.getNumOfShares());
                 ps.setDouble(3, entity.getValuePaid());
                 ps.execute();
-                logger.info("INSERT statement running for {} position", entity.getTicker());
+                infoLogger.info("INSERT statement running for {} position", entity.getTicker());
                 return this.findById(entity.getTicker()).get();
             } catch (SQLException e) {
-                logger.error("Could not INSERT position", e);
+                errorLogger.error("Could not INSERT position", e);
             }
         } else {
             try (PreparedStatement ps = this.connection.prepareStatement(UPDATE)) {
@@ -50,10 +51,10 @@ public class PositionDao implements CrudDao<Position, String>{
                 ps.setDouble(2, newValuePaid);
                 ps.setString(3, entity.getTicker());
                 ps.execute();
-                logger.info("UPDATE statement running for {} position", entity.getTicker());
+                infoLogger.info("UPDATE statement running for {} position", entity.getTicker());
                 return this.findById(entity.getTicker()).get();
             } catch (SQLException e) {
-                logger.error("Could not UPDATE position", e);
+                errorLogger.error("Could not UPDATE position", e);
             }
         }
 
@@ -75,11 +76,11 @@ public class PositionDao implements CrudDao<Position, String>{
                 return Optional.empty();
             }
         } catch (SQLException e) {
-            logger.error("Could not retrieve position with id: {}", s, e);
+            errorLogger.error("Could not retrieve position with id: {}", s, e);
         } catch (IllegalArgumentException e) {
-            logger.error("Please provide a valid ticker symbol.", e);
+            errorLogger.error("Please provide a valid ticker symbol.", e);
         } catch (NoSuchElementException e) {
-            logger.error("Could not retrieve position with id: {} because it doesn't exist", s, e);
+            errorLogger.error("Could not retrieve position with id: {} because it doesn't exist", s, e);
         }
         return Optional.of(position);
     }
@@ -97,7 +98,7 @@ public class PositionDao implements CrudDao<Position, String>{
                 positions.add(p);
             }
         } catch (SQLException e) {
-            logger.error("Could not complete request: Find All Entities");
+            errorLogger.error("Could not complete request: Find All Entities");
         }
         return positions;
     }
@@ -111,7 +112,7 @@ public class PositionDao implements CrudDao<Position, String>{
             ps.setString(1, s);
             ps.execute();
         } catch (SQLException e) {
-            logger.error("Could not delete position with id: {}", s, e);
+            errorLogger.error("Could not delete position with id: {}", s, e);
         }
     }
 
@@ -119,9 +120,9 @@ public class PositionDao implements CrudDao<Position, String>{
     public void deleteAll() {
         try (PreparedStatement ps = this.connection.prepareStatement(DELETE_ALL)) {
             ps.execute();
-            logger.info("DELETE ALL statement executed.");
+            infoLogger.info("DELETE ALL statement executed.");
         } catch (SQLException e) {
-            logger.error("Could not delete all entities", e);
+            errorLogger.error("Could not delete all entities", e);
         }
     }
 }

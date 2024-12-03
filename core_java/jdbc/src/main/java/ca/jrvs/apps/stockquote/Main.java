@@ -23,7 +23,8 @@ public class Main {
     private static QuoteHttpHelper mainHttpHelper;
     private static StockQuoteController controller;
 
-    final static Logger logger = LoggerFactory.getLogger(Main.class);
+    final static Logger infoLogger = LoggerFactory.getLogger("infoLogger");
+    final static Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     private static String server;
     private static String database;
@@ -40,23 +41,25 @@ public class Main {
             mainQuoteService = new QuoteService(mainQuoteDao, mainHttpHelper);
             mainPositionService = new PositionService(mainPositionDao, mainQuoteService);
             controller = new StockQuoteController(mainQuoteService, mainPositionService);
+            infoLogger.info("App resources initialized");
             controller.initClient();
         } catch (SQLException error) {
-            logger.error("Could not establish connection to db", error);
+            errorLogger.error("Could not establish connection to db", error);
         }
     }
 
     public static void parseProperties() {
         Properties props = new Properties();
-        try (FileInputStream fileInputStream = new FileInputStream("src/resources/properties.txt")) {
+        try (FileInputStream fileInputStream = new FileInputStream("src/main/resources/properties.txt")) {
             props.load(fileInputStream);
             server = props.getProperty("server");
             database = props.getProperty("database");
             username = props.getProperty("username");
             password = props.getProperty("password");
 //            apiKey = props.getProperty("apiKey");
+            infoLogger.info("Imported properties from properties.txt file.");
         } catch (IOException error) {
-            logger.error("Could not read properties file to initialize app resources.", error);
+            errorLogger.error("Could not read properties file to initialize app resources.", error);
         }
     }
 }

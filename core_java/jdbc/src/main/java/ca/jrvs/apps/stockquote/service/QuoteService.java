@@ -5,13 +5,13 @@ import ca.jrvs.apps.stockquote.dao.QuoteDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.sql.SQLException;
 import java.util.Optional;
 
 public class QuoteService {
     private final QuoteDao quoteDao;
     private final QuoteHttpHelper quoteHttpHelper;
-    private final Logger logger = LoggerFactory.getLogger(QuoteService.class);
+    private final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
+    private final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     public QuoteService(QuoteDao quoteDao, QuoteHttpHelper quoteHttpHelper) {
         this.quoteDao = quoteDao;
@@ -24,19 +24,19 @@ public class QuoteService {
      * @return Latest quote information or empty optional if ticker symbol not found
      */
     public Optional<Quote> fetchQuoteDataFromAPI(String ticker) {
-        logger.info("Fetching quote data from API");
+        infoLogger.info("Fetching quote data from API");
         Quote quote = quoteHttpHelper.fetchQuoteInfo(ticker);
         if (quote.getTicker() == null) {
-            logger.info("Stock ticker symbol not found! Returning empty Optional.");
+            infoLogger.info("Stock ticker symbol not found! Returning empty Optional.");
             return Optional.empty();
         } else if(!quote.getTicker().equals(ticker)) {
             throw new RuntimeException("API ERROR: Stock returned and provided ticker symbol differ.");
         } else {
-            logger.info("Stock ticker: {} accepted. Updating stock info to DB.", quote.getTicker());
+            infoLogger.info("Stock ticker: {} accepted. Updating stock info to DB.", quote.getTicker());
             try {
                 quoteDao.save(quote);
             } catch (Exception e) {
-                logger.error("Error updating stock info", e);
+                errorLogger.error("Error updating stock info", e);
             }
         }
         return Optional.of(quote);
@@ -50,7 +50,7 @@ public class QuoteService {
      * @return optional of quote in db or empty optional
      */
     public Optional<Quote> fetchQuoteDataFromDB(String ticker) {
-        logger.info("Fetching quote data from DB");
+        infoLogger.info("Fetching quote data from DB");
         return quoteDao.findById(ticker);
     }
 }
