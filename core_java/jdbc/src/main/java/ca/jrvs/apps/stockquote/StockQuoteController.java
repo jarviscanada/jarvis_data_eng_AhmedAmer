@@ -73,7 +73,7 @@ public class StockQuoteController {
     public void buyMenu() {
         String input;
         Optional<Quote> quoteOptional;
-        Double price;
+        boolean validEntry = false;
         do {
             System.out.print("\n\n\n\n\n");
             System.out.print("Buy Menu: \n");
@@ -81,8 +81,9 @@ public class StockQuoteController {
             System.out.println("To return to the main menu, type back");
             input = scanner.nextLine();
             if (input.equals("back")) {
+                validEntry = true;
+                System.out.print("\nHeading back to main menu!");
                 infoLogger.info("User navigated to main menu.");
-                break;
             }
             quoteOptional = quoteService.fetchQuoteDataFromAPI(input);
             if (quoteOptional.isPresent()) {
@@ -91,13 +92,13 @@ public class StockQuoteController {
             } else {
                 System.out.print("\n\nYou need to enter a valid stock symbol. Try again!");
             }
-        } while (quoteOptional.isEmpty());
+        } while (!validEntry);
     }
 
     public void buyMenuStockFound(Quote quote) {
         double price = quote.getPrice();
         String input;
-        boolean validEntry = false;
+        boolean exit = false;
         boolean validNumOfShares = false;
         do {
             System.out.print("\n\n\n\n\n");
@@ -112,25 +113,29 @@ public class StockQuoteController {
                         int amount = scanner.nextInt();
                         System.out.print("\nPurchasing...");
                         positionService.buy(quote.getTicker(), amount, price);
+                        System.out.printf("\nStock purchased at the amount %d for the price: %f", amount, price);
+                        System.out.print("\nReturning to buy menu.");
                         validNumOfShares = true;
-                        validEntry = true;
+                        exit = true;
                     } catch (InputMismatchException e) {
+                        scanner.nextLine();
                         System.out.println("\nInvalid entry. Please enter a valid integer smaller than 10 digits.");
                         errorLogger.error("Valid integer required for inputting number of shares to buy", e);
                     }
                 } while (!validNumOfShares);
             } else if (input.equals("no")) {
-                System.out.println("\nReturning to main menu.");
-                validEntry = true;
+                System.out.println("\nReturning to buy menu.");
+                exit = true;
             } else {
                 System.out.println("\nPlease enter 'yes' or 'no'!");
             }
-        } while (!validEntry);
+        } while (!exit);
     }
 
     public void sellMenu() {
         String input;
         Optional<Position> posOptional;
+        boolean exit = false;
         do {
             System.out.print("\n\n\n\n\n");
             System.out.print("Sell Menu: \n");
@@ -138,8 +143,9 @@ public class StockQuoteController {
             System.out.println("To return to the main menu, type back");
             input = scanner.nextLine();
             if (input.equals("back")) {
+                exit = true;
+                System.out.print("\nHeading back to main menu!");
                 infoLogger.info("User navigated to main menu.");
-                break;
             }
             posOptional = positionService.fetchPosition(input);
             if (posOptional.isPresent()) {
@@ -149,12 +155,12 @@ public class StockQuoteController {
                 System.out.println("\nInvalid entry. Please enter the ticker symbol of the stock you wish to sell.");
                 System.out.println("Note that you must own shares of this stock to sell it!");
             }
-        } while (posOptional.isEmpty());
+        } while (!exit);
     }
 
     public void sellMenuPositionFound(Position position) {
         String input;
-        boolean validEntry = false;
+        boolean exit = false;
         Optional<Quote> quoteOptional;
         double price;
         double netProfit;
@@ -178,14 +184,17 @@ public class StockQuoteController {
                 if (input.equals("yes")) {
                     System.out.println("Selling stock...");
                     positionService.sell(position.getTicker());
-                    validEntry = true;
+                    System.out.printf("\nStock sold at the share amount %d for the total profit of: %f", position
+                            .getNumOfShares(), netProfit);
+                    System.out.print("\nReturning to buy menu.");
+                    exit = true;
                 } else if (input.equals("no")) {
-                    System.out.println("\nReturning to main menu.");
-                    validEntry = true;
+                    System.out.println("\nReturning to sell menu.");
+                    exit = true;
                 } else {
                     System.out.println("\nPlease answer with either 'yes' or 'no'!");
                 }
-            } while (!validEntry);
+            } while (!exit);
         }
     }
 
