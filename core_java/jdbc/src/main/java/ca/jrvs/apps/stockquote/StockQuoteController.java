@@ -120,7 +120,7 @@ public class StockQuoteController {
                     }
                 } while (!validNumOfShares);
             } else if (input.equals("no")) {
-                System.out.println("\nReturning to buy menu.");
+                System.out.println("\nReturning to main menu.");
                 validEntry = true;
             } else {
                 System.out.println("\nPlease enter 'yes' or 'no'!");
@@ -131,9 +131,6 @@ public class StockQuoteController {
     public void sellMenu() {
         String input;
         Optional<Position> posOptional;
-        Optional<Quote> quoteOptional;
-        Double price;
-        Double netProfit;
         do {
             System.out.print("\n\n\n\n\n");
             System.out.print("Sell Menu: \n");
@@ -147,19 +144,33 @@ public class StockQuoteController {
             posOptional = positionService.fetchPosition(input);
             if (posOptional.isPresent()) {
                 Position position = posOptional.get();
-                quoteOptional = quoteService.fetchQuoteDataFromAPI(position.getTicker());
-                if (quoteOptional.isEmpty()) {
-                    System.out.println("Could not retrieve updated stock information at this moment!");
-                    System.out.println("Fetching latest information from database if available!");
-                    quoteOptional = quoteService.fetchQuoteDataFromDB(position.getTicker());
-                    if (quoteOptional.isEmpty()) {
-                       System.out.println("\nCould not find any information in database!");
-                       System.out.println("Returning to main menu!");
-                       break;
-                    }
-                }
-                price = quoteOptional.get().getPrice();
-                netProfit = price*position.getNumOfShares() - position.getValuePaid();
+                sellMenuPositionFound(position);
+            } else {
+                System.out.println("\nInvalid entry. Please enter the ticker symbol of the stock you wish to sell.");
+                System.out.println("Note that you must own shares of this stock to sell it!");
+            }
+        } while (posOptional.isEmpty());
+    }
+
+    public void sellMenuPositionFound(Position position) {
+        String input;
+        boolean validEntry = false;
+        Optional<Quote> quoteOptional;
+        double price;
+        double netProfit;
+        quoteOptional = quoteService.fetchQuoteDataFromAPI(position.getTicker());
+        if (quoteOptional.isEmpty()) {
+            System.out.println("Could not retrieve updated stock information at this moment!");
+            System.out.println("Fetching latest information from database if available!");
+            quoteOptional = quoteService.fetchQuoteDataFromDB(position.getTicker());
+            if (quoteOptional.isEmpty()) {
+                System.out.println("\nCould not find any information in database!");
+                System.out.println("Returning to main menu! Please wait a few minutes before using the application again.");
+            }
+        } else {
+            price = quoteOptional.get().getPrice();
+            netProfit = price*position.getNumOfShares() - position.getValuePaid();
+            do {
                 System.out.print("\n" + "You currently own some shares!\n" + position);
                 System.out.print("\n\n\nIf you sold your shares now your profits would be " + netProfit + "!");
                 System.out.print("\nWould you like to sell this stock? Type yes or no.");
@@ -167,12 +178,15 @@ public class StockQuoteController {
                 if (input.equals("yes")) {
                     System.out.println("Selling stock...");
                     positionService.sell(position.getTicker());
+                    validEntry = true;
+                } else if (input.equals("no")) {
+                    System.out.println("\nReturning to main menu.");
+                    validEntry = true;
+                } else {
+                    System.out.println("\nPlease answer with either 'yes' or 'no'!");
                 }
-            } else {
-                System.out.println("\nInvalid entry. Please enter the ticker symbol of the stock you wish to sell.");
-                System.out.println("Note that you must own shares of this stock to sell it!");
-            }
-        } while (posOptional.isEmpty());
+            } while (!validEntry);
+        }
     }
 
     public void allOwnedStock() {
