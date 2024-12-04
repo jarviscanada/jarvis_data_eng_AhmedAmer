@@ -113,3 +113,10 @@
 2024-12-04 15:58:56 INFO  PositionService:85 - Net gain/loss: 175.4900000000016
 2024-12-04 15:59:17 INFO  StockQuoteController:148 - User navigated to main menu.
 2024-12-04 15:59:19 INFO  StockQuoteController:48 - User asked to print all owned stock.
+2024-12-04 16:03:37 INFO  Main:62 - Imported properties from properties.txt file.
+2024-12-04 16:03:38 INFO  Main:44 - App resources initialized
+2024-12-04 16:03:41 INFO  StockQuoteController:40 - User navigated to buy menu.
+2024-12-04 16:03:42 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-04 16:03:43 INFO  QuoteService:34 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-04 16:03:43 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: IBM
+2024-12-04 16:03:47 INFO  StockQuoteController:86 - User navigated to main menu.

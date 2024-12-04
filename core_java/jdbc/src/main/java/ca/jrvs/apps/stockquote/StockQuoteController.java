@@ -73,7 +73,7 @@ public class StockQuoteController {
     public void buyMenu() {
         String input;
         Optional<Quote> quoteOptional;
-        boolean validEntry = false;
+        boolean exit = false;
         do {
             System.out.print("\n\n\n\n\n");
             System.out.print("Buy Menu: \n");
@@ -81,18 +81,19 @@ public class StockQuoteController {
             System.out.println("To return to the main menu, type back");
             input = scanner.nextLine();
             if (input.equals("back")) {
-                validEntry = true;
+                exit = true;
                 System.out.print("\nHeading back to main menu!");
                 infoLogger.info("User navigated to main menu.");
-            }
-            quoteOptional = quoteService.fetchQuoteDataFromAPI(input);
-            if (quoteOptional.isPresent()) {
-                Quote quote = quoteOptional.get();
-                buyMenuStockFound(quote);
             } else {
-                System.out.print("\n\nYou need to enter a valid stock symbol. Try again!");
+                quoteOptional = quoteService.fetchQuoteDataFromAPI(input);
+                if (quoteOptional.isPresent()) {
+                    Quote quote = quoteOptional.get();
+                    buyMenuStockFound(quote);
+                } else {
+                    System.out.print("\n\nYou need to enter a valid stock symbol. Try again!");
+                }
             }
-        } while (!validEntry);
+        } while (!exit);
     }
 
     public void buyMenuStockFound(Quote quote) {
