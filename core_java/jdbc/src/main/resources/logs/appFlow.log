@@ -64,3 +64,52 @@
 2024-12-03 14:34:20 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: IBM
 2024-12-03 14:34:42 INFO  StockQuoteController:86 - User navigated to main menu.
 2024-12-03 14:34:42 INFO  QuoteService:27 - Fetching quote data from API
+2024-12-04 15:40:41 INFO  Main:60 - Imported properties from properties.txt file.
+2024-12-04 15:44:13 INFO  Main:62 - Imported properties from properties.txt file.
+2024-12-04 15:44:29 INFO  Main:62 - Imported properties from properties.txt file.
+2024-12-04 15:50:55 INFO  Main:62 - Imported properties from properties.txt file.
+2024-12-04 15:52:53 INFO  Main:62 - Imported properties from properties.txt file.
+2024-12-04 15:52:54 INFO  Main:44 - App resources initialized
+2024-12-04 15:52:56 INFO  StockQuoteController:40 - User navigated to buy menu.
+2024-12-04 15:52:58 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-04 15:53:00 INFO  QuoteService:34 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-04 15:53:00 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: IBM
+2024-12-04 15:53:06 INFO  StockQuoteController:86 - User navigated to main menu.
+2024-12-04 15:53:06 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-04 15:53:07 INFO  QuoteService:34 - Stock ticker: BACK accepted. Updating stock info to DB.
+2024-12-04 15:53:07 INFO  QuoteDao:49 - Executed INSERT statement on ticker: BACK
+2024-12-04 15:53:46 INFO  StockQuoteController:40 - User navigated to buy menu.
+2024-12-04 15:53:48 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-04 15:53:49 INFO  QuoteService:34 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-04 15:53:49 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: IBM
+2024-12-04 15:53:52 INFO  StockQuoteController:86 - User navigated to main menu.
+2024-12-04 15:53:52 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-04 15:53:53 INFO  QuoteService:34 - Stock ticker: BACK accepted. Updating stock info to DB.
+2024-12-04 15:53:53 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: BACK
+2024-12-04 15:55:32 INFO  StockQuoteController:40 - User navigated to buy menu.
+2024-12-04 15:55:34 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-04 15:55:34 INFO  QuoteService:34 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-04 15:55:34 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: IBM
+2024-12-04 15:55:39 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-04 15:55:40 INFO  QuoteService:34 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-04 15:55:40 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: AAPL
+2024-12-04 15:55:55 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-04 15:55:55 INFO  QuoteService:31 - Stock ticker symbol not found! Returning empty Optional.
+2024-12-04 15:58:31 INFO  StockQuoteController:86 - User navigated to main menu.
+2024-12-04 15:58:31 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-04 15:58:31 INFO  QuoteService:34 - Stock ticker: BACK accepted. Updating stock info to DB.
+2024-12-04 15:58:31 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: BACK
+2024-12-04 15:58:38 INFO  StockQuoteController:44 - User navigated to sell menu.
+2024-12-04 15:58:41 INFO  StockQuoteController:148 - User navigated to main menu.
+2024-12-04 15:58:43 INFO  StockQuoteController:44 - User navigated to sell menu.
+2024-12-04 15:58:50 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-04 15:58:51 INFO  QuoteService:34 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-04 15:58:51 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: IBM
+2024-12-04 15:58:56 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-04 15:58:56 INFO  QuoteService:34 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-04 15:58:56 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: IBM
+2024-12-04 15:58:56 INFO  PositionService:82 - The new price of IBM is: 229.0
+2024-12-04 15:58:56 INFO  PositionService:83 - Selling all 109 shares of IBM at total price: 24961.0
+2024-12-04 15:58:56 INFO  PositionService:85 - Net gain/loss: 175.4900000000016
+2024-12-04 15:59:17 INFO  StockQuoteController:148 - User navigated to main menu.
+2024-12-04 15:59:19 INFO  StockQuoteController:48 - User asked to print all owned stock.

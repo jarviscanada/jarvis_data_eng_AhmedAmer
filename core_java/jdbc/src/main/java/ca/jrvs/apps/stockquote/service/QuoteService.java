@@ -5,6 +5,7 @@ import ca.jrvs.apps.stockquote.dao.QuoteDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.sql.SQLException;
 import java.util.Optional;
 
 public class QuoteService {
@@ -29,14 +30,12 @@ public class QuoteService {
         if (quote.getTicker() == null) {
             infoLogger.info("Stock ticker symbol not found! Returning empty Optional.");
             return Optional.empty();
-        } else if(!quote.getTicker().equals(ticker)) {
-            throw new RuntimeException("API ERROR: Stock returned and provided ticker symbol differ.");
         } else {
             infoLogger.info("Stock ticker: {} accepted. Updating stock info to DB.", quote.getTicker());
             try {
                 quoteDao.save(quote);
-            } catch (Exception e) {
-                errorLogger.error("Error updating stock info", e);
+            } catch (IllegalArgumentException e) {
+                errorLogger.error("Error updating stock info with save method", e);
             }
         }
         return Optional.of(quote);

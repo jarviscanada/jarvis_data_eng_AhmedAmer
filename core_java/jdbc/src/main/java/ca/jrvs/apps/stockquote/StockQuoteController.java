@@ -186,7 +186,7 @@ public class StockQuoteController {
                     positionService.sell(position.getTicker());
                     System.out.printf("\nStock sold at the share amount %d for the total profit of: %f", position
                             .getNumOfShares(), netProfit);
-                    System.out.print("\nReturning to buy menu.");
+                    System.out.print("\nReturning to sell menu.");
                     exit = true;
                 } else if (input.equals("no")) {
                     System.out.println("\nReturning to sell menu.");
