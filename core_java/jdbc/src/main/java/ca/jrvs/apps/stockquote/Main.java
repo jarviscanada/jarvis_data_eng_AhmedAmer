@@ -44,6 +44,8 @@ public class Main {
             infoLogger.info("App resources initialized");
             controller.initClient();
         } catch (SQLException error) {
+            System.out.println("ERROR: Could not establish connection to database.");
+            System.out.println("Ensure that the database is running and that the 'properties.txt' file contains accurate properties for the connection.");
             errorLogger.error("Could not establish connection to db", error);
         }
     }
