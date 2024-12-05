@@ -85,6 +85,7 @@ public class StockQuoteController {
                 System.out.print("\nHeading back to main menu!");
                 infoLogger.info("User navigated to main menu.");
             } else {
+                infoLogger.info("User asked to fetch quote for {}", input);
                 quoteOptional = quoteService.fetchQuoteDataFromAPI(input);
                 if (quoteOptional.isPresent()) {
                     Quote quote = quoteOptional.get();
@@ -206,6 +207,9 @@ public class StockQuoteController {
         for (Position position : positions) {
             System.out.println(position + "\n");
         }
-        System.out.print("Returning to main menu!");
+        if (positions.isEmpty()) {
+            System.out.print("You do not own any stocks!");
+        }
+        System.out.println("Returning to main menu!");
     }
 }

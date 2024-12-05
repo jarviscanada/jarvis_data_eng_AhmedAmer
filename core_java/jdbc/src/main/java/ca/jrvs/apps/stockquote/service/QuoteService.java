@@ -27,6 +27,10 @@ public class QuoteService {
     public Optional<Quote> fetchQuoteDataFromAPI(String ticker) {
         infoLogger.info("Fetching quote data from API");
         Quote quote = quoteHttpHelper.fetchQuoteInfo(ticker);
+        if (quote == null) {
+            infoLogger.info("Quote from QuoteHttpHelper was returned null, returning empty optional.");
+            return Optional.empty();
+        }
         if (quote.getTicker() == null) {
             infoLogger.info("Stock ticker symbol not found! Returning empty Optional.");
             return Optional.empty();
