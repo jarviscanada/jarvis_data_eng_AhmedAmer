@@ -27,24 +27,30 @@ public class QuoteHttpHelper {
      */
     public Quote fetchQuoteInfo(String symbol) throws IllegalArgumentException {
         Quote quote = new Quote();
+
         Request request = new Request.Builder()
                 .url("https://alpha-vantage.p.rapidapi.com/query?function=GLOBAL_QUOTE&symbol="+symbol+"&datatype=json")
                 .header("X-RapidAPI-Key", apiKey)
                 .header("X-RapidAPI-Host", "alpha-vantage.p.rapidapi.com")
                 .build();
+
         try (Response response = httpClient.newCall(request).execute()) {
+
             ObjectMapper m = new ObjectMapper();
             JsonNode jsonBody = m.readTree(response.body().string());
             JsonNode quoteNode = jsonBody.get("Global Quote");
             quote = m.convertValue(quoteNode, Quote.class);
+
             if (quote == null) {
                 errorLogger.error("API returned null quote possibly because limit of calls has been reached.");
             } else {
                 quote.setTimestamp(quoteTimestamp());
             }
+
         } catch (IOException e) {
             errorLogger.error("Error fetching quote info from API call", e);
         }
+
         return quote;
     }
 

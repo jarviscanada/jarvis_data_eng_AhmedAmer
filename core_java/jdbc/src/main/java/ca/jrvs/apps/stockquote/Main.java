@@ -34,7 +34,9 @@ public class Main {
     public static void main(String[] args) {
         parseProperties();
         DatabaseConnectionManager dcm = new DatabaseConnectionManager(server, database, username, password);
+
         try (Connection connection = dcm.getConnection()) {
+
             mainHttpHelper = new QuoteHttpHelper();
             mainQuoteDao = new QuoteDao(connection);
             mainPositionDao = new PositionDao(connection);
@@ -43,16 +45,21 @@ public class Main {
             controller = new StockQuoteController(mainQuoteService, mainPositionService);
             infoLogger.info("App resources initialized");
             controller.initClient();
+
         } catch (SQLException error) {
+
             System.out.println("ERROR: Could not establish connection to database.");
             System.out.println("Ensure that the database is running and that the 'properties.txt' file contains accurate properties for the connection.");
             errorLogger.error("Could not establish connection to db", error);
+
         }
     }
 
     public static void parseProperties() {
         Properties props = new Properties();
+
         try (FileInputStream fileInputStream = new FileInputStream("src/main/resources/properties.txt")) {
+
             props.load(fileInputStream);
             server = props.getProperty("server");
             database = props.getProperty("database");
@@ -60,8 +67,10 @@ public class Main {
             password = props.getProperty("password");
 //            apiKey = props.getProperty("apiKey");
             infoLogger.info("Imported properties from properties.txt file.");
+
         } catch (IOException error) {
             errorLogger.error("Could not read properties file to initialize app resources.", error);
         }
+
     }
 }

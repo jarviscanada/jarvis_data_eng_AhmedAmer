@@ -27,24 +27,28 @@ public class QuoteService {
      * @return Latest quote information or empty optional if ticker symbol not found
      */
     public Optional<Quote> fetchQuoteDataFromAPI(String ticker) {
-        infoLogger.info("Fetching quote data from API");
+        infoLogger.info("Fetching quote data from API for ticker {}", ticker);
         Quote quote = quoteHttpHelper.fetchQuoteInfo(ticker);
+
         if (quote == null) {
             infoLogger.info("Quote from QuoteHttpHelper was returned null, returning empty optional.");
             throw new NoSuchElementException("Quote from QuoteHttpHelper was returned null.");
         }
+
         if (quote.getTicker() == null) {
             infoLogger.info("Stock ticker symbol not found! Returning empty Optional.");
             return Optional.empty();
         } else {
             infoLogger.info("Stock ticker: {} accepted. Updating stock info to DB.", quote.getTicker());
+
             try {
                 quoteDao.save(quote);
             } catch (IllegalArgumentException e) {
                 errorLogger.error("Error updating stock info with save method", e);
             }
+            return Optional.of(quote);
         }
-        return Optional.of(quote);
+
     }
 
     //StockQuoteController helper functions - get quote from database instead
