@@ -33,7 +33,9 @@ public class QuoteDao implements CrudDao<Quote, String> {
     @Override
     public Quote save(Quote entity) throws IllegalArgumentException {
         if (this.findById(entity.getTicker()).isEmpty()) {
+
             try (PreparedStatement ps = this.connection.prepareStatement(INSERT);) {
+
                 ps.setString(1, entity.getTicker());
                 ps.setDouble(2, entity.getOpen());
                 ps.setDouble(3, entity.getHigh());
@@ -48,11 +50,15 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 ps.execute();
                 infoLogger.info("Executed INSERT statement on ticker: {}", entity.getTicker());
                 return this.findById(entity.getTicker()).get();
+
             } catch (SQLException e) {
                 errorLogger.error("UPDATE Statement failure for provided entity", e);
             }
+
         } else {
+
             try (PreparedStatement ps = this.connection.prepareStatement(UPDATE);) {
+
                 ps.setDouble(1, entity.getOpen());
                 ps.setDouble(2, entity.getHigh());
                 ps.setDouble(3, entity.getLow());
@@ -67,9 +73,11 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 ps.execute();
                 infoLogger.info("Executed UPDATE statement on ticker: {}", entity.getTicker());
                 return this.findById(entity.getTicker()).get();
+
             } catch (SQLException e) {
                 errorLogger.error("UPDATE Statement failure for provided entity", e);
             }
+
         }
         return null;
     }
@@ -77,10 +85,13 @@ public class QuoteDao implements CrudDao<Quote, String> {
     @Override
     public Optional<Quote> findById(String s) throws IllegalArgumentException {
         Quote quote = new Quote();
+
         try (PreparedStatement ps = this.connection.prepareStatement(SELECT_BY_ID);) {
             ps.setString(1, s);
             ResultSet rs = ps.executeQuery();
+
             if (rs.next()) {
+
                 quote.setTicker(rs.getString("symbol"));
                 quote.setOpen(rs.getDouble("open"));
                 quote.setHigh(rs.getDouble("high"));
@@ -92,24 +103,31 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 quote.setChange(rs.getDouble("change"));
                 quote.setChangePercent(rs.getString("change_percent"));
                 quote.setTimestamp(rs.getTimestamp("timestamp"));
+
             }
+
             if (quote.getTicker() == null) {
                 return Optional.empty();
             }
         } catch (SQLException e) {
             errorLogger.error("Could not retrieve quote from ticker {}", s, e);
+
         } catch (IllegalArgumentException e) {
             errorLogger.error("Please provide a valid ticker symbol.", e);
         }
+
         return Optional.of(quote);
     }
 
     @Override
     public List<Quote> findAll() {
         List<Quote> quotes = new ArrayList<>();
+
         try (Statement s = this.connection.createStatement();
              ResultSet rs = s.executeQuery(SELECT_ALL)) {
+
             while(rs.next()) {
+
                 Quote quote = new Quote();
                 quote.setTicker(rs.getString("symbol"));
                 quote.setOpen(rs.getDouble("open"));
@@ -123,10 +141,12 @@ public class QuoteDao implements CrudDao<Quote, String> {
                 quote.setChangePercent(rs.getString("change_percent"));
                 quote.setTimestamp(rs.getTimestamp("timestamp"));
                 quotes.add(quote);
+
             }
         } catch (SQLException e) {
             errorLogger.error("Could not complete request: Find All Entities", e);
         }
+
         return quotes;
     }
 
@@ -135,20 +155,24 @@ public class QuoteDao implements CrudDao<Quote, String> {
         if (findById(s).isEmpty()) {
             throw new IllegalArgumentException("No entities found with that particular ticker symbol.");
         }
+
         try (PreparedStatement ps = this.connection.prepareStatement(DELETE)) {
             ps.setString(1, s);
             ps.execute();
         } catch (SQLException e) {
             errorLogger.error("Could not delete quote from ticker {}", s, e);
         }
+
     }
 
     @Override
     public void deleteAll() {
+
         try (Statement s = this.connection.createStatement()) {
             s.executeQuery(DELETE_ALL);
         } catch (SQLException e) {
             errorLogger.error("Could not delete all entities", e);
         }
+
     }
 }
