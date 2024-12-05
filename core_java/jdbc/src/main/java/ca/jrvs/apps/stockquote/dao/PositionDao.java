@@ -30,9 +30,10 @@ public class PositionDao implements CrudDao<Position, String>{
 
     @Override
     public Position save(Position entity) throws IllegalArgumentException {
-        String statement;
         Optional<Position> oldPosition = this.findById(entity.getTicker());
+
         if (oldPosition.isEmpty()) {
+
             try (PreparedStatement ps = this.connection.prepareStatement(INSERT)) {
                 ps.setString(1, entity.getTicker());
                 ps.setInt(2, entity.getNumOfShares());
@@ -43,7 +44,9 @@ public class PositionDao implements CrudDao<Position, String>{
             } catch (SQLException e) {
                 errorLogger.error("Could not INSERT position", e);
             }
+
         } else {
+
             try (PreparedStatement ps = this.connection.prepareStatement(UPDATE)) {
                 int newNumOfShares = oldPosition.get().getNumOfShares() + entity.getNumOfShares();
                 double newValuePaid = oldPosition.get().getValuePaid() + entity.getValuePaid();
@@ -56,6 +59,7 @@ public class PositionDao implements CrudDao<Position, String>{
             } catch (SQLException e) {
                 errorLogger.error("Could not UPDATE position", e);
             }
+
         }
 
         return null;
@@ -64,65 +68,86 @@ public class PositionDao implements CrudDao<Position, String>{
     @Override
     public Optional<Position> findById(String s) throws IllegalArgumentException {
         Position position = new Position();
+
         try (PreparedStatement ps = this.connection.prepareStatement(SELECT_BY_ID)) {
             ps.setString(1, s);
             ResultSet rs = ps.executeQuery();
+
             if (rs.next()) {
+
                 position.setTicker(rs.getString("symbol"));
                 position.setNumOfShares(rs.getInt("number_of_shares"));
                 position.setValuePaid(rs.getDouble("value_paid"));
+
             }
+
             if (position.getTicker() == null) {
                 return Optional.empty();
             }
+
         } catch (SQLException e) {
             errorLogger.error("Could not retrieve position with id: {}", s, e);
+
         } catch (IllegalArgumentException e) {
             errorLogger.error("Please provide a valid ticker symbol.", e);
+
         } catch (NoSuchElementException e) {
             errorLogger.error("Could not retrieve position with id: {} because it doesn't exist", s, e);
+
         }
+
         return Optional.of(position);
     }
 
     @Override
     public List<Position> findAll() {
         List<Position> positions = new ArrayList<>();
+
         try (Statement s = connection.createStatement();
              ResultSet rs = s.executeQuery(SELECT_ALL)) {
+
             while(rs.next()) {
+
                 Position p = new Position();
                 p.setTicker(rs.getString("symbol"));
                 p.setNumOfShares(rs.getInt("number_of_shares"));
                 p.setValuePaid(rs.getDouble("value_paid"));
                 positions.add(p);
+
             }
+
         } catch (SQLException e) {
             errorLogger.error("Could not complete request: Find All Entities");
         }
+
         return positions;
     }
 
     @Override
     public void deleteById(String s) throws IllegalArgumentException {
+
         if (this.findById(s).isEmpty()) {
             throw new IllegalArgumentException("Could not find entity with id: " + s);
         }
+
         try (PreparedStatement ps = this.connection.prepareStatement(DELETE)) {
             ps.setString(1, s);
             ps.execute();
         } catch (SQLException e) {
             errorLogger.error("Could not delete position with id: {}", s, e);
         }
+
     }
 
     @Override
     public void deleteAll() {
+
         try (PreparedStatement ps = this.connection.prepareStatement(DELETE_ALL)) {
             ps.execute();
             infoLogger.info("DELETE ALL statement executed.");
         } catch (SQLException e) {
             errorLogger.error("Could not delete all entities", e);
         }
+        
     }
 }
