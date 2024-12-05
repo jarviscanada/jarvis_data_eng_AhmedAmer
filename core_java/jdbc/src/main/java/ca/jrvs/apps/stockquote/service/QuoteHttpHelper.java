@@ -39,8 +39,9 @@ public class QuoteHttpHelper {
             quote = m.convertValue(quoteNode, Quote.class);
             if (quote == null) {
                 errorLogger.error("API returned null quote possibly because limit of calls has been reached.");
+            } else {
+                quote.setTimestamp(quoteTimestamp());
             }
-            quote.setTimestamp(quoteTimestamp());
         } catch (IOException e) {
             errorLogger.error("Error fetching quote info from API call", e);
         }

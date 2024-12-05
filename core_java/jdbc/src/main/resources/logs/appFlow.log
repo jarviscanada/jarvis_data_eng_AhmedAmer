@@ -120,3 +120,17 @@
 2024-12-04 16:03:43 INFO  QuoteService:34 - Stock ticker: IBM accepted. Updating stock info to DB.
 2024-12-04 16:03:43 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: IBM
 2024-12-04 16:03:47 INFO  StockQuoteController:86 - User navigated to main menu.
+2024-12-05 10:37:10 INFO  Main:62 - Imported properties from properties.txt file.
+2024-12-05 10:38:03 INFO  Main:62 - Imported properties from properties.txt file.
+2024-12-05 10:38:04 INFO  Main:44 - App resources initialized
+2024-12-05 10:38:14 INFO  StockQuoteController:40 - User navigated to buy menu.
+2024-12-05 10:38:23 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-05 10:38:25 INFO  QuoteService:34 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-05 10:38:25 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: IBM
+2024-12-05 10:38:33 INFO  QuoteService:28 - Fetching quote data from API
+2024-12-05 10:38:33 INFO  QuoteService:34 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-05 10:38:33 INFO  QuoteDao:68 - Executed UPDATE statement on ticker: IBM
+2024-12-05 10:38:33 INFO  PositionDao:41 - INSERT statement running for IBM position
+2024-12-05 10:38:33 INFO  PositionService:55 - Successfully purchased stock: IBM at price 233.49 per share.
+2024-12-05 10:38:33 INFO  PositionService:56 - New numOfShares: 100. New valuePaid: 23349.0
+2024-12-05 10:38:33 INFO  QuoteService:28 - Fetching quote data from API
