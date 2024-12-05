@@ -63,7 +63,7 @@ public class PositionService {
      * Sells all shares of the given ticker symbol
      * @param ticker symbol of stock
      */
-    public void sell(String ticker) {
+    public void sell(String ticker) throws IllegalArgumentException{
         Optional<Position> ownedStockOptional = dao.findById(ticker);
         if (ownedStockOptional.isEmpty()) {
             throw new IllegalArgumentException("You do not own this stock. Please provide a " +
