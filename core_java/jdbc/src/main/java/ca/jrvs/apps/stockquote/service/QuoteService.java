@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.SQLException;
+import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public class QuoteService {
@@ -29,7 +31,7 @@ public class QuoteService {
         Quote quote = quoteHttpHelper.fetchQuoteInfo(ticker);
         if (quote == null) {
             infoLogger.info("Quote from QuoteHttpHelper was returned null, returning empty optional.");
-            return Optional.empty();
+            throw new NoSuchElementException("Quote from QuoteHttpHelper was returned null.");
         }
         if (quote.getTicker() == null) {
             infoLogger.info("Stock ticker symbol not found! Returning empty Optional.");
