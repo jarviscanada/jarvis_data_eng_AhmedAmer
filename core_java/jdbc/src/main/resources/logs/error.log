@@ -1,0 +1,17 @@
+2024-12-05 15:49:11 ERROR PositionService:79 - User does not own stock for ticker: AAPL
+2024-12-05 15:49:11 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-05 15:49:12 ERROR PositionService:51 - Buy Method: Number of shares exceeds stock volume.
+2024-12-05 15:49:12 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-05 15:49:12 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-05 15:49:12 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-05 15:49:12 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-05 15:49:13 ERROR PositionService:79 - User does not own stock for ticker: FAKE1
+2024-12-05 15:49:13 ERROR PositionService:44 - Unable to retrieve quote info from API.
+2024-12-05 15:49:13 ERROR PositionService:51 - Buy Method: Number of shares exceeds stock volume.
+2024-12-05 15:49:13 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-05 15:49:13 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-05 15:49:13 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-05 15:49:13 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-05 15:49:13 ERROR PositionService:87 - There was a problem fetching latest stock quote from the API!
+2024-12-05 15:49:14 ERROR QuoteHttpHelper:45 - API returned null quote possibly because limit of calls has been reached.
+2024-12-05 15:49:15 ERROR QuoteHttpHelper:45 - API returned null quote possibly because limit of calls has been reached.
