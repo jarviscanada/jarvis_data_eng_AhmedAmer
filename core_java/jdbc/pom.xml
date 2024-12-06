@@ -1,7 +1,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>ca.jrvs.apps</groupId>
-    <artifactId>jdbs</artifactId>
+    <artifactId>jdbc</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
