@@ -81,3 +81,6 @@ java.lang.NumberFormatException: For input string: "one million"
 2024-12-06 10:41:37 ERROR PositionService:87 - There was a problem fetching latest stock quote from the API!
 2024-12-06 10:41:38 ERROR QuoteHttpHelper:45 - API returned null quote possibly because limit of calls has been reached.
 2024-12-06 10:41:38 ERROR QuoteHttpHelper:45 - API returned null quote possibly because limit of calls has been reached.
+2024-12-06 11:27:46 ERROR PositionService:48 - Buy Method: Number of shares exceeds stock volume.
+2024-12-06 11:34:34 ERROR PositionService:48 - Buy Method: Number of shares exceeds stock volume.
+2024-12-06 11:34:51 ERROR PositionService:43 - Buy Method: Number of shares must be greater than zero.

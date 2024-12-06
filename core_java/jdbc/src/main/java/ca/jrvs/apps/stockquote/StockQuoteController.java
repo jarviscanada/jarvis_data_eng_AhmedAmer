@@ -152,37 +152,47 @@ public class StockQuoteController {
     }
 
     public void processBuy(Quote quote) {
-        boolean validNumOfShares = false;
+        boolean exit = false;
         double price = quote.getPrice();
 
         do {
 
-            System.out.print("\n\nHow many shares of this stock do you want to purchase? enter the amount below:");
+            System.out.print("\n\nHow many shares of this stock do you want to purchase? enter 0 to go back" +
+                    "\nEnter the amount below:");
 
             try {
                 int amount = Integer.parseInt(scanner.nextLine().trim());
 
-                if (amount < 0) {
-                    System.out.println("\nPlease enter a positive integer!");
-                    errorLogger.error("User entered invalid number of shares: {}", amount);
-                    continue;
+                if (amount == 0) {
+                    break;
                 }
 
                 System.out.print("\nPurchasing...");
-                positionService.buy(quote.getTicker(), amount, price);
-                infoLogger.info("User purchased {} shares of {} at the price: {}", amount, quote.getTicker(), price);
+                positionService.buy(quote.getTicker(), amount, price, quote.getVolume());
                 System.out.printf("\nYou have purchased %d shares of %s for the price: $%.2f per share", amount, quote.getTicker(), price);
                 System.out.print("\nReturning to buy menu.");
-                validNumOfShares = true;
+                exit = true;
 
             } catch (InputMismatchException e) {
 
                 System.out.println("\nInvalid entry. Please enter a valid integer smaller than 10 digits.");
                 errorLogger.error("Invalid integer entered by user", e);
 
+            } catch (NumberFormatException e) {
+
+                System.out.println("\nInvalid entry. Please enter a valid integer smaller than 10 digits.");
+                errorLogger.error("Invalid integer entered by user", e);
+
+            } catch (IllegalArgumentException e) {
+
+                System.out.printf("\n\nInvalid entry." +
+                        "\nYou can only enter a number less than the available volume of stock!" +
+                        "\n\nAvailable volume of stock: %d", quote.getVolume());
+                System.out.print("\nPlease try again!");
+                errorLogger.error("User entered invalid number of shares", e);
             }
 
-        } while (!validNumOfShares);
+        } while (!exit);
     }
 
     public void sellMenu() {
@@ -228,25 +238,34 @@ public class StockQuoteController {
         Optional<Quote> quoteOptional;
         Quote quote;
 
-        quoteOptional = quoteService.fetchQuoteDataFromAPI(position.getTicker());
+        try {
 
-        if (quoteOptional.isEmpty()) {
-
-            System.out.println("Could not retrieve updated stock information at this moment!");
-            System.out.println("Fetching latest information from database if available!");
-
-            quoteOptional = quoteService.fetchQuoteDataFromDB(position.getTicker());
+            quoteOptional = quoteService.fetchQuoteDataFromAPI(position.getTicker());
 
             if (quoteOptional.isEmpty()) {
 
-                System.out.println("\nCould not find any information in database!");
-                System.out.println("Returning! Please wait a few minutes before using the application again.");
+                System.out.println("Could not retrieve updated stock information at this moment!");
+                System.out.println("Fetching latest information from database if available!");
+
+                quoteOptional = quoteService.fetchQuoteDataFromDB(position.getTicker());
+
+                if (quoteOptional.isEmpty()) {
+
+                    System.out.println("\nCould not find any information in database!");
+                    System.out.println("Returning! Please wait a few minutes before using the application again.");
+                }
+
+            } else {
+
+                quote = quoteOptional.get();
+                processSell(quote, position);
+
             }
+        } catch (NoSuchElementException e) {
 
-        } else {
-
-            quote = quoteOptional.get();
-            processSell(quote, position);
+            errorLogger.error("User hit API limit in sell menu.");
+            System.out.print("\n\nAPI Error: Possibly due to API call limit. " +
+                    "\nPlease try again in about 2 minutes when the call limit has subsided!");
 
         }
     }
@@ -273,15 +292,12 @@ public class StockQuoteController {
 
                 try {
 
-                    positionService.sell(position.getTicker());
+                    positionService.sell(position.getTicker(), price);
 
                     System.out.println("Selling stock...");
                     System.out.printf("\nStock: %s sold at the share amount %d for the total profit of: %f",
                             position.getTicker(), numberOfShares, netProfit);
                     System.out.print("\nReturning to sell menu.");
-
-                    infoLogger.info("User sold {} shares of stock: {} for a profit of {}",
-                            numberOfShares, position.getTicker(), netProfit);
 
                     exit = true;
 

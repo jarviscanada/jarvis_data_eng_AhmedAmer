@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public class PositionService {
@@ -27,25 +28,21 @@ public class PositionService {
      * @param price at what price to buy each share
      * @return The position in our database after processing the buy
      */
-    public Position buy(String ticker, int numberOfShares, double price) {
+    public Position buy(String ticker, int numberOfShares, double price, int stockVolume) {
         if (price <= 0) {
             errorLogger.error("Buy method: Share price must be greater than zero.");
             throw new IllegalArgumentException("Share price must be greater than zero.");
+        }
+
+        if (stockVolume <= 0) {
+            errorLogger.error("Buy method: Stock volume must be greater than zero.");
+            throw new IllegalArgumentException("Stock volume must be greater than zero.");
         }
 
         if (numberOfShares <= 0) {
             errorLogger.error("Buy Method: Number of shares must be greater than zero.");
             throw new IllegalArgumentException("Number of shares must be greater than zero.");
         }
-
-        Optional<Quote> optionalQuote = quoteService.fetchQuoteDataFromAPI(ticker);
-
-        if (optionalQuote.isEmpty()) {
-            errorLogger.error("Unable to retrieve quote info from API.");
-            throw new IllegalArgumentException("Please use a valid ticker symbol.");
-        }
-
-        int stockVolume = optionalQuote.get().getVolume();
 
         if (numberOfShares > stockVolume) {
             errorLogger.error("Buy Method: Number of shares exceeds stock volume.");
@@ -54,7 +51,7 @@ public class PositionService {
 
         Position position = new Position();
 
-        position.setTicker(optionalQuote.get().getTicker());
+        position.setTicker(ticker);
         position.setValuePaid(numberOfShares*price);
         position.setNumOfShares(numberOfShares);
         dao.save(position);
@@ -72,7 +69,7 @@ public class PositionService {
      * Sells all shares of the given ticker symbol
      * @param ticker symbol of stock
      */
-    public void sell(String ticker) throws IllegalArgumentException{
+    public void sell(String ticker, double price) throws IllegalArgumentException{
         Optional<Position> ownedStockOptional = dao.findById(ticker);
 
         if (ownedStockOptional.isEmpty()) {
@@ -81,20 +78,12 @@ public class PositionService {
                     "ticker symbol for a stock you do own.");
         }
 
-        Optional<Quote> quoteOfOwnedStockOptional = quoteService.fetchQuoteDataFromAPI(ticker);
-
-        if (quoteOfOwnedStockOptional.isEmpty()) {
-            errorLogger.error("There was a problem fetching latest stock quote from the API!");
-            throw new IllegalArgumentException("Try using a valid ticker symbol for a stock that you own.");
-        }
-
             Position ownedStock = ownedStockOptional.get();
-            Quote quoteOfOwnedStock = quoteOfOwnedStockOptional.get();
 
-            double stockPrice = quoteOfOwnedStock.getPrice();
-            double newTotalPrice = stockPrice * ownedStock.getNumOfShares();
+
+            double newTotalPrice = price * ownedStock.getNumOfShares();
             int numberOfShares = ownedStock.getNumOfShares();
-            infoLogger.info("The new price of {} is: {}", ticker, stockPrice);
+            infoLogger.info("The new price of {} is: {}", ticker, price);
             infoLogger.info("Selling all {} shares of {} at total price: {}", numberOfShares,
                     ticker, newTotalPrice);
             infoLogger.info("Net gain/loss: {}", newTotalPrice - ownedStock.getValuePaid());

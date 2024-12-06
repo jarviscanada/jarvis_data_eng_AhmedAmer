@@ -278,3 +278,47 @@
 2024-12-06 10:41:38 INFO  QuoteService:39 - Stock ticker symbol not found! Returning empty Optional.
 2024-12-06 10:41:38 INFO  QuoteService:30 - Fetching quote data from API for ticker FAKE1
 2024-12-06 10:41:38 INFO  QuoteService:42 - Stock ticker: FAKE1 accepted. Updating stock info to DB.
+2024-12-06 11:25:18 INFO  Main:69 - Imported properties from properties.txt file.
+2024-12-06 11:25:19 INFO  Main:46 - App resources initialized
+2024-12-06 11:25:29 INFO  StockQuoteController:42 - User navigated to buy menu.
+2024-12-06 11:25:32 INFO  StockQuoteController:99 - User asked to fetch quote for ibm
+2024-12-06 11:25:32 INFO  QuoteService:30 - Fetching quote data from API for ticker ibm
+2024-12-06 11:25:39 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-06 11:25:39 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-06 11:26:42 INFO  StockQuoteController:99 - User asked to fetch quote for ibm
+2024-12-06 11:26:42 INFO  QuoteService:30 - Fetching quote data from API for ticker ibm
+2024-12-06 11:26:42 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-06 11:26:42 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-06 11:34:23 INFO  Main:69 - Imported properties from properties.txt file.
+2024-12-06 11:34:23 INFO  Main:46 - App resources initialized
+2024-12-06 11:34:26 INFO  StockQuoteController:42 - User navigated to buy menu.
+2024-12-06 11:34:27 INFO  StockQuoteController:99 - User asked to fetch quote for ibm
+2024-12-06 11:34:27 INFO  QuoteService:30 - Fetching quote data from API for ticker ibm
+2024-12-06 11:34:29 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-06 11:34:29 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-06 11:37:48 INFO  Main:69 - Imported properties from properties.txt file.
+2024-12-06 11:37:48 INFO  Main:46 - App resources initialized
+2024-12-06 11:43:22 INFO  StockQuoteController:42 - User navigated to buy menu.
+2024-12-06 11:43:24 INFO  StockQuoteController:99 - User asked to fetch quote for ibm
+2024-12-06 11:43:24 INFO  QuoteService:30 - Fetching quote data from API for ticker ibm
+2024-12-06 11:43:25 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-06 11:43:25 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-06 11:43:43 INFO  StockQuoteController:95 - Buy Menu: User navigated to main menu.
+2024-12-06 11:43:44 INFO  StockQuoteController:46 - User navigated to sell menu.
+2024-12-06 11:43:47 INFO  QuoteService:30 - Fetching quote data from API for ticker IBM
+2024-12-06 11:43:47 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-06 11:43:47 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-06 11:43:51 INFO  PositionService:86 - The new price of IBM is: 234.75
+2024-12-06 11:43:51 INFO  PositionService:87 - Selling all 1500 shares of IBM at total price: 352125.0
+2024-12-06 11:43:51 INFO  PositionService:89 - Net gain/loss: 0.0
+2024-12-06 11:43:54 INFO  StockQuoteController:214 - User navigated to main menu.
+2024-12-06 11:43:55 INFO  StockQuoteController:50 - User asked to print all owned stock.
+2024-12-06 11:44:00 INFO  StockQuoteController:46 - User navigated to sell menu.
+2024-12-06 11:44:03 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-06 11:44:03 INFO  QuoteService:42 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-06 11:44:03 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: AAPL
+2024-12-06 11:44:06 INFO  PositionService:86 - The new price of AAPL is: 243.04
+2024-12-06 11:44:06 INFO  PositionService:87 - Selling all 19 shares of AAPL at total price: 4617.76
+2024-12-06 11:44:06 INFO  PositionService:89 - Net gain/loss: 4427.76
+2024-12-06 11:44:14 INFO  StockQuoteController:214 - User navigated to main menu.
+2024-12-06 11:44:16 INFO  StockQuoteController:54 - User asked to exit application.
