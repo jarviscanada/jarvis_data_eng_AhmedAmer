@@ -19,6 +19,7 @@ public class QuoteHttpHelper {
     private final OkHttpClient httpClient = new OkHttpClient();
     final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
+
     /**
      * Fetch latest quote data from Alpha Vantage endpoint
      * @param symbol symbol of stock to fetch
@@ -26,6 +27,12 @@ public class QuoteHttpHelper {
      * @throws IllegalArgumentException - if no data was found for the given symbol
      */
     public Quote fetchQuoteInfo(String symbol) throws IllegalArgumentException {
+        if(apiKey == null || apiKey.isEmpty()) {
+            errorLogger.error("apiKey is empty");
+            throw new NullPointerException("Please ensure that you have set a valid ALPHA VANTAGE API KEY environment variable " +
+                    "on your local machine.\n Please name this variable 'ALPHA_VANTAGE_KEY'.");
+        }
+
         Quote quote = new Quote();
 
         Request request = new Request.Builder()

@@ -57,8 +57,10 @@ public class Main {
 
     public static void parseProperties() {
         Properties props = new Properties();
+        String propsDirImage = "/usr/local/app/jdbc/lib/properties.txt";
+        String propsDirLocal = "src/main/resources/properties.txt";
 
-        try (FileInputStream fileInputStream = new FileInputStream("src/main/resources/properties.txt")) {
+        try (FileInputStream fileInputStream = new FileInputStream(propsDirImage)) {
 
             props.load(fileInputStream);
             server = props.getProperty("server");
