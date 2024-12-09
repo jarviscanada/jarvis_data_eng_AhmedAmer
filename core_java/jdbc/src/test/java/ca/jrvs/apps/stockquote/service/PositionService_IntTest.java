@@ -52,36 +52,46 @@ public class PositionService_IntTest {
     @Test
     public void test_buy_invalidNumberOfShares() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("AAPL", 1212511223, 10);
+            positionService.buy("AAPL", 1212511223, 10, 1000);
         }); // numOfShares over volume amount
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("AAPL", 0 ,10);
+            positionService.buy("AAPL", 0 ,10, 1000);
         }); // numOfShares input 0
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("AAPL", -2 ,10);
+            positionService.buy("AAPL", -2 ,10, 1000);
         }); // numOfShares negative
     }
 
     @Test
     public void test_buy_simulateBadTicker() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("!?@#!", 0 ,10);
+            positionService.buy("!?@#!", 0 ,10, 1000);
         });
     }
 
     @Test
     public void test_buy_invalidPrice() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("AAPL", 19 ,0);
+            positionService.buy("AAPL", 19 ,0, 1000);
         }); // Price 0
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("AAPL",  10,-2);
+            positionService.buy("AAPL",  10,-2, 1000);
         }); // Price negative
     }
 
     @Test
+    public void test_buy_invalidVolume() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            positionService.buy("AAPL", 19 ,10, 0);
+        }); // volume 0
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            positionService.buy("AAPL",  10,10, -3);
+        }); // volume negative
+    }
+
+    @Test
     public void test_buy_validArgs() {
-        Position result = positionService.buy("AAPL", 19 ,10);
+        Position result = positionService.buy("AAPL", 19 ,10, 1000);
         Assertions.assertEquals(result.getTicker(), "AAPL");
         Assertions.assertTrue(positionDao.findById("AAPL").isPresent());
     }
@@ -89,7 +99,7 @@ public class PositionService_IntTest {
     @Test
     public void test_sell_stockNotOwned() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.sell("AAPL");
+            positionService.sell("AAPL", 19.2);
         });
     }
 
@@ -105,7 +115,7 @@ public class PositionService_IntTest {
 
     @Test
     public void test_sell_validTicker() {
-        positionService.sell("AAPL");
+        positionService.sell("AAPL", 19.2);
         Assertions.assertTrue(positionDao.findById("AAPL").isEmpty());
     }
 }

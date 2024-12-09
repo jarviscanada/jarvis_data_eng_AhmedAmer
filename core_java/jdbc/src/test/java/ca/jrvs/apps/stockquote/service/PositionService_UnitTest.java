@@ -67,13 +67,13 @@ public class PositionService_UnitTest {
     public void test_buy_invalidNumberOfShares() {
         when(mockQuoteService.fetchQuoteDataFromAPI("FAKE1")).thenReturn(Optional.of(testQuote));
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("FAKE1", 12125, 10);
+            positionService.buy("FAKE1", 12125, 10 ,100);
         }); // numOfShares over volume amount
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("FAKE1", 0 ,10);
+            positionService.buy("FAKE1", 0 ,10, 100);
         }); // numOfShares input 0
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("FAKE1", -2 ,10);
+            positionService.buy("FAKE1", -2 ,10, 100);
         }); // numOfShares negative
     }
 
@@ -81,17 +81,17 @@ public class PositionService_UnitTest {
     public void test_buy_simulateBadTicker() {
         when(mockQuoteService.fetchQuoteDataFromAPI("badTick")).thenReturn(Optional.empty());
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("badTick", 120 ,10);
+            positionService.buy("badTick", 120 ,10, 100);
         });
     }
 
     @Test
     public void test_buy_invalidPrice() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("FAKE1", 19 ,0);
+            positionService.buy("FAKE1", 19 ,0, 100);
         }); // Price 0
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.buy("FAKE1",  10,-2);
+            positionService.buy("FAKE1",  10,-2, 100);
         }); // Price negative
     }
 
@@ -99,7 +99,7 @@ public class PositionService_UnitTest {
     public void test_buy_validArgs() {
         when(mockQuoteService.fetchQuoteDataFromAPI("FAKE1")).thenReturn(Optional.of(testQuote));
         when(mockPositionDao.findById("FAKE1")).thenReturn(Optional.of(testPosition));
-        Position result = positionService.buy("FAKE1", 19 ,10);
+        Position result = positionService.buy("FAKE1", 19 ,10, 100);
         verify(mockPositionDao).save(any(Position.class));
         verify(mockPositionDao).findById(anyString());
         Assertions.assertEquals(result.getTicker(), testQuote.getTicker());
@@ -109,7 +109,7 @@ public class PositionService_UnitTest {
     public void test_sell_stockNotOwned() {
         when(mockPositionDao.findById("FAKE1")).thenReturn(Optional.empty());
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.sell("FAKE1");
+            positionService.sell("FAKE1", 19.2);
         });
     }
 
@@ -118,7 +118,7 @@ public class PositionService_UnitTest {
         when(mockPositionDao.findById("FAKE1")).thenReturn(Optional.of(testPosition));
         when(mockQuoteService.fetchQuoteDataFromAPI("FAKE1")).thenReturn(Optional.empty());
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            positionService.sell("FAKE1");
+            positionService.sell("FAKE1", 19.2);
         });
     }
 
@@ -128,7 +128,7 @@ public class PositionService_UnitTest {
     public void test_sell_validTicker() {
         when(mockPositionDao.findById("FAKE1")).thenReturn(Optional.of(testPosition));
         when(mockQuoteService.fetchQuoteDataFromAPI("FAKE1")).thenReturn(Optional.of(testQuote));
-        positionService.sell("FAKE1");
+        positionService.sell("FAKE1", 19.2);
         verify(mockPositionDao).deleteById("FAKE1");
     }
 }

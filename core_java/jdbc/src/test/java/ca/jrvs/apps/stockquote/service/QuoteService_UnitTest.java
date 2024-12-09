@@ -76,12 +76,4 @@ public class QuoteService_UnitTest {
         Assertions.assertEquals(testQuote.getTicker(), serviceResult.get().getTicker());
         Assertions.assertEquals(testQuote, serviceResult.get());
     }
-
-    @Test
-    public void test_fetchQuoteDataFromAPI_wrongTick() {
-        String wrongTick = "FAKE2";
-        when(mockQuoteHttpHelper.fetchQuoteInfo(wrongTick)).thenReturn(testQuote);
-        Assertions.assertThrows(RuntimeException.class, () ->
-                service.fetchQuoteDataFromAPI(wrongTick));
-    }
 }

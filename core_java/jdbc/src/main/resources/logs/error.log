@@ -1,0 +1,86 @@
+2024-12-05 15:49:11 ERROR PositionService:79 - User does not own stock for ticker: AAPL
+2024-12-05 15:49:11 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-05 15:49:12 ERROR PositionService:51 - Buy Method: Number of shares exceeds stock volume.
+2024-12-05 15:49:12 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-05 15:49:12 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-05 15:49:12 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-05 15:49:12 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-05 15:49:13 ERROR PositionService:79 - User does not own stock for ticker: FAKE1
+2024-12-05 15:49:13 ERROR PositionService:44 - Unable to retrieve quote info from API.
+2024-12-05 15:49:13 ERROR PositionService:51 - Buy Method: Number of shares exceeds stock volume.
+2024-12-05 15:49:13 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-05 15:49:13 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-05 15:49:13 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-05 15:49:13 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-05 15:49:13 ERROR PositionService:87 - There was a problem fetching latest stock quote from the API!
+2024-12-05 15:49:14 ERROR QuoteHttpHelper:45 - API returned null quote possibly because limit of calls has been reached.
+2024-12-05 15:49:15 ERROR QuoteHttpHelper:45 - API returned null quote possibly because limit of calls has been reached.
+2024-12-05 22:12:58 ERROR Main:53 - Could not establish connection to db
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:280)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+	at org.postgresql.Driver.makeConnection(Driver.java:454)
+	at org.postgresql.Driver.connect(Driver.java:256)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:191)
+	at ca.jrvs.apps.stockquote.service.DatabaseConnectionManager.getConnection(DatabaseConnectionManager.java:20)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:38)
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:70)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:91)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:192)
+	... 8 more
+2024-12-05 22:19:36 ERROR StockQuoteController:186 - Invalid integer entered by user
+java.lang.NumberFormatException: For input string: "one million"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:588)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at ca.jrvs.apps.stockquote.StockQuoteController.processBuy(StockQuoteController.java:163)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenuStockFound(StockQuoteController.java:140)
+	at ca.jrvs.apps.stockquote.StockQuoteController.buyMenu(StockQuoteController.java:107)
+	at ca.jrvs.apps.stockquote.StockQuoteController.initClient(StockQuoteController.java:43)
+	at ca.jrvs.apps.stockquote.Main.main(Main.java:47)
+2024-12-06 10:31:27 ERROR PositionService:79 - User does not own stock for ticker: AAPL
+2024-12-06 10:31:27 ERROR PositionService:79 - User does not own stock for ticker: AAPL
+2024-12-06 10:31:27 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-06 10:31:29 ERROR PositionService:51 - Buy Method: Number of shares exceeds stock volume.
+2024-12-06 10:31:29 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-06 10:31:29 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-06 10:31:29 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-06 10:31:29 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-06 10:31:30 ERROR PositionService:79 - User does not own stock for ticker: FAKE1
+2024-12-06 10:31:30 ERROR PositionService:44 - Unable to retrieve quote info from API.
+2024-12-06 10:31:30 ERROR PositionService:51 - Buy Method: Number of shares exceeds stock volume.
+2024-12-06 10:31:30 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-06 10:31:30 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-06 10:31:30 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-06 10:31:30 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-06 10:31:30 ERROR PositionService:87 - There was a problem fetching latest stock quote from the API!
+2024-12-06 10:31:31 ERROR QuoteHttpHelper:45 - API returned null quote possibly because limit of calls has been reached.
+2024-12-06 10:41:36 ERROR PositionService:79 - User does not own stock for ticker: AAPL
+2024-12-06 10:41:36 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-06 10:41:36 ERROR PositionService:51 - Buy Method: Number of shares exceeds stock volume.
+2024-12-06 10:41:36 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-06 10:41:36 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-06 10:41:36 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-06 10:41:36 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-06 10:41:37 ERROR PositionService:79 - User does not own stock for ticker: FAKE1
+2024-12-06 10:41:37 ERROR PositionService:44 - Unable to retrieve quote info from API.
+2024-12-06 10:41:37 ERROR PositionService:51 - Buy Method: Number of shares exceeds stock volume.
+2024-12-06 10:41:37 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-06 10:41:37 ERROR PositionService:37 - Buy Method: Number of shares must be greater than zero.
+2024-12-06 10:41:37 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-06 10:41:37 ERROR PositionService:32 - Buy method: Share price must be greater than zero.
+2024-12-06 10:41:37 ERROR PositionService:87 - There was a problem fetching latest stock quote from the API!
+2024-12-06 10:41:38 ERROR QuoteHttpHelper:45 - API returned null quote possibly because limit of calls has been reached.
+2024-12-06 10:41:38 ERROR QuoteHttpHelper:45 - API returned null quote possibly because limit of calls has been reached.
+2024-12-06 11:27:46 ERROR PositionService:48 - Buy Method: Number of shares exceeds stock volume.
+2024-12-06 11:34:34 ERROR PositionService:48 - Buy Method: Number of shares exceeds stock volume.
+2024-12-06 11:34:51 ERROR PositionService:43 - Buy Method: Number of shares must be greater than zero.
