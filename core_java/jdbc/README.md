@@ -1,12 +1,3 @@
-```bash
-docker run --rm --name stock-quote -e POSTGRES_PASSWORD=password -d -v $HOME/srv/postgres:/var/lib/postgresql/data -p 5432:5432 postgres
-```
-```bash 
-docker run --rm -it -e ALPHA_VANTAGE_KEY=$env:ALPHA_VANTAGE_KEY ahmedamerworks/jdbc
-docker run --rm -it -e ALPHA_VANTAGE_KEY=$ALPHA_VANTAGE_KEY ahmedamerworks/jdbc
-```
-
-
 # Introduction
 The purpose of this project was to design and implement a functional Stock Quote app
 that allows the user to fetch stock price quotes directly from 
