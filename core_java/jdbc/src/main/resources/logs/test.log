@@ -1,0 +1,69 @@
+2024-12-05 15:49:07 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-05 15:49:07 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-05 15:49:08 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-05 15:49:08 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-05 15:49:08 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-05 15:49:08 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-05 15:49:08 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-05 15:49:08 INFO  PositionDao_Test:132 - Changed numOfShares for testPosition3: 100
+2024-12-05 15:49:08 INFO  PositionDao_Test:138 - Updated numOfShares after UPDATE statement: 136
+2024-12-05 15:49:08 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-05 15:49:08 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-05 15:49:08 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-05 15:49:08 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-05 15:49:08 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-05 15:49:09 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-05 15:49:09 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-05 15:49:09 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-05 15:49:09 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-05 15:49:09 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-05 15:49:09 INFO  QuoteDao_Test:125 - Changed testQuote4's High, Low, Price attributes -> 17.7 10.3 15.8
+2024-12-05 15:49:09 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-05 15:49:09 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-05 15:49:09 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-06 10:31:25 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-06 10:31:25 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-06 10:31:25 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-06 10:31:25 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-06 10:31:25 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-06 10:31:25 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-06 10:31:25 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-06 10:31:25 INFO  PositionDao_Test:132 - Changed numOfShares for testPosition3: 100
+2024-12-06 10:31:25 INFO  PositionDao_Test:138 - Updated numOfShares after UPDATE statement: 136
+2024-12-06 10:31:25 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-06 10:31:26 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-06 10:31:26 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-06 10:31:26 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-06 10:31:26 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-06 10:31:26 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-06 10:31:26 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-06 10:31:26 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-06 10:31:26 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-06 10:31:26 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-06 10:31:26 INFO  QuoteDao_Test:125 - Changed testQuote4's High, Low, Price attributes -> 17.7 10.3 15.8
+2024-12-06 10:31:26 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-06 10:31:26 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-06 10:31:27 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-06 10:41:32 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-06 10:41:32 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-06 10:41:32 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-06 10:41:32 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-06 10:41:32 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-06 10:41:32 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-06 10:41:32 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-06 10:41:32 INFO  PositionDao_Test:132 - Changed numOfShares for testPosition3: 100
+2024-12-06 10:41:32 INFO  PositionDao_Test:138 - Updated numOfShares after UPDATE statement: 136
+2024-12-06 10:41:32 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-06 10:41:32 INFO  PositionDao_Test:100 - Setup complete, DAOs initialized and data saved.
+2024-12-06 10:41:33 INFO  PositionDao_Test:115 - Teardown Complete.
+2024-12-06 10:41:33 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-06 10:41:33 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-06 10:41:33 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-06 10:41:33 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-06 10:41:33 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-06 10:41:33 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-06 10:41:33 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-06 10:41:33 INFO  QuoteDao_Test:125 - Changed testQuote4's High, Low, Price attributes -> 17.7 10.3 15.8
+2024-12-06 10:41:33 INFO  QuoteDao_Test:106 - Teardown Complete.
+2024-12-06 10:41:33 INFO  QuoteDao_Test:94 - Setup Complete. Testing quotes inserted.
+2024-12-06 10:41:33 INFO  QuoteDao_Test:106 - Teardown Complete.

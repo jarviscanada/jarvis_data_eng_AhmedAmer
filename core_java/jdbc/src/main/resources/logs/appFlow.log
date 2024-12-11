@@ -1,0 +1,334 @@
+2024-12-05 15:49:07 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-05 15:49:07 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-05 15:49:07 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-05 15:49:07 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-05 15:49:07 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-05 15:49:07 INFO  PositionDao:42 - INSERT statement running for FAKE3 position
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-05 15:49:08 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-05 15:49:08 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-05 15:49:08 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-05 15:49:08 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-05 15:49:08 INFO  PositionDao:42 - INSERT statement running for FAKE3 position
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-05 15:49:08 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-05 15:49:08 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-05 15:49:08 INFO  PositionDao:42 - INSERT statement running for FAKE3 position
+2024-12-05 15:49:08 INFO  PositionDao:57 - UPDATE statement running for FAKE3 position
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-05 15:49:08 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-05 15:49:08 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-05 15:49:08 INFO  PositionDao:42 - INSERT statement running for FAKE3 position
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-05 15:49:08 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE4
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE4
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE4
+2024-12-05 15:49:09 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: FAKE4
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-05 15:49:09 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE4
+2024-12-05 15:49:10 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-05 15:49:11 INFO  QuoteService:42 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-05 15:49:11 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: AAPL
+2024-12-05 15:49:11 INFO  PositionService:97 - The new price of AAPL is: 243.01
+2024-12-05 15:49:11 INFO  PositionService:98 - Selling all 19 shares of AAPL at total price: 4617.19
+2024-12-05 15:49:11 INFO  PositionService:100 - Net gain/loss: 4427.19
+2024-12-05 15:49:11 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-05 15:49:12 INFO  QuoteService:42 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-05 15:49:12 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: AAPL
+2024-12-05 15:49:12 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-05 15:49:13 INFO  QuoteService:42 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-05 15:49:13 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: AAPL
+2024-12-05 15:49:13 INFO  PositionDao:42 - INSERT statement running for AAPL position
+2024-12-05 15:49:13 INFO  PositionService:64 - Successfully purchased stock: AAPL at price 10.0 per share.
+2024-12-05 15:49:13 INFO  PositionService:65 - New numOfShares: 19. New valuePaid: 190.0
+2024-12-05 15:49:13 INFO  PositionService:97 - The new price of FAKE1 is: 14.4
+2024-12-05 15:49:13 INFO  PositionService:98 - Selling all 345 shares of FAKE1 at total price: 4968.0
+2024-12-05 15:49:13 INFO  PositionService:100 - Net gain/loss: 3643.5
+2024-12-05 15:49:13 INFO  PositionService:64 - Successfully purchased stock: FAKE1 at price 10.0 per share.
+2024-12-05 15:49:13 INFO  PositionService:65 - New numOfShares: 345. New valuePaid: 1324.5
+2024-12-05 15:49:14 INFO  QuoteService:30 - Fetching quote data from API for ticker !!>2x
+2024-12-05 15:49:14 INFO  QuoteService:34 - Quote from QuoteHttpHelper was returned null, returning empty optional.
+2024-12-05 15:49:14 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-05 15:49:15 INFO  QuoteService:34 - Quote from QuoteHttpHelper was returned null, returning empty optional.
+2024-12-05 15:49:15 INFO  QuoteService:30 - Fetching quote data from API for ticker !!>2x
+2024-12-05 15:49:15 INFO  QuoteService:39 - Stock ticker symbol not found! Returning empty Optional.
+2024-12-05 15:49:15 INFO  QuoteService:30 - Fetching quote data from API for ticker FAKE2
+2024-12-05 15:49:15 INFO  QuoteService:42 - Stock ticker: FAKE1 accepted. Updating stock info to DB.
+2024-12-05 15:49:15 INFO  QuoteService:30 - Fetching quote data from API for ticker FAKE1
+2024-12-05 15:49:15 INFO  QuoteService:42 - Stock ticker: FAKE1 accepted. Updating stock info to DB.
+2024-12-05 22:12:58 INFO  Main:69 - Imported properties from properties.txt file.
+2024-12-05 22:14:09 INFO  Main:69 - Imported properties from properties.txt file.
+2024-12-05 22:14:10 INFO  Main:46 - App resources initialized
+2024-12-05 22:14:19 INFO  StockQuoteController:50 - User asked to print all owned stock.
+2024-12-05 22:14:29 INFO  StockQuoteController:46 - User navigated to sell menu.
+2024-12-05 22:14:46 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-05 22:14:48 INFO  QuoteService:42 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-05 22:14:48 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: AAPL
+2024-12-05 22:14:55 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-05 22:14:55 INFO  QuoteService:42 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-05 22:14:55 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: AAPL
+2024-12-05 22:14:55 INFO  PositionService:97 - The new price of AAPL is: 243.04
+2024-12-05 22:14:55 INFO  PositionService:98 - Selling all 19 shares of AAPL at total price: 4617.76
+2024-12-05 22:14:55 INFO  PositionService:100 - Net gain/loss: 4427.76
+2024-12-05 22:14:55 INFO  StockQuoteController:283 - User sold 19 shares of stock: AAPL for a profit of 4427.76
+2024-12-05 22:15:17 INFO  StockQuoteController:205 - User navigated to main menu.
+2024-12-05 22:15:20 INFO  StockQuoteController:42 - User navigated to buy menu.
+2024-12-05 22:15:37 INFO  StockQuoteController:99 - User asked to fetch quote for ibm
+2024-12-05 22:15:37 INFO  QuoteService:30 - Fetching quote data from API for ticker ibm
+2024-12-05 22:15:37 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-05 22:15:37 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-05 22:15:46 INFO  QuoteService:30 - Fetching quote data from API for ticker IBM
+2024-12-05 22:15:47 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-05 22:15:47 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-05 22:15:47 INFO  PositionDao:42 - INSERT statement running for IBM position
+2024-12-05 22:15:47 INFO  PositionService:64 - Successfully purchased stock: IBM at price 234.75 per share.
+2024-12-05 22:15:47 INFO  PositionService:65 - New numOfShares: 500. New valuePaid: 117375.0
+2024-12-05 22:15:47 INFO  StockQuoteController:173 - User purchased 500 shares of IBM at the price: 234.75
+2024-12-05 22:16:03 INFO  StockQuoteController:99 - User asked to fetch quote for msft
+2024-12-05 22:16:03 INFO  QuoteService:30 - Fetching quote data from API for ticker msft
+2024-12-05 22:16:04 INFO  QuoteService:42 - Stock ticker: MSFT accepted. Updating stock info to DB.
+2024-12-05 22:16:04 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: MSFT
+2024-12-05 22:19:04 INFO  Main:69 - Imported properties from properties.txt file.
+2024-12-05 22:19:05 INFO  Main:46 - App resources initialized
+2024-12-05 22:19:11 INFO  StockQuoteController:42 - User navigated to buy menu.
+2024-12-05 22:19:29 INFO  StockQuoteController:99 - User asked to fetch quote for ibm
+2024-12-05 22:19:29 INFO  QuoteService:30 - Fetching quote data from API for ticker ibm
+2024-12-05 22:19:30 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-05 22:19:30 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-05 22:19:46 INFO  QuoteService:30 - Fetching quote data from API for ticker IBM
+2024-12-05 22:19:46 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-05 22:19:46 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-05 22:19:46 INFO  PositionDao:57 - UPDATE statement running for IBM position
+2024-12-05 22:19:46 INFO  PositionService:64 - Successfully purchased stock: IBM at price 234.75 per share.
+2024-12-05 22:19:46 INFO  PositionService:65 - New numOfShares: 1500. New valuePaid: 352125.0
+2024-12-05 22:19:46 INFO  StockQuoteController:173 - User purchased 1000 shares of IBM at the price: 234.75
+2024-12-05 22:20:07 INFO  StockQuoteController:95 - Buy Menu: User navigated to main menu.
+2024-12-05 22:20:10 INFO  StockQuoteController:54 - User asked to exit application.
+2024-12-06 10:31:24 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:31:24 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:31:25 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-06 10:31:25 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-06 10:31:25 INFO  PositionDao:42 - INSERT statement running for FAKE3 position
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:31:25 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-06 10:31:25 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:31:25 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-06 10:31:25 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-06 10:31:25 INFO  PositionDao:42 - INSERT statement running for FAKE3 position
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:31:25 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-06 10:31:25 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-06 10:31:25 INFO  PositionDao:42 - INSERT statement running for FAKE3 position
+2024-12-06 10:31:25 INFO  PositionDao:57 - UPDATE statement running for FAKE3 position
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:31:25 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:31:25 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-06 10:31:26 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-06 10:31:26 INFO  PositionDao:42 - INSERT statement running for FAKE3 position
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE4
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE4
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE4
+2024-12-06 10:31:26 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: FAKE4
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:31:26 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE4
+2024-12-06 10:31:27 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-06 10:31:29 INFO  QuoteService:42 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-06 10:31:29 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: AAPL
+2024-12-06 10:31:29 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-06 10:31:29 INFO  QuoteService:42 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-06 10:31:29 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: AAPL
+2024-12-06 10:31:29 INFO  PositionDao:42 - INSERT statement running for AAPL position
+2024-12-06 10:31:29 INFO  PositionService:64 - Successfully purchased stock: AAPL at price 10.0 per share.
+2024-12-06 10:31:29 INFO  PositionService:65 - New numOfShares: 19. New valuePaid: 190.0
+2024-12-06 10:31:30 INFO  PositionService:97 - The new price of FAKE1 is: 14.4
+2024-12-06 10:31:30 INFO  PositionService:98 - Selling all 345 shares of FAKE1 at total price: 4968.0
+2024-12-06 10:31:30 INFO  PositionService:100 - Net gain/loss: 3643.5
+2024-12-06 10:31:30 INFO  PositionService:64 - Successfully purchased stock: FAKE1 at price 10.0 per share.
+2024-12-06 10:31:30 INFO  PositionService:65 - New numOfShares: 345. New valuePaid: 1324.5
+2024-12-06 10:31:31 INFO  QuoteService:30 - Fetching quote data from API for ticker !!>2x
+2024-12-06 10:31:31 INFO  QuoteService:39 - Stock ticker symbol not found! Returning empty Optional.
+2024-12-06 10:31:31 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-06 10:31:31 INFO  QuoteService:34 - Quote from QuoteHttpHelper was returned null, returning empty optional.
+2024-12-06 10:31:32 INFO  QuoteService:30 - Fetching quote data from API for ticker !!>2x
+2024-12-06 10:31:32 INFO  QuoteService:39 - Stock ticker symbol not found! Returning empty Optional.
+2024-12-06 10:31:32 INFO  QuoteService:30 - Fetching quote data from API for ticker FAKE2
+2024-12-06 10:31:32 INFO  QuoteService:42 - Stock ticker: FAKE1 accepted. Updating stock info to DB.
+2024-12-06 10:31:32 INFO  QuoteService:30 - Fetching quote data from API for ticker FAKE1
+2024-12-06 10:31:32 INFO  QuoteService:42 - Stock ticker: FAKE1 accepted. Updating stock info to DB.
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE3 position
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE3 position
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE3 position
+2024-12-06 10:41:32 INFO  PositionDao:57 - UPDATE statement running for FAKE3 position
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:41:32 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE1 position
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE2 position
+2024-12-06 10:41:32 INFO  PositionDao:42 - INSERT statement running for FAKE3 position
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE4
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE4
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE4
+2024-12-06 10:41:33 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: FAKE4
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE1
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE2
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE3
+2024-12-06 10:41:33 INFO  QuoteDao:51 - Executed INSERT statement on ticker: FAKE4
+2024-12-06 10:41:34 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-06 10:41:35 INFO  QuoteService:42 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-06 10:41:35 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: AAPL
+2024-12-06 10:41:35 INFO  PositionService:97 - The new price of AAPL is: 243.04
+2024-12-06 10:41:35 INFO  PositionService:98 - Selling all 19 shares of AAPL at total price: 4617.76
+2024-12-06 10:41:35 INFO  PositionService:100 - Net gain/loss: 4427.76
+2024-12-06 10:41:36 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-06 10:41:36 INFO  QuoteService:42 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-06 10:41:36 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: AAPL
+2024-12-06 10:41:36 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-06 10:41:36 INFO  QuoteService:42 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-06 10:41:36 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: AAPL
+2024-12-06 10:41:36 INFO  PositionDao:42 - INSERT statement running for AAPL position
+2024-12-06 10:41:36 INFO  PositionService:64 - Successfully purchased stock: AAPL at price 10.0 per share.
+2024-12-06 10:41:36 INFO  PositionService:65 - New numOfShares: 19. New valuePaid: 190.0
+2024-12-06 10:41:37 INFO  PositionService:97 - The new price of FAKE1 is: 14.4
+2024-12-06 10:41:37 INFO  PositionService:98 - Selling all 345 shares of FAKE1 at total price: 4968.0
+2024-12-06 10:41:37 INFO  PositionService:100 - Net gain/loss: 3643.5
+2024-12-06 10:41:37 INFO  PositionService:64 - Successfully purchased stock: FAKE1 at price 10.0 per share.
+2024-12-06 10:41:37 INFO  PositionService:65 - New numOfShares: 345. New valuePaid: 1324.5
+2024-12-06 10:41:38 INFO  QuoteService:30 - Fetching quote data from API for ticker !!>2x
+2024-12-06 10:41:38 INFO  QuoteService:34 - Quote from QuoteHttpHelper was returned null, returning empty optional.
+2024-12-06 10:41:38 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-06 10:41:38 INFO  QuoteService:34 - Quote from QuoteHttpHelper was returned null, returning empty optional.
+2024-12-06 10:41:38 INFO  QuoteService:30 - Fetching quote data from API for ticker !!>2x
+2024-12-06 10:41:38 INFO  QuoteService:39 - Stock ticker symbol not found! Returning empty Optional.
+2024-12-06 10:41:38 INFO  QuoteService:30 - Fetching quote data from API for ticker FAKE1
+2024-12-06 10:41:38 INFO  QuoteService:42 - Stock ticker: FAKE1 accepted. Updating stock info to DB.
+2024-12-06 11:25:18 INFO  Main:69 - Imported properties from properties.txt file.
+2024-12-06 11:25:19 INFO  Main:46 - App resources initialized
+2024-12-06 11:25:29 INFO  StockQuoteController:42 - User navigated to buy menu.
+2024-12-06 11:25:32 INFO  StockQuoteController:99 - User asked to fetch quote for ibm
+2024-12-06 11:25:32 INFO  QuoteService:30 - Fetching quote data from API for ticker ibm
+2024-12-06 11:25:39 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-06 11:25:39 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-06 11:26:42 INFO  StockQuoteController:99 - User asked to fetch quote for ibm
+2024-12-06 11:26:42 INFO  QuoteService:30 - Fetching quote data from API for ticker ibm
+2024-12-06 11:26:42 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-06 11:26:42 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-06 11:34:23 INFO  Main:69 - Imported properties from properties.txt file.
+2024-12-06 11:34:23 INFO  Main:46 - App resources initialized
+2024-12-06 11:34:26 INFO  StockQuoteController:42 - User navigated to buy menu.
+2024-12-06 11:34:27 INFO  StockQuoteController:99 - User asked to fetch quote for ibm
+2024-12-06 11:34:27 INFO  QuoteService:30 - Fetching quote data from API for ticker ibm
+2024-12-06 11:34:29 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-06 11:34:29 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-06 11:37:48 INFO  Main:69 - Imported properties from properties.txt file.
+2024-12-06 11:37:48 INFO  Main:46 - App resources initialized
+2024-12-06 11:43:22 INFO  StockQuoteController:42 - User navigated to buy menu.
+2024-12-06 11:43:24 INFO  StockQuoteController:99 - User asked to fetch quote for ibm
+2024-12-06 11:43:24 INFO  QuoteService:30 - Fetching quote data from API for ticker ibm
+2024-12-06 11:43:25 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-06 11:43:25 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-06 11:43:43 INFO  StockQuoteController:95 - Buy Menu: User navigated to main menu.
+2024-12-06 11:43:44 INFO  StockQuoteController:46 - User navigated to sell menu.
+2024-12-06 11:43:47 INFO  QuoteService:30 - Fetching quote data from API for ticker IBM
+2024-12-06 11:43:47 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-06 11:43:47 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-06 11:43:51 INFO  PositionService:86 - The new price of IBM is: 234.75
+2024-12-06 11:43:51 INFO  PositionService:87 - Selling all 1500 shares of IBM at total price: 352125.0
+2024-12-06 11:43:51 INFO  PositionService:89 - Net gain/loss: 0.0
+2024-12-06 11:43:54 INFO  StockQuoteController:214 - User navigated to main menu.
+2024-12-06 11:43:55 INFO  StockQuoteController:50 - User asked to print all owned stock.
+2024-12-06 11:44:00 INFO  StockQuoteController:46 - User navigated to sell menu.
+2024-12-06 11:44:03 INFO  QuoteService:30 - Fetching quote data from API for ticker AAPL
+2024-12-06 11:44:03 INFO  QuoteService:42 - Stock ticker: AAPL accepted. Updating stock info to DB.
+2024-12-06 11:44:03 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: AAPL
+2024-12-06 11:44:06 INFO  PositionService:86 - The new price of AAPL is: 243.04
+2024-12-06 11:44:06 INFO  PositionService:87 - Selling all 19 shares of AAPL at total price: 4617.76
+2024-12-06 11:44:06 INFO  PositionService:89 - Net gain/loss: 4427.76
+2024-12-06 11:44:14 INFO  StockQuoteController:214 - User navigated to main menu.
+2024-12-06 11:44:16 INFO  StockQuoteController:54 - User asked to exit application.
+2024-12-08 12:13:48 INFO  Main:69 - Imported properties from properties.txt file.
+2024-12-08 12:13:49 INFO  Main:46 - App resources initialized
+2024-12-08 12:14:18 INFO  StockQuoteController:42 - User navigated to buy menu.
+2024-12-08 12:14:20 INFO  StockQuoteController:99 - User asked to fetch quote for ibm
+2024-12-08 12:14:20 INFO  QuoteService:30 - Fetching quote data from API for ticker ibm
+2024-12-08 12:14:21 INFO  QuoteService:42 - Stock ticker: IBM accepted. Updating stock info to DB.
+2024-12-08 12:14:22 INFO  QuoteDao:74 - Executed UPDATE statement on ticker: IBM
+2024-12-08 12:14:26 INFO  StockQuoteController:95 - Buy Menu: User navigated to main menu.
+2024-12-08 12:14:29 INFO  StockQuoteController:50 - User asked to print all owned stock.
+2024-12-08 12:14:43 INFO  StockQuoteController:54 - User asked to exit application.
