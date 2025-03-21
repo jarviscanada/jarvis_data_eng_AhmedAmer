@@ -12,23 +12,22 @@ summary: Self-taught programmer with a degree in Neuroscience and an incredible 
 skills:
   # At least 5 skills
   proficient:
+    - Python
     - Java
-    - React
-    - HTML/CSS
     - SQL
     - JavaScript
-    - Git Version Control
+    - HTML/CSS
   # At least 5 skills
   competent:
-    - Python
+    - Hadoop Ecosystem Tools (HDFS, MapReduce)
+    - PySpark ETL and Data Processing
     - Agile Software Development
     - Data Structures/Algorithms
-    - Linux CLI
-    - Bash Scripts
     - PostgreSQL
+    - Linux CLI and Bash
   # At least 5 skills
   familiar:
-    - TypeScript
+    - React
     - Machine Learning Models
     - Tableau/Power BI
     - MongoDB
@@ -87,7 +86,7 @@ professional_experience:
     company: "Jarvis"
     duration: "Sep 2024-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Attended agile scrum meetings daily. Worked as part of a team of developers to write Linux bash scripts that monitored memory usage within a network of Linux machines. Wrote scripts that stored that data in a PostgreSQL database in intervals of one minute."
+    description: "Attended agile scrum meetings daily. Worked as part of a team of developers to write Linux bash scripts that monitored memory usage within a network of Linux machines. Wrote scripts that stored data in a PostgreSQL database in intervals of one minute. Developed and deployed (via docker) stock quote and grep Java applications as part of the SDLC of a trading platform. Performed data analytics on retail historical data using Python pandas/NumPy and presented findings on how to improve sales via Jupyter Notebook. Provisioned a Hadoop cluster to perform ETL and analysis of public WDI data. Performed ETL process of data with PySpark."
   - title: "Software Developer"
     company: "Kambira"
     duration: "Dec 2023-May 2024"
