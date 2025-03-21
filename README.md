@@ -4,11 +4,11 @@ Self-taught programmer with a degree in Neuroscience and an incredible passion f
 
 ## Skills
 
-**Proficient:** Java, React, HTML/CSS, SQL, JavaScript, Git Version Control
+**Proficient:** Python, Java, SQL, JavaScript, HTML/CSS
 
-**Competent:** Python, Agile Software Development, Data Structures/Algorithms, Linux CLI, Bash Scripts, PostgreSQL
+**Competent:** Hadoop Ecosystem Tools (HDFS, MapReduce), PySpark ETL and Data Processing, Agile Software Development, Data Structures/Algorithms, PostgreSQL, Linux CLI and Bash
 
-**Familiar:** TypeScript, Machine Learning Models, Tableau/Power BI, MongoDB, Maven
+**Familiar:** React, Machine Learning Models, Tableau/Power BI, MongoDB, Maven
 
 ## Jarvis Projects
 
@@ -19,7 +19,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer]
 
 **Core Java Apps - Grep App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer/tree/master/core_java/grep)]: Designed and implemented a Java application that mimics the Linux CLI grep command - effectively searches for string matches in a file directory and returns the lines associated with the pattern. The app was implemented using the core Java Util as well as Java NIO library and Java Stream API. The app was developed, built, compiled, and packaged using Maven and a Docker image was built and distributed on Dockerhub. Testing with JUnit occurred when implementing a method for matching regex expressions to strings.
 
-**Core Java Apps - Stock Quote App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer/tree/master/core_java/jdbc)]: This project designed and implemented an app with which users can fetch quotes from the Stock Market and purchase/sell shares. The app was built with Core Java 11 and Maven was used to manage dependencies. Notable libraries used: OkHttpClient for sending HTTP requests, Jackson Core library for parsing JSON data to Quote and Position objects. For testing, we used JUNIT5 to write testing methods and Mockito to mock objects during unit testing. The application was dockerized for ease of deployment and the user interface currently sits on the command-line interface.
+**Core Java Apps - Stock Quote App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer/tree/master/core_java/jdbc)]: Developed an app with which users can fetch quotes from the Stock Market and purchase/sell shares. The app was built with Core Java 11 and Maven was used to manage dependencies. Notable libraries used: OkHttpClient for sending HTTP requests, Jackson Core library for parsing JSON data to Quote and Position objects. For testing, we used JUNIT5 to write testing methods and Mockito to mock objects during unit testing. The application was dockerized for ease of deployment and the user interface currently sits on the command-line interface.
+
+**Hadoop** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer/tree/master/hadoop)]: Provisioned and configured a Hadoop cluster through Google Cloud Platform’s Dataproc service. Performed ETL process on publicly available WDI data by leveraging cluster jobs using HiveQL. Analysed the benefits/tradeoffs of storage formats such as columnar vs textfile format, external vs HDFS tables, as well as various optimisation strategies such as partitioned tables. Monitored the progress of jobs, the status of resources and any error logs using YARN and Tez web interfaces. Reported on findings of differences in performance and optimal setups for big data processing with Hadoop clusters.
 
 
 ## Highlighted Projects
@@ -30,7 +32,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer]
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (Sep 2024-present)**: Attended agile scrum meetings daily. Worked as part of a team of developers to write Linux bash scripts that monitored memory usage within a network of Linux machines. Wrote scripts that stored that data in a PostgreSQL database in intervals of one minute.
+**Software Developer, Jarvis (Sep 2024-present)**: Attended agile scrum meetings daily. Worked as part of a team of developers to write Linux bash scripts that monitored memory usage within a network of Linux machines. Wrote scripts that stored data in a PostgreSQL database in intervals of one minute. Developed and deployed (via docker) stock quote and grep Java applications as part of the SDLC of a trading platform. Performed data analytics on retail historical data using Python pandas/NumPy and presented findings on how to improve sales via Jupyter Notebook. Provisioned a Hadoop cluster to perform ETL and analysis of public WDI data. Performed ETL process of data with PySpark.
 
 **Software Developer, Kambira (Dec 2023-May 2024)**: Worked hand-in-hand with the founding developers of the company to propel their vision forward as a member of a team. Built the front-end portion of the React.js web app using Tailwind/TypeScript according to designs conceptualized beforehand on Figma. Adjusted and added to designs for pages using Figma. Contributed to both logic and styling code, including buttons, alert messages, user information, and dropdown menus.
 
