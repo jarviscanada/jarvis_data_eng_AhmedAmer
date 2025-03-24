@@ -1,0 +1,1302 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n# SparkSession\n\nSparkSession is automatically created when you start up a Notebook (e.g. Zeppelin, Databricks)\n\n<img src=\"https://i.imgur.com/5Ai45fb.jpg\" width=500px>",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T19:00:42+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>SparkSession</h1>\n<p>SparkSession is automatically created when you start up a Notebook (e.g. Zeppelin, Databricks)</p>\n<img src=\"https://i.imgur.com/5Ai45fb.jpg\" width=500px>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842889_494862552",
+      "id": "20200924-193240_1472050812",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:51963"
+    },
+    {
+      "text": "%spark\n//Scala SparkSession\nspark",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T19:03:05+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres1\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.SparkSession\u001b[0m = org.apache.spark.sql.SparkSession@52f17d4f\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842891_1619188332",
+      "id": "20200924-184153_664614999",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T19:03:06+0000",
+      "dateFinished": "2025-03-24T19:03:42+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51964"
+    },
+    {
+      "text": "%spark.pyspark\n#PySpark SparkSession\nspark",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T19:11:47+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "<pyspark.sql.session.SparkSession object at 0x7fd5a4f2c150>\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842891_891169524",
+      "id": "20200924-184216_1856886640",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T19:11:47+0000",
+      "dateFinished": "2025-03-24T19:11:47+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51965"
+    },
+    {
+      "text": "%md \n\n# Show DataFrame\n\n`df.show()` is the Spark native API that displays data but it's not pretty. \n\n`z.show(df)` is a Zeppelin build-in feature that allows you to show a df result in a pretty way",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T19:00:42+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Show DataFrame</h1>\n<p><code>df.show()</code> is the Spark native API that displays data but it&rsquo;s not pretty. </p>\n<p><code>z.show(df)</code> is a Zeppelin build-in feature that allows you to show a df result in a pretty way</p>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842891_1740764186",
+      "id": "20200924-193529_188023260",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "status": "READY",
+      "$$hashKey": "object:51966"
+    },
+    {
+      "text": "%spark.pyspark\n\n#List all hive tables in a df\ntables_df = spark.sql(\"show tables\")",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T19:11:32+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842891_200404995",
+      "id": "20200924-193839_1624951483",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T19:11:32+0000",
+      "dateFinished": "2025-03-24T19:11:32+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51967"
+    },
+    {
+      "text": "%spark.pyspark\n\ntables_df.show()",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T19:11:58+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------+--------------------+-----------+\n|namespace|           tableName|isTemporary|\n+---------+--------------------+-----------+\n|  default|     wdi_csv_parquet|      false|\n|  default|        wdi_csv_text|      false|\n|  default|              wdi_gs|      false|\n|  default|        wdi_gs_debug|      false|\n|  default|      wdi_opencsv_gs|      false|\n|  default|    wdi_opencsv_text|      false|\n|  default|wdi_opencsv_text_...|      false|\n|  default|wdi_opencsv_text_...|      false|\n+---------+--------------------+-----------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842892_1057244824",
+      "id": "20200924-193721_1495175077",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T19:11:59+0000",
+      "dateFinished": "2025-03-24T19:11:59+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51968"
+    },
+    {
+      "text": "%spark.pyspark\nz.show(tables_df)",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T19:12:13+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "namespace": "string",
+                      "tableName": "string",
+                      "isTemporary": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "namespace\ttableName\tisTemporary\ndefault\twdi_csv_parquet\tfalse\ndefault\twdi_csv_text\tfalse\ndefault\twdi_gs\tfalse\ndefault\twdi_gs_debug\tfalse\ndefault\twdi_opencsv_gs\tfalse\ndefault\twdi_opencsv_text\tfalse\ndefault\twdi_opencsv_text_partitions\tfalse\ndefault\twdi_opencsv_text_view\tfalse\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842892_674343909",
+      "id": "20200924-184243_46563422",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T19:12:13+0000",
+      "dateFinished": "2025-03-24T19:12:13+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51969"
+    },
+    {
+      "text": "%md \n\n# Spark SQL vs Dataframe\n\n`%sql` is the Spark SQL interpreter\n\n`%spark.pyspark` is the PySpark interpreter\n\n`%spark` is the Spark Scala interpreter",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T19:00:42+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Spark SQL vs Dataframe</h1>\n<p><code>%sql</code> is the Spark SQL interpreter</p>\n<p><code>%spark.pyspark</code> is the PySpark interpreter</p>\n<p><code>%spark</code> is the Spark Scala interpreter</p>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842892_987944915",
+      "id": "20200924-194044_351534117",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "status": "READY",
+      "$$hashKey": "object:51970"
+    },
+    {
+      "text": "%sql\n\nselect count(1) from wdi_csv_parquet",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T19:12:36+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "count(1)\n21759408\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=0",
+              "$$hashKey": "object:53051"
+            },
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=1",
+              "$$hashKey": "object:53052"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842892_1970747790",
+      "id": "20200924-185443_1507376390",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T19:12:37+0000",
+      "dateFinished": "2025-03-24T19:12:46+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51971"
+    },
+    {
+      "text": "%spark.pyspark\n\n#Read Hive data to a df (this is lazy)\nwdi_df = spark.sql(\"SELECT * from wdi_csv_parquet\")\n#Persist df in memory for fast future access\nwdi_df = wdi_df.cache()\nwdi_df.printSchema()\n\n#Spark action is eager\nz.show(wdi_df.count())",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T19:31:53+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- year: string (nullable = true)\n |-- countryname: string (nullable = true)\n |-- countrycode: string (nullable = true)\n |-- indicatorname: string (nullable = true)\n |-- indicatorcode: string (nullable = true)\n |-- indicatorvalue: string (nullable = true)\n\n21759408\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=7",
+              "$$hashKey": "object:53114"
+            },
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=8",
+              "$$hashKey": "object:53115"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842892_1813780385",
+      "id": "20200924-185805_1139438367",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T19:31:53+0000",
+      "dateFinished": "2025-03-24T19:31:53+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51972"
+    },
+    {
+      "text": "%md \n\n# Show Historical GDP for Canada\n\n- Re-write the hive query (left cell) using PySpark df",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T19:29:35+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 5,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Show Historical GDP for Canada</h1>\n<ul>\n<li>Re-write the hive query (left cell) using PySpark df</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842893_587798354",
+      "id": "20200924-194555_411298048",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T19:29:35+0000",
+      "dateFinished": "2025-03-24T19:29:38+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51973"
+    },
+    {
+      "text": "%sql\nSELECT year, IndicatorValue as GDP\nFROM wdi_csv_parquet\nWHERE indicatorCode = 'NY.GDP.MKTP.KD.ZG' and countryName = 'Canada'\nORDER BY year\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T22:58:01+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 7,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "year": "string",
+                      "GDP": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "year",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "GDP",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "year\tGDP\n1960\t0.0\n1961\t3.1632917\n1962\t7.1167793\n1963\t5.181776\n1964\t6.6994567\n1965\t6.636545\n1966\t6.584965\n1967\t2.9153104\n1968\t5.295342\n1969\t5.2600007\n1970\t3.2556136\n1971\t4.1176577\n1972\t5.4458556\n1973\t6.964203\n1974\t3.6909876\n1975\t1.8229731\n1976\t5.1993027\n1977\t3.4582305\n1978\t3.9535913\n1979\t3.8049228\n1980\t2.162617\n1981\t3.5031195\n1982\t-3.202025\n1983\t2.5985727\n1984\t5.92535\n1985\t4.7340827\n1986\t2.1618156\n1987\t4.0964646\n1988\t4.429401\n1989\t2.323974\n1990\t0.15434603\n1991\t-2.1256921\n1992\t0.88297606\n1993\t2.6552358\n1994\t4.4934745\n1995\t2.6777084\n1996\t1.611048\n1997\t4.2798123\n1998\t3.8817592\n1999\t5.163211\n2000\t5.18269\n2001\t1.7708191\n2002\t3.0100162\n2003\t1.8022733\n2004\t3.085961\n2005\t3.2013822\n2006\t2.6234126\n2007\t2.0627477\n2008\t1.000361\n2009\t-2.9495876\n2010\t3.0835142\n2011\t3.141219\n2012\t1.7454723\n2013\t2.2180681\n2014\t2.4728925\n2015\t1.0782688\n2016\t0.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842893_322461968",
+      "id": "20200925-000736_1945332225",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "status": "READY",
+      "$$hashKey": "object:51974"
+    },
+    {
+      "text": "%spark.pyspark\nfrom pyspark.sql.functions import col\n\n#Rewritten query using Spark Dataframe\nwdi_table = spark.table('wdi_csv_parquet')\nwdi_canada_df = wdi_table.filter(\n        (col('indicatorCode') == 'NY.GDP.MKTP.KD.ZG') & (col('countryName') == 'Canada')\n    ).orderBy('year').select(\n            col('year').cast('int').alias('Year'),\n            col('indicatorValue').cast('float').alias('GDP')\n        )\n\n#use z.show to display df result and draw a bar chart\nz.show(wdi_canada_df)",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T23:04:13+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "Year": "string",
+                      "GDP": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {},
+              "keys": [],
+              "groups": [],
+              "values": []
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "Year\tGDP\n1960\t0.0\n1961\t3.1632917\n1962\t7.1167793\n1963\t5.181776\n1964\t6.6994567\n1965\t6.636545\n1966\t6.584965\n1967\t2.9153104\n1968\t5.295342\n1969\t5.2600007\n1970\t3.2556136\n1971\t4.1176577\n1972\t5.4458556\n1973\t6.964203\n1974\t3.6909876\n1975\t1.8229731\n1976\t5.1993027\n1977\t3.4582305\n1978\t3.9535913\n1979\t3.8049228\n1980\t2.162617\n1981\t3.5031195\n1982\t-3.202025\n1983\t2.5985727\n1984\t5.92535\n1985\t4.7340827\n1986\t2.1618156\n1987\t4.0964646\n1988\t4.429401\n1989\t2.323974\n1990\t0.15434603\n1991\t-2.1256921\n1992\t0.88297606\n1993\t2.6552358\n1994\t4.4934745\n1995\t2.6777084\n1996\t1.611048\n1997\t4.2798123\n1998\t3.8817592\n1999\t5.163211\n2000\t5.18269\n2001\t1.7708191\n2002\t3.0100162\n2003\t1.8022733\n2004\t3.085961\n2005\t3.2013822\n2006\t2.6234126\n2007\t2.0627477\n2008\t1.000361\n2009\t-2.9495876\n2010\t3.0835142\n2011\t3.141219\n2012\t1.7454723\n2013\t2.2180681\n2014\t2.4728925\n2015\t1.0782688\n2016\t0.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=17",
+              "$$hashKey": "object:53355"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842893_373543429",
+      "id": "20200924-192035_1023279440",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T23:04:09+0000",
+      "dateFinished": "2025-03-24T23:04:11+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51975"
+    },
+    {
+      "text": "%md \n\n# Show GDP for Each Country and Sort By Year\n\n- Re-write the hive query (left cell) using PySpark df  \n    - hint: you can create multiple DFs ",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T23:21:17+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 5,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Show GDP for Each Country and Sort By Year</h1>\n<ul>\n<li>Re-write the hive query (left cell) using PySpark df\n<ul>\n<li>hint: you can create multiple DFs</li>\n</ul>\n</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842893_1083107977",
+      "id": "20200924-195213_2033277524",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T23:13:38+0000",
+      "dateFinished": "2025-03-24T23:13:38+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51976"
+    },
+    {
+      "text": "%sql\nSELECT countryname,\n       year,\n       indicatorcode,\n       indicatorvalue\nFROM wdi_csv_parquet\nWHERE indicatorcode = 'NY.GDP.MKTP.KD.ZG'\nDISTRIBUTE BY countryname\nSORT BY countryname, year\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T23:25:07+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 7,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "countryname": "string",
+                      "year": "string",
+                      "indicatorcode": "string",
+                      "indicatorvalue": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "countryname\tyear\tindicatorcode\tindicatorvalue\nAfghanistan\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1978\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1979\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1980\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1981\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1982\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1983\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1984\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1985\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1986\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1987\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1988\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1989\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1990\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1991\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1992\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1993\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1994\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1995\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1996\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1997\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1998\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1999\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t2000\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t2001\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t2002\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t2003\tNY.GDP.MKTP.KD.ZG\t8.44416322679218\nAfghanistan\t2004\tNY.GDP.MKTP.KD.ZG\t1.05555578746555\nAfghanistan\t2005\tNY.GDP.MKTP.KD.ZG\t11.1752702416587\nAfghanistan\t2006\tNY.GDP.MKTP.KD.ZG\t5.55413762257501\nAfghanistan\t2007\tNY.GDP.MKTP.KD.ZG\t13.7402049898513\nAfghanistan\t2008\tNY.GDP.MKTP.KD.ZG\t3.61136839226168\nAfghanistan\t2009\tNY.GDP.MKTP.KD.ZG\t21.0206487363678\nAfghanistan\t2010\tNY.GDP.MKTP.KD.ZG\t8.43329048161792\nAfghanistan\t2011\tNY.GDP.MKTP.KD.ZG\t6.11368516942299\nAfghanistan\t2012\tNY.GDP.MKTP.KD.ZG\t14.4347412879524\nAfghanistan\t2013\tNY.GDP.MKTP.KD.ZG\t1.95912289275337\nAfghanistan\t2014\tNY.GDP.MKTP.KD.ZG\t1.31253090764642\nAfghanistan\t2015\tNY.GDP.MKTP.KD.ZG\t1.51991126448578\nAfghanistan\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1978\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1979\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1980\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1981\tNY.GDP.MKTP.KD.ZG\t5.74563526610041\nAlbania\t1982\tNY.GDP.MKTP.KD.ZG\t2.94859680232911\nAlbania\t1983\tNY.GDP.MKTP.KD.ZG\t1.10493826600218\nAlbania\t1984\tNY.GDP.MKTP.KD.ZG\t-1.25159664394278\nAlbania\t1985\tNY.GDP.MKTP.KD.ZG\t1.78064395791648\nAlbania\t1986\tNY.GDP.MKTP.KD.ZG\t5.63724319559962\nAlbania\t1987\tNY.GDP.MKTP.KD.ZG\t-0.78784264870842\nAlbania\t1988\tNY.GDP.MKTP.KD.ZG\t-1.42003967816675\nAlbania\t1989\tNY.GDP.MKTP.KD.ZG\t9.83654899260358\nAlbania\t1990\tNY.GDP.MKTP.KD.ZG\t-9.57564018741695\nAlbania\t1991\tNY.GDP.MKTP.KD.ZG\t-29.5889976817695\nAlbania\t1992\tNY.GDP.MKTP.KD.ZG\t-7.19999998650893\nAlbania\t1993\tNY.GDP.MKTP.KD.ZG\t9.60000001192878\nAlbania\t1994\tNY.GDP.MKTP.KD.ZG\t8.29999999672621\nAlbania\t1995\tNY.GDP.MKTP.KD.ZG\t13.2999999863389\nAlbania\t1996\tNY.GDP.MKTP.KD.ZG\t9.09999999999984\nAlbania\t1997\tNY.GDP.MKTP.KD.ZG\t-10.8378557343801\nAlbania\t1998\tNY.GDP.MKTP.KD.ZG\t9.00885253954446\nAlbania\t1999\tNY.GDP.MKTP.KD.ZG\t13.501173375611\nAlbania\t2000\tNY.GDP.MKTP.KD.ZG\t6.66662051466618\nAlbania\t2001\tNY.GDP.MKTP.KD.ZG\t7.94033142118306\nAlbania\t2002\tNY.GDP.MKTP.KD.ZG\t4.23137101197186\nAlbania\t2003\tNY.GDP.MKTP.KD.ZG\t5.77349056968094\nAlbania\t2004\tNY.GDP.MKTP.KD.ZG\t5.70955658121406\nAlbania\t2005\tNY.GDP.MKTP.KD.ZG\t5.72081995256856\nAlbania\t2006\tNY.GDP.MKTP.KD.ZG\t5.43101273397926\nAlbania\t2007\tNY.GDP.MKTP.KD.ZG\t5.90000000867104\nAlbania\t2008\tNY.GDP.MKTP.KD.ZG\t7.52999998948079\nAlbania\t2009\tNY.GDP.MKTP.KD.ZG\t3.35000000887302\nAlbania\t2010\tNY.GDP.MKTP.KD.ZG\t3.70999999380066\nAlbania\t2011\tNY.GDP.MKTP.KD.ZG\t2.55000000544001\nAlbania\t2012\tNY.GDP.MKTP.KD.ZG\t1.41999999814648\nAlbania\t2013\tNY.GDP.MKTP.KD.ZG\t1.10999999256572\nAlbania\t2014\tNY.GDP.MKTP.KD.ZG\t2\nAlbania\t2015\tNY.GDP.MKTP.KD.ZG\t2.55999999999999\nAlbania\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAlgeria\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAlgeria\t1961\tNY.GDP.MKTP.KD.ZG\t-13.6054413317701\nAlgeria\t1962\tNY.GDP.MKTP.KD.ZG\t-19.6850418177625\nAlgeria\t1963\tNY.GDP.MKTP.KD.ZG\t34.3137287655079\nAlgeria\t1964\tNY.GDP.MKTP.KD.ZG\t5.83941301154115\nAlgeria\t1965\tNY.GDP.MKTP.KD.ZG\t6.20689820871414\nAlgeria\t1966\tNY.GDP.MKTP.KD.ZG\t-4.80497094020372\nAlgeria\t1967\tNY.GDP.MKTP.KD.ZG\t9.45296255852286\nAlgeria\t1968\tNY.GDP.MKTP.KD.ZG\t10.7962385787696\nAlgeria\t1969\tNY.GDP.MKTP.KD.ZG\t8.43328027567706\nAlgeria\t1970\tNY.GDP.MKTP.KD.ZG\t8.86265711302651\nAlgeria\t1971\tNY.GDP.MKTP.KD.ZG\t-11.3317191643427\nAlgeria\t1972\tNY.GDP.MKTP.KD.ZG\t27.423969476936\nAlgeria\t1973\tNY.GDP.MKTP.KD.ZG\t3.81317629773889\nAlgeria\t1974\tNY.GDP.MKTP.KD.ZG\t7.49491770360042\nAlgeria\t1975\tNY.GDP.MKTP.KD.ZG\t5.04534161211801\nAlgeria\t1976\tNY.GDP.MKTP.KD.ZG\t8.38675648316108\nAlgeria\t1977\tNY.GDP.MKTP.KD.ZG\t5.25858598509484\nAlgeria\t1978\tNY.GDP.MKTP.KD.ZG\t9.21483570036614\nAlgeria\t1979\tNY.GDP.MKTP.KD.ZG\t7.47782655326378\nAlgeria\t1980\tNY.GDP.MKTP.KD.ZG\t0.790606970518297\nAlgeria\t1981\tNY.GDP.MKTP.KD.ZG\t2.99999608984621\nAlgeria\t1982\tNY.GDP.MKTP.KD.ZG\t6.40000411531005\nAlgeria\t1983\tNY.GDP.MKTP.KD.ZG\t5.40000302470133\nAlgeria\t1984\tNY.GDP.MKTP.KD.ZG\t5.59999652985009\nAlgeria\t1985\tNY.GDP.MKTP.KD.ZG\t3.69999725338795\nAlgeria\t1986\tNY.GDP.MKTP.KD.ZG\t0.400001001999243\nAlgeria\t1987\tNY.GDP.MKTP.KD.ZG\t-0.69999752446148\nAlgeria\t1988\tNY.GDP.MKTP.KD.ZG\t-1.00000549123267\nAlgeria\t1989\tNY.GDP.MKTP.KD.ZG\t4.40000215933378\nAlgeria\t1990\tNY.GDP.MKTP.KD.ZG\t0.800000580914457\nAlgeria\t1991\tNY.GDP.MKTP.KD.ZG\t-1.20000058417291\nAlgeria\t1992\tNY.GDP.MKTP.KD.ZG\t1.80000230116705\nAlgeria\t1993\tNY.GDP.MKTP.KD.ZG\t-2.10000076099048\nAlgeria\t1994\tNY.GDP.MKTP.KD.ZG\t-0.899996545968492\nAlgeria\t1995\tNY.GDP.MKTP.KD.ZG\t3.7999947880281\nAlgeria\t1996\tNY.GDP.MKTP.KD.ZG\t4.09999847018592\nAlgeria\t1997\tNY.GDP.MKTP.KD.ZG\t1.09999993807601\nAlgeria\t1998\tNY.GDP.MKTP.KD.ZG\t5.10000360875516\nAlgeria\t1999\tNY.GDP.MKTP.KD.ZG\t3.20000155285518\nAlgeria\t2000\tNY.GDP.MKTP.KD.ZG\t3.8\nAlgeria\t2001\tNY.GDP.MKTP.KD.ZG\t2.99999999999999\nAlgeria\t2002\tNY.GDP.MKTP.KD.ZG\t5.59999999999994\nAlgeria\t2003\tNY.GDP.MKTP.KD.ZG\t7.20000000000012\nAlgeria\t2004\tNY.GDP.MKTP.KD.ZG\t4.29999999999981\nAlgeria\t2005\tNY.GDP.MKTP.KD.ZG\t5.90000000000006\nAlgeria\t2006\tNY.GDP.MKTP.KD.ZG\t1.70000000000007\nAlgeria\t2007\tNY.GDP.MKTP.KD.ZG\t3.40000000000001\nAlgeria\t2008\tNY.GDP.MKTP.KD.ZG\t2.39999999999986\nAlgeria\t2009\tNY.GDP.MKTP.KD.ZG\t1.60000000000011\nAlgeria\t2010\tNY.GDP.MKTP.KD.ZG\t3.60000000000002\nAlgeria\t2011\tNY.GDP.MKTP.KD.ZG\t2.90000000000006\nAlgeria\t2012\tNY.GDP.MKTP.KD.ZG\t3.39999999999989\nAlgeria\t2013\tNY.GDP.MKTP.KD.ZG\t2.80000000000014\nAlgeria\t2014\tNY.GDP.MKTP.KD.ZG\t3.79999999999987\nAlgeria\t2015\tNY.GDP.MKTP.KD.ZG\t3.89999999999992\nAlgeria\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1978\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1979\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1980\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1981\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1982\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1983\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1984\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1985\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1986\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1987\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1988\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1989\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1990\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1991\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1992\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1993\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1994\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1995\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1996\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1997\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1998\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1999\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2000\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2001\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2002\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2003\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2004\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2005\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2006\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2007\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2008\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2009\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2010\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2011\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2012\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2013\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2014\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2015\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1971\tNY.GDP.MKTP.KD.ZG\t4.64947352511373\nAndorra\t1972\tNY.GDP.MKTP.KD.ZG\t8.14974570911613\nAndorra\t1973\tNY.GDP.MKTP.KD.ZG\t7.78846541379028\nAndorra\t1974\tNY.GDP.MKTP.KD.ZG\t5.61878578419557\nAndorra\t1975\tNY.GDP.MKTP.KD.ZG\t0.542203244600969\nAndorra\t1976\tNY.GDP.MKTP.KD.ZG\t3.30379145669792\nAndorra\t1977\tNY.GDP.MKTP.KD.ZG\t2.83857430718224\nAndorra\t1978\tNY.GDP.MKTP.KD.ZG\t1.46300341337702\nAndorra\t1979\tNY.GDP.MKTP.KD.ZG\t0.0415465175962453\nAndorra\t1980\tNY.GDP.MKTP.KD.ZG\t2.20872814446003\nAndorra\t1981\tNY.GDP.MKTP.KD.ZG\t-0.132468704037194\nAndorra\t1982\tNY.GDP.MKTP.KD.ZG\t1.24646173311282\nAndorra\t1983\tNY.GDP.MKTP.KD.ZG\t1.77011580714547\nAndorra\t1984\tNY.GDP.MKTP.KD.ZG\t1.78468756916817\nAndorra\t1985\tNY.GDP.MKTP.KD.ZG\t2.32143585364256\nAndorra\t1986\tNY.GDP.MKTP.KD.ZG\t3.25332168107124\nAndorra\t1987\tNY.GDP.MKTP.KD.ZG\t5.54712259348614\nAndorra\t1988\tNY.GDP.MKTP.KD.ZG\t5.094324231523\nAndorra\t1989\tNY.GDP.MKTP.KD.ZG\t4.8270302776809\nAndorra\t1990\tNY.GDP.MKTP.KD.ZG\t3.78139347786568\nAndorra\t1991\tNY.GDP.MKTP.KD.ZG\t2.54600064090229\nAndorra\t1992\tNY.GDP.MKTP.KD.ZG\t0.929215382801402\nAndorra\t1993\tNY.GDP.MKTP.KD.ZG\t-1.03149171388272\nAndorra\t1994\tNY.GDP.MKTP.KD.ZG\t2.38319527748475\nAndorra\t1995\tNY.GDP.MKTP.KD.ZG\t2.7574939772792\nAndorra\t1996\tNY.GDP.MKTP.KD.ZG\t4.64974195875254\nAndorra\t1997\tNY.GDP.MKTP.KD.ZG\t9.06767396402095\nAndorra\t1998\tNY.GDP.MKTP.KD.ZG\t3.19478796475406\nAndorra\t1999\tNY.GDP.MKTP.KD.ZG\t4.09908114794879\nAndorra\t2000\tNY.GDP.MKTP.KD.ZG\t1.16578706437875\nAndorra\t2001\tNY.GDP.MKTP.KD.ZG\t6.06678059681872\nAndorra\t2002\tNY.GDP.MKTP.KD.ZG\t6.42684513850158\nAndorra\t2003\tNY.GDP.MKTP.KD.ZG\t12.0239197396079\nAndorra\t2004\tNY.GDP.MKTP.KD.ZG\t8.06950429074125\nAndorra\t2005\tNY.GDP.MKTP.KD.ZG\t7.83970449604648\nAndorra\t2006\tNY.GDP.MKTP.KD.ZG\t4.58531059335641\nAndorra\t2007\tNY.GDP.MKTP.KD.ZG\t0.078039377902499\nAndorra\t2008\tNY.GDP.MKTP.KD.ZG\t-8.59425600818136\nAndorra\t2009\tNY.GDP.MKTP.KD.ZG\t-3.81798602402674\nAndorra\t2010\tNY.GDP.MKTP.KD.ZG\t-5.34797718118854\nAndorra\t2011\tNY.GDP.MKTP.KD.ZG\t-4.80267503725287\nAndorra\t2012\tNY.GDP.MKTP.KD.ZG\t-1.76001032768896\nAndorra\t2013\tNY.GDP.MKTP.KD.ZG\t-0.0635143126218196\nAndorra\t2014\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t2015\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1978\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1979\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1980\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1981\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1982\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1983\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1984\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1985\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1986\tNY.GDP.MKTP.KD.ZG\t2.80000000794205\nAngola\t1987\tNY.GDP.MKTP.KD.ZG\t7.90000000367507\nAngola\t1988\tNY.GDP.MKTP.KD.ZG\t5.59999998070748\nAngola\t1989\tNY.GDP.MKTP.KD.ZG\t0.400000018928679\nAngola\t1990\tNY.GDP.MKTP.KD.ZG\t-0.300000018689033\nAngola\t1991\tNY.GDP.MKTP.KD.ZG\t-1.19999998948089\nAngola\t1992\tNY.GDP.MKTP.KD.ZG\t-6.90000000175168\nAngola\t1993\tNY.GDP.MKTP.KD.ZG\t-24.6999999862023\nAngola\t1994\tNY.GDP.MKTP.KD.ZG\t3.49999998931119\nAngola\t1995\tNY.GDP.MKTP.KD.ZG\t10.4000000186697\nAngola\t1996\tNY.GDP.MKTP.KD.ZG\t11.1999999665668\nAngola\t1997\tNY.GDP.MKTP.KD.ZG\t7.90000000976701\nAngola\t1998\tNY.GDP.MKTP.KD.ZG\t6.8047621164026\nAngola\t1999\tNY.GDP.MKTP.KD.ZG\t3.23979967059962\nAngola\t2000\tNY.GDP.MKTP.KD.ZG\t3.01207617104589\nAngola\t2001\tNY.GDP.MKTP.KD.ZG\t4.22096514726003\nAngola\t2002\tNY.GDP.MKTP.KD.ZG\t-6.94046155293243\nAngola\t2003\tNY.GDP.MKTP.KD.ZG\t5.24749454056162\nAngola\t2004\tNY.GDP.MKTP.KD.ZG\t10.8795774758584\nAngola\t2005\tNY.GDP.MKTP.KD.ZG\t18.2614503245644\nAngola\t2006\tNY.GDP.MKTP.KD.ZG\t20.7351248827892\nAngola\t2007\tNY.GDP.MKTP.KD.ZG\t22.5930542991417\nAngola\t2008\tNY.GDP.MKTP.KD.ZG\t13.8171458087553\nAngola\t2009\tNY.GDP.MKTP.KD.ZG\t2.41286969254453\nAngola\t2010\tNY.GDP.MKTP.KD.ZG\t3.40765479391563\nAngola\t2011\tNY.GDP.MKTP.KD.ZG\t3.91859698579799\nAngola\t2012\tNY.GDP.MKTP.KD.ZG\t5.15544054479086\nAngola\t2013\tNY.GDP.MKTP.KD.ZG\t6.81358576983935\nAngola\t2014\tNY.GDP.MKTP.KD.ZG\t4.80447270408375\nAngola\t2015\tNY.GDP.MKTP.KD.ZG\t2.99770407322555\nAngola\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1978\tNY.GDP.MKTP.KD.ZG\t4.18412369241072\nAntigua and Barbuda\t1979\tNY.GDP.MKTP.KD.ZG\t7.3435710853441\nAntigua and Barbuda\t1980\tNY.GDP.MKTP.KD.ZG\t8.59506428983356\nAntigua and Barbuda\t1981\tNY.GDP.MKTP.KD.ZG\t4.08371877510336\nAntigua and Barbuda\t1982\tNY.GDP.MKTP.KD.ZG\t0.167303078434315\nAntigua and Barbuda\t1983\tNY.GDP.MKTP.KD.ZG\t4.67838938623611\nAntigua and Barbuda\t1984\tNY.GDP.MKTP.KD.ZG\t9.75361582028521\nAntigua and Barbuda\t1985\tNY.GDP.MKTP.KD.ZG\t7.99031164631295\nAntigua and Barbuda\t1986\tNY.GDP.MKTP.KD.ZG\t12.7194263697446\nAntigua and Barbuda\t1987\tNY.GDP.MKTP.KD.ZG\t8.26317513832319\nAntigua and Barbuda\t1988\tNY.GDP.MKTP.KD.ZG\t5.42179951397377\nAntigua and Barbuda\t1989\tNY.GDP.MKTP.KD.ZG\t5.77288342482856\nAntigua and Barbuda\t1990\tNY.GDP.MKTP.KD.ZG\t2.54510196146892\nAntigua and Barbuda\t1991\tNY.GDP.MKTP.KD.ZG\t2.0364360939451\nAntigua and Barbuda\t1992\tNY.GDP.MKTP.KD.ZG\t0.848187899110314\nAntigua and Barbuda\t1993\tNY.GDP.MKTP.KD.ZG\t5.39010158752733\nAntigua and Barbuda\t1994\tNY.GDP.MKTP.KD.ZG\t6.32762207439725\nAntigua and Barbuda\t1995\tNY.GDP.MKTP.KD.ZG\t-4.17681867690712\nAntigua and Barbuda\t1996\tNY.GDP.MKTP.KD.ZG\t6.7395611559254\nAntigua and Barbuda\t1997\tNY.GDP.MKTP.KD.ZG\t4.88584151541207\nAntigua and Barbuda\t1998\tNY.GDP.MKTP.KD.ZG\t4.40767395547452\nAntigua and Barbuda\t1999\tNY.GDP.MKTP.KD.ZG\t4.12160455415504\nAntigua and Barbuda\t2000\tNY.GDP.MKTP.KD.ZG\t5.04176929743556\nAntigua and Barbuda\t2001\tNY.GDP.MKTP.KD.ZG\t-3.19424189288979\nAntigua and Barbuda\t2002\tNY.GDP.MKTP.KD.ZG\t2.92425143016098\nAntigua and Barbuda\t2003\tNY.GDP.MKTP.KD.ZG\t5.91363142470426\nAntigua and Barbuda\t2004\tNY.GDP.MKTP.KD.ZG\t5.28642014860594\nAntigua and Barbuda\t2005\tNY.GDP.MKTP.KD.ZG\t6.08322843204205\nAntigua and Barbuda\t2006\tNY.GDP.MKTP.KD.ZG\t13.3764001850193\nAntigua and Barbuda\t2007\tNY.GDP.MKTP.KD.ZG\t9.49894448015539\nAntigua and Barbuda\t2008\tNY.GDP.MKTP.KD.ZG\t0.07111102052761\nAntigua and Barbuda\t2009\tNY.GDP.MKTP.KD.ZG\t-12.0360150576178\nAntigua and Barbuda\t2010\tNY.GDP.MKTP.KD.ZG\t-7.14299133491195\nAntigua and Barbuda\t2011\tNY.GDP.MKTP.KD.ZG\t-1.79343560355176\nAntigua and Barbuda\t2012\tNY.GDP.MKTP.KD.ZG\t4.01954183888284\nAntigua and Barbuda\t2013\tNY.GDP.MKTP.KD.ZG\t-0.346259915794363\nAntigua and Barbuda\t2014\tNY.GDP.MKTP.KD.ZG\t4.8219802933227\nAntigua and Barbuda\t2015\tNY.GDP.MKTP.KD.ZG\t3.66412072919201\nAntigua and Barbuda\t2016\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1960\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1961\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1962\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1963\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1964\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1965\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1966\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1967\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1968\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1969\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1970\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1971\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1972\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1973\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1974\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1975\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1976\tNY.GDP.MKTP.KD.ZG\t12.8963334764839\nArab World\t1977\tNY.GDP.MKTP.KD.ZG\t8.6488693136165\nArab World\t1978\tNY.GDP.MKTP.KD.ZG\t1.91012841623584\nArab World\t1979\tNY.GDP.MKTP.KD.ZG\t10.5867781345448\nArab World\t1980\tNY.GDP.MKTP.KD.ZG\t10.0738569854381\nArab World\t1981\tNY.GDP.MKTP.KD.ZG\t3.97701471197497\nArab World\t1982\tNY.GDP.MKTP.KD.ZG\t-3.11052920082138\nArab World\t1983\tNY.GDP.MKTP.KD.ZG\t-2.78641375028106\nArab World\t1984\tNY.GDP.MKTP.KD.ZG\t1.70543504044156\nArab World\t1985\tNY.GDP.MKTP.KD.ZG\t-0.532066508021643\nArab World\t1986\tNY.GDP.MKTP.KD.ZG\t0.468922565241854\nArab World\t1987\tNY.GDP.MKTP.KD.ZG\t0.604706661297854\nArab World\t1988\tNY.GDP.MKTP.KD.ZG\t3.77814205447694\nArab World\t1989\tNY.GDP.MKTP.KD.ZG\t2.42781001560668\nArab World\t1990\tNY.GDP.MKTP.KD.ZG\t10.7821246999374\nArab World\t1991\tNY.GDP.MKTP.KD.ZG\t-1.19233071945639\nArab World\t1992\tNY.GDP.MKTP.KD.ZG\t5.09904102387704\nArab World\t1993\tNY.GDP.MKTP.KD.ZG\t4.04835785911477\nArab World\t1994\tNY.GDP.MKTP.KD.ZG\t3.43766138069736\nArab World\t1995\tNY.GDP.MKTP.KD.ZG\t2.92586224392333\nArab World\t1996\tNY.GDP.MKTP.KD.ZG\t4.8582177480192\nArab World\t1997\tNY.GDP.MKTP.KD.ZG\t4.86018110602386\nArab World\t1998\tNY.GDP.MKTP.KD.ZG\t5.28330287028811\nArab World\t1999\tNY.GDP.MKTP.KD.ZG\t3.04791589284952\nArab World\t2000\tNY.GDP.MKTP.KD.ZG\t5.13235495889286\nArab World\t2001\tNY.GDP.MKTP.KD.ZG\t2.20141443936836\nArab World\t2002\tNY.GDP.MKTP.KD.ZG\t1.49855443787776\nArab World\t2003\tNY.GDP.MKTP.KD.ZG\t4.23361602662584\nArab World\t2004\tNY.GDP.MKTP.KD.ZG\t9.73882570851472\nArab World\t2005\tNY.GDP.MKTP.KD.ZG\t6.15104233372202\nArab World\t2006\tNY.GDP.MKTP.KD.ZG\t7.31209078222616\nArab World\t2007\tNY.GDP.MKTP.KD.ZG\t5.65008395785689\nArab World\t2008\tNY.GDP.MKTP.KD.ZG\t6.30550695986682\nArab World\t2009\tNY.GDP.MKTP.KD.ZG\t1.51529983052367\nArab World\t2010\tNY.GDP.MKTP.KD.ZG\t4.61579881738106\nArab World\t2011\tNY.GDP.MKTP.KD.ZG\t3.33067447890171\nArab World\t2012\tNY.GDP.MKTP.KD.ZG\t6.64109130027622\nArab World\t2013\tNY.GDP.MKTP.KD.ZG\t2.90357914809545\nArab World\t2014\tNY.GDP.MKTP.KD.ZG\t2.14118616558636\nArab World\t2015\tNY.GDP.MKTP.KD.ZG\t2.97164832223424\nArab World\t2016\tNY.GDP.MKTP.KD.ZG\t0\nArgentina\t1960\tNY.GDP.MKTP.KD.ZG\t0\nArgentina\t1961\tNY.GDP.MKTP.KD.ZG\t5.42784287951248\nArgentina\t1962\tNY.GDP.MKTP.KD.ZG\t-0.852021523482009\nArgentina\t1963\tNY.GDP.MKTP.KD.ZG\t-5.30819682651725\nArgentina\t1964\tNY.GDP.MKTP.KD.ZG\t10.1302976614338\nArgentina\t1965\tNY.GDP.MKTP.KD.ZG\t10.5694333403428\nArgentina\t1966\tNY.GDP.MKTP.KD.ZG\t-0.659726171593704\nArgentina\t1967\tNY.GDP.MKTP.KD.ZG\t3.1919966233703\nArgentina\t1968\tNY.GDP.MKTP.KD.ZG\t4.82250078158644\nArgentina\t1969\tNY.GDP.MKTP.KD.ZG\t9.67952600806899\nArgentina\t1970\tNY.GDP.MKTP.KD.ZG\t3.04564331900328\nArgentina\t1971\tNY.GDP.MKTP.KD.ZG\t5.65813108318036\nArgentina\t1972\tNY.GDP.MKTP.KD.ZG\t1.62841651625511\nArgentina\t1973\tNY.GDP.MKTP.KD.ZG\t2.81175404095775\nArgentina\t1974\tNY.GDP.MKTP.KD.ZG\t5.5338043948322\nArgentina\t1975\tNY.GDP.MKTP.KD.ZG\t-0.0284121027670778\nArgentina\t1976\tNY.GDP.MKTP.KD.ZG\t-2.01825151667566\nArgentina\t1977\tNY.GDP.MKTP.KD.ZG\t6.93414775537975\nArgentina\t1978\tNY.GDP.MKTP.KD.ZG\t-4.50612480247695\nArgentina\t1979\tNY.GDP.MKTP.KD.ZG\t10.2227634648727\nArgentina\t1980\tNY.GDP.MKTP.KD.ZG\t4.15176234244556\nArgentina\t1981\tNY.GDP.MKTP.KD.ZG\t-5.68952800019454\nArgentina\t1982\tNY.GDP.MKTP.KD.ZG\t-4.95717851904021\nArgentina\t1983\tNY.GDP.MKTP.KD.ZG\t3.87512342400915\nArgentina\t1984\tNY.GDP.MKTP.KD.ZG\t2.21177350377243\nArgentina\t1985\tNY.GDP.MKTP.KD.ZG\t-7.58667718413531\nArgentina\t1986\tNY.GDP.MKTP.KD.ZG\t7.87577983041486\nArgentina\t1987\tNY.GDP.MKTP.KD.ZG\t2.90999313057101\nArgentina\t1988\tNY.GDP.MKTP.KD.ZG\t-2.55690487694625\nArgentina\t1989\tNY.GDP.MKTP.KD.ZG\t-7.49618958372476\nArgentina\t1990\tNY.GDP.MKTP.KD.ZG\t-2.39895921890088\nArgentina\t1991\tNY.GDP.MKTP.KD.ZG\t12.6697100866107\nArgentina\t1992\tNY.GDP.MKTP.KD.ZG\t11.9407747350582\nArgentina\t1993\tNY.GDP.MKTP.KD.ZG\t5.90691950110389\nArgentina\t1994\tNY.GDP.MKTP.KD.ZG\t5.83620069792453\nArgentina\t1995\tNY.GDP.MKTP.KD.ZG\t-2.84520961517036\nArgentina\t1996\tNY.GDP.MKTP.KD.ZG\t5.52668982269238\nArgentina\t1997\tNY.GDP.MKTP.KD.ZG\t8.11104677397105\nArgentina\t1998\tNY.GDP.MKTP.KD.ZG\t3.85017886550885\nArgentina\t1999\tNY.GDP.MKTP.KD.ZG\t-3.38545705440335\nArgentina\t2000\tNY.GDP.MKTP.KD.ZG\t-0.788998929008514\nArgentina\t2001\tNY.GDP.MKTP.KD.ZG\t-4.40883969595714\nArgentina\t2002\tNY.GDP.MKTP.KD.ZG\t-10.894484811485\nArgentina\t2003\tNY.GDP.MKTP.KD.ZG\t8.83704077566961\nArgentina\t2004\tNY.GDP.MKTP.KD.ZG\t9.02957332125889\nArgentina\t2005\tNY.GDP.MKTP.KD.ZG\t8.88930814130993\nArgentina\t2006\tNY.GDP.MKTP.KD.ZG\t8.14253597906148\nArgentina\t2007\tNY.GDP.MKTP.KD.ZG\t9.01574459002907\nArgentina\t2008\tNY.GDP.MKTP.KD.ZG\t4.09386150040511\nArgentina\t2009\tNY.GDP.MKTP.KD.ZG\t-6.01335533140711\nArgentina\t2010\tNY.GDP.MKTP.KD.ZG\t10.3535674488731\nArgentina\t2011\tNY.GDP.MKTP.KD.ZG\t6.14748633986851\nArgentina\t2012\tNY.GDP.MKTP.KD.ZG\t-1.05287445030977\nArgentina\t2013\tNY.GDP.MKTP.KD.ZG\t2.30248415836283\nArgentina\t2014\tNY.GDP.MKTP.KD.ZG\t-2.55847744625616\nArgentina\t2015\tNY.GDP.MKTP.KD.ZG\t2.37229601701262\nArgentina\t2016\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1960\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1961\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1962\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1963\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1964\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1965\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1966\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1967\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1968\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1969\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1970\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1971\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1972\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1973\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1974\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1975\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1976\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1977\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1978\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1979\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1980\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1981\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1982\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1983\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1984\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1985\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1986\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1987\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1988\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1989\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1990\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1991\tNY.GDP.MKTP.KD.ZG\t-11.6999984817524\nArmenia\t1992\tNY.GDP.MKTP.KD.ZG\t-41.8000027485614\nArmenia\t1993\tNY.GDP.MKTP.KD.ZG\t-8.79999879239085\nArmenia\t1994\tNY.GDP.MKTP.KD.ZG\t5.40000279013701\nArmenia\t1995\tNY.GDP.MKTP.KD.ZG\t6.89999840719999\nArmenia\t1996\tNY.GDP.MKTP.KD.ZG\t5.86540074820616\nArmenia\t1997\tNY.GDP.MKTP.KD.ZG\t3.32107969582276\nArmenia\t1998\tNY.GDP.MKTP.KD.ZG\t7.3\nArmenia\t1999\tNY.GDP.MKTP.KD.ZG\t3.30000000000001\nArmenia\t2000\tNY.GDP.MKTP.KD.ZG\t5.89999999999978\nArmenia\t2001\tNY.GDP.MKTP.KD.ZG\t9.55664149553445\nArmenia\t2002\tNY.GDP.MKTP.KD.ZG\t13.186300532067\nArmenia\t2003\tNY.GDP.MKTP.KD.ZG\t14.0407950559649\nArmenia\t2004\tNY.GDP.MKTP.KD.ZG\t10.4678418639969\nArmenia\t2005\tNY.GDP.MKTP.KD.ZG\t13.8657112498155\nArmenia\t2006\tNY.GDP.MKTP.KD.ZG\t13.1980035154758\nArmenia\t2007\tNY.GDP.MKTP.KD.ZG\t13.7492019586216\nArmenia\t2008\tNY.GDP.MKTP.KD.ZG\t6.90000000168239\nArmenia\t2009\tNY.GDP.MKTP.KD.ZG\t-14.149988640087\nArmenia\t2010\tNY.GDP.MKTP.KD.ZG\t2.1999999991457\nArmenia\t2011\tNY.GDP.MKTP.KD.ZG\t4.69999999861844\nArmenia\t2012\tNY.GDP.MKTP.KD.ZG\t7.20000000328227\nArmenia\t2013\tNY.GDP.MKTP.KD.ZG\t3.30000000179984\nArmenia\t2014\tNY.GDP.MKTP.KD.ZG\t3.49999999884847\nArmenia\t2015\tNY.GDP.MKTP.KD.ZG\t3.00000000125773\nArmenia\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1978\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1979\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1980\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1981\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1982\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1983\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1984\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1985\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1986\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1987\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1988\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1989\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1990\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1991\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1992\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1993\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1994\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1995\tNY.GDP.MKTP.KD.ZG\t1.24508591166203\nAruba\t1996\tNY.GDP.MKTP.KD.ZG\t7.81443171889218\nAruba\t1997\tNY.GDP.MKTP.KD.ZG\t6.66662183020206\nAruba\t1998\tNY.GDP.MKTP.KD.ZG\t1.15446939174406\nAruba\t1999\tNY.GDP.MKTP.KD.ZG\t4.51406203251221\nAruba\t2000\tNY.GDP.MKTP.KD.ZG\t-0.364695778713454\nAruba\t2001\tNY.GDP.MKTP.KD.ZG\t-2.16445940890385\nAruba\t2002\tNY.GDP.MKTP.KD.ZG\t0.465289865491144\nAruba\t2003\tNY.GDP.MKTP.KD.ZG\t7.51947237328494\nAruba\t2004\tNY.GDP.MKTP.KD.ZG\t1.17669048367502\nAruba\t2005\tNY.GDP.MKTP.KD.ZG\t0.380390971382511\nAruba\t2006\tNY.GDP.MKTP.KD.ZG\t2.35511944298051\nAruba\t2007\tNY.GDP.MKTP.KD.ZG\t-3.65462624193272\nAruba\t2008\tNY.GDP.MKTP.KD.ZG\t-6.88130206359888\nAruba\t2009\tNY.GDP.MKTP.KD.ZG\t-5.65350208612952\nAruba\t2010\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t2011\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t2012\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t2013\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t2014\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t2015\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAustralia\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAustralia\t1961\tNY.GDP.MKTP.KD.ZG\t2.47592903011602\nAustralia\t1962\tNY.GDP.MKTP.KD.ZG\t1.32757523914135\nAustralia\t1963\tNY.GDP.MKTP.KD.ZG\t6.21244438552095\nAustralia\t1964\tNY.GDP.MKTP.KD.ZG\t6.97615507461865\nAustralia\t1965\tNY.GDP.MKTP.KD.ZG\t5.98001969888841\nAustralia\t1966\tNY.GDP.MKTP.KD.ZG\t2.36519306244575\nAustralia\t1967\tNY.GDP.MKTP.KD.ZG\t6.29705551126803\nAustralia\t1968\tNY.GDP.MKTP.KD.ZG\t5.09282130336703\nAustralia\t1969\tNY.GDP.MKTP.KD.ZG\t7.0497118665666\nAustralia\t1970\tNY.GDP.MKTP.KD.ZG\t7.16689151654633\nAustralia\t1971\tNY.GDP.MKTP.KD.ZG\t4.00915277582364\nAustralia\t1972\tNY.GDP.MKTP.KD.ZG\t3.91086112989925\nAustralia\t1973\tNY.GDP.MKTP.KD.ZG\t2.59864243885953\nAustralia\t1974\tNY.GDP.MKTP.KD.ZG\t4.09686079488536\nAustralia\t1975\tNY.GDP.MKTP.KD.ZG\t1.33824894253101\nAustralia\t1976\tNY.GDP.MKTP.KD.ZG\t2.58966329312659\nAustralia\t1977\tNY.GDP.MKTP.KD.ZG\t3.60727832218465\nAustralia\t1978\tNY.GDP.MKTP.KD.ZG\t0.896974943070489\nAustralia\t1979\tNY.GDP.MKTP.KD.ZG\t4.052844192668\nAustralia\t1980\tNY.GDP.MKTP.KD.ZG\t3.05139105308542\nAustralia\t1981\tNY.GDP.MKTP.KD.ZG\t3.35814322205586\nAustralia\t1982\tNY.GDP.MKTP.KD.ZG\t3.3212959214834\nAustralia\t1983\tNY.GDP.MKTP.KD.ZG\t-2.23060017080476\nAustralia\t1984\tNY.GDP.MKTP.KD.ZG\t4.6271332407684\nAustralia\t1985\tNY.GDP.MKTP.KD.ZG\t5.24948051140859\nAustralia\t1986\tNY.GDP.MKTP.KD.ZG\t4.10152789814649\nAustralia\t1987\tNY.GDP.MKTP.KD.ZG\t2.57449271362755\nAustralia\t1988\tNY.GDP.MKTP.KD.ZG\t5.7690381847342\nAustralia\t1989\tNY.GDP.MKTP.KD.ZG\t3.87870000593526\nAustralia\t1990\tNY.GDP.MKTP.KD.ZG\t3.52913488445492\nAustralia\t1991\tNY.GDP.MKTP.KD.ZG\t-0.379883393800185\nAustralia\t1992\tNY.GDP.MKTP.KD.ZG\t0.399007033076032\nAustralia\t1993\tNY.GDP.MKTP.KD.ZG\t4.06013476851687\nAustralia\t1994\tNY.GDP.MKTP.KD.ZG\t4.03794657229683\nAustralia\t1995\tNY.GDP.MKTP.KD.ZG\t3.87904043958818\nAustralia\t1996\tNY.GDP.MKTP.KD.ZG\t3.94914072165129\nAustralia\t1997\tNY.GDP.MKTP.KD.ZG\t3.94734180401746\nAustralia\t1998\tNY.GDP.MKTP.KD.ZG\t4.43824342820818\nAustralia\t1999\tNY.GDP.MKTP.KD.ZG\t5.00709635409926\nAustralia\t2000\tNY.GDP.MKTP.KD.ZG\t3.86865768166436\nAustralia\t2001\tNY.GDP.MKTP.KD.ZG\t1.92938679706415\nAustralia\t2002\tNY.GDP.MKTP.KD.ZG\t3.856686720792\nAustralia\t2003\tNY.GDP.MKTP.KD.ZG\t3.07079872147182\nAustralia\t2004\tNY.GDP.MKTP.KD.ZG\t4.14937434487798\nAustralia\t2005\tNY.GDP.MKTP.KD.ZG\t3.2066423006508\nAustralia\t2006\tNY.GDP.MKTP.KD.ZG\t2.9828702853226\nAustralia\t2007\tNY.GDP.MKTP.KD.ZG\t3.75765786437918\nAustralia\t2008\tNY.GDP.MKTP.KD.ZG\t3.70669950604605\nAustralia\t2009\tNY.GDP.MKTP.KD.ZG\t1.81967826084417\nAustralia\t2010\tNY.GDP.MKTP.KD.ZG\t2.01818214420197\nAustralia\t2011\tNY.GDP.MKTP.KD.ZG\t2.37956133560841\nAustralia\t2012\tNY.GDP.MKTP.KD.ZG\t3.63272030319823\nAustralia\t2013\tNY.GDP.MKTP.KD.ZG\t2.44004906206246\nAustralia\t2014\tNY.GDP.MKTP.KD.ZG\t2.4998512224341\nAustralia\t2015\tNY.GDP.MKTP.KD.ZG\t2.25782511179634\nAustralia\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAustria\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAustria\t1961\tNY.GDP.MKTP.KD.ZG\t5.53797931684524\nAustria\t1962\tNY.GDP.MKTP.KD.ZG\t2.64867511295262\nAustria\t1963\tNY.GDP.MKTP.KD.ZG\t4.13826758157035\nAustria\t1964\tNY.GDP.MKTP.KD.ZG\t6.12435373762838\nAustria\t1965\tNY.GDP.MKTP.KD.ZG\t3.48017491799565\nAustria\t1966\tNY.GDP.MKTP.KD.ZG\t5.64286141093264\nAustria\t1967\tNY.GDP.MKTP.KD.ZG\t3.00804779775493\nAustria\t1968\tNY.GDP.MKTP.KD.ZG\t4.47231278246076\nAustria\t1969\tNY.GDP.MKTP.KD.ZG\t6.27586716606969\nAustria\t1970\tNY.GDP.MKTP.KD.ZG\t5.54602841063007\nAustria\t1971\tNY.GDP.MKTP.KD.ZG\t5.11496873516448\nAustria\t1972\tNY.GDP.MKTP.KD.ZG\t6.20786097184929\nAustria\t1973\tNY.GDP.MKTP.KD.ZG\t4.89043542102145\nAustria\t1974\tNY.GDP.MKTP.KD.ZG\t3.94213808630408\nAustria\t1975\tNY.GDP.MKTP.KD.ZG\t-0.363735687508665\nAustria\t1976\tNY.GDP.MKTP.KD.ZG\t4.57844539632157\nAustria\t1977\tNY.GDP.MKTP.KD.ZG\t5.07998083944021\nAustria\t1978\tNY.GDP.MKTP.KD.ZG\t-0.210653522029688\nAustria\t1979\tNY.GDP.MKTP.KD.ZG\t5.356699873455\nAustria\t1980\tNY.GDP.MKTP.KD.ZG\t1.73148536881487\nAustria\t1981\tNY.GDP.MKTP.KD.ZG\t-0.14429447402668\nAustria\t1982\tNY.GDP.MKTP.KD.ZG\t2.0112543759392\nAustria\t1983\tNY.GDP.MKTP.KD.ZG\t2.97308801257286\nAustria\t1984\tNY.GDP.MKTP.KD.ZG\t0.0512752530666916\nAustria\t1985\tNY.GDP.MKTP.KD.ZG\t2.49867849370824\nAustria\t1986\tNY.GDP.MKTP.KD.ZG\t2.30139275532899\nAustria\t1987\tNY.GDP.MKTP.KD.ZG\t1.35716799724619\nAustria\t1988\tNY.GDP.MKTP.KD.ZG\t3.2958802564421\nAustria\t1989\tNY.GDP.MKTP.KD.ZG\t3.8870747605712\nAustria\t1990\tNY.GDP.MKTP.KD.ZG\t4.34564156450476\nAustria\t1991\tNY.GDP.MKTP.KD.ZG\t3.44162738717691\nAustria\t1992\tNY.GDP.MKTP.KD.ZG\t2.09352471906863\nAustria\t1993\tNY.GDP.MKTP.KD.ZG\t0.526809483408996\nAustria\t1994\tNY.GDP.MKTP.KD.ZG\t2.40211875392227\nAustria\t1995\tNY.GDP.MKTP.KD.ZG\t2.66798367090327\nAustria\t1996\tNY.GDP.MKTP.KD.ZG\t2.39831429528101\nAustria\t1997\tNY.GDP.MKTP.KD.ZG\t2.20501964036377\nAustria\t1998\tNY.GDP.MKTP.KD.ZG\t3.55996691871002\nAustria\t1999\tNY.GDP.MKTP.KD.ZG\t3.58998775085415\nAustria\t2000\tNY.GDP.MKTP.KD.ZG\t3.36840771488365\nAustria\t2001\tNY.GDP.MKTP.KD.ZG\t1.35051607992412\nAustria\t2002\tNY.GDP.MKTP.KD.ZG\t1.65585494261917\nAustria\t2003\tNY.GDP.MKTP.KD.ZG\t0.756156575984136\nAustria\t2004\tNY.GDP.MKTP.KD.ZG\t2.70574308750665\nAustria\t2005\tNY.GDP.MKTP.KD.ZG\t2.14068259595112\nAustria\t2006\tNY.GDP.MKTP.KD.ZG\t3.35083135763318\nAustria\t2007\tNY.GDP.MKTP.KD.ZG\t3.621510423492\nAustria\t2008\tNY.GDP.MKTP.KD.ZG\t1.54726383930861\nAustria\t2009\tNY.GDP.MKTP.KD.ZG\t-3.79907504838874\nAustria\t2010\tNY.GDP.MKTP.KD.ZG\t1.92867305613767\nAustria\t2011\tNY.GDP.MKTP.KD.ZG\t2.80799993211767\nAustria\t2012\tNY.GDP.MKTP.KD.ZG\t0.757314345720772\nAustria\t2013\tNY.GDP.MKTP.KD.ZG\t0.321250821811844\nAustria\t2014\tNY.GDP.MKTP.KD.ZG\t0.353471065680438\nAustria\t2015\tNY.GDP.MKTP.KD.ZG\t0.862105018651633\nAustria\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1978\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1979\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1980\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1981\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1982\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1983\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1984\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1985\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1986\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1987\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1988\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1989\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1990\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1991\tNY.GDP.MKTP.KD.ZG\t-0.699999960061689\nAzerbaijan\t1992\tNY.GDP.MKTP.KD.ZG\t-22.6000003946572\nAzerbaijan\t1993\tNY.GDP.MKTP.KD.ZG\t-23.099999548566\nAzerbaijan\t1994\tNY.GDP.MKTP.KD.ZG\t-19.7000000190049\nAzerbaijan\t1995\tNY.GDP.MKTP.KD.ZG\t-11.8000008993603\nAzerbaijan\t1996\tNY.GDP.MKTP.KD.ZG\t1.30000019976242\nAzerbaijan\t1997\tNY.GDP.MKTP.KD.ZG\t5.80000052390139\nAzerbaijan\t1998\tNY.GDP.MKTP.KD.ZG\t10.0000002781915\nAzerbaijan\t1999\tNY.GDP.MKTP.KD.ZG\t7.40000058167318\nAzerbaijan\t2000\tNY.GDP.MKTP.KD.ZG\t11.0999992535406\nAzerbaijan\t2001\tNY.GDP.MKTP.KD.ZG\t9.89999999999999\nAzerbaijan\t2002\tNY.GDP.MKTP.KD.ZG\t10.5999992015725\nAzerbaijan\t2003\tNY.GDP.MKTP.KD.ZG\t11.2000002371477\nAzerbaijan\t2004\tNY.GDP.MKTP.KD.ZG\t10.2000003982988\nAzerbaijan\t2005\tNY.GDP.MKTP.KD.ZG\t26.4000008082431\nAzerbaijan\t2006\tNY.GDP.MKTP.KD.ZG\t34.4999995102935\nAzerbaijan\t2007\tNY.GDP.MKTP.KD.ZG\t25.0489995231791\nAzerbaijan\t2008\tNY.GDP.MKTP.KD.ZG\t10.7724207826314\nAzerbaijan\t2009\tNY.GDP.MKTP.KD.ZG\t9.41065376397619\nAzerbaijan\t2010\tNY.GDP.MKTP.KD.ZG\t4.85433932383958\nAzerbaijan\t2011\tNY.GDP.MKTP.KD.ZG\t0.0659227678492726\nAzerbaijan\t2012\tNY.GDP.MKTP.KD.ZG\t2.20000018843571\nAzerbaijan\t2013\tNY.GDP.MKTP.KD.ZG\t5.79667839631929\nAzerbaijan\t2014\tNY.GDP.MKTP.KD.ZG\t2\nAzerbaijan\t2015\tNY.GDP.MKTP.KD.ZG\t1.09999999999999\nAzerbaijan\t2016\tNY.GDP.MKTP.KD.ZG\t0\nBahamas, The\t1960\tNY.GDP.MKTP.KD.ZG\t0\nBahamas, The\t1961\tNY.GDP.MKTP.KD.ZG\t10.6670974291829\nBahamas, The\t1962\tNY.GDP.MKTP.KD.ZG\t10.4519718906978\nBahamas, The\t1963\tNY.GDP.MKTP.KD.ZG\t10.5240552039871\nBahamas, The\t1964\tNY.GDP.MKTP.KD.ZG\t10.501567201834\nBahamas, The\t1965\tNY.GDP.MKTP.KD.ZG\t10.4255964880827\nBahamas, The\t1966\tNY.GDP.MKTP.KD.ZG\t9.07192871148771\nBahamas, The\t1967\tNY.GDP.MKTP.KD.ZG\t9.59811386676546\nBahamas, The\t1968\tNY.GDP.MKTP.KD.ZG\t8.42176356379973\nBahamas, The\t1969\tNY.GDP.MKTP.KD.ZG\t8.9816625781348\nBahamas, The\t1970\tNY.GDP.MKTP.KD.ZG\t-5.6496495193161\nBahamas, The\t1971\tNY.GDP.MKTP.KD.ZG\t1.6265087407437\nBahamas, The\t1972\tNY.GDP.MKTP.KD.ZG\t-3.49733593336903\nBahamas, The\t1973\tNY.GDP.MKTP.KD.ZG\t7.56756882392715\nBahamas, The\t1974\tNY.GDP.MKTP.KD.ZG\t-16.7542290749632\nBahamas, The\t1975\tNY.GDP.MKTP.KD.ZG\t-14.8031263125012\nBahamas, The\t1976\tNY.GDP.MKTP.KD.ZG\t5.18518497170824\nBahamas, The\t1977\tNY.GDP.MKTP.KD.ZG\t9.15492921913146\nBahamas, The\t1978\tNY.GDP.MKTP.KD.ZG\t14.1795201387168\nBahamas, The\t1979\tNY.GDP.MKTP.KD.ZG\t26.139295769424\nBahamas, The\t1980\tNY.GDP.MKTP.KD.ZG\t6.49528192139535\nBahamas, The\t1981\tNY.GDP.MKTP.KD.ZG\t-9.22640507988643\nBahamas, The\t1982\tNY.GDP.MKTP.KD.ZG\t6.69889775608137\nBahamas, The\t1983\tNY.GDP.MKTP.KD.ZG\t3.59705186796597\nBahamas, The\t1984\tNY.GDP.MKTP.KD.ZG\t14.1711486244798\nBahamas, The\t1985\tNY.GDP.MKTP.KD.ZG\t4.82918011397481\nBahamas, The\t1986\tNY.GDP.MKTP.KD.ZG\t1.79700022744103\nBahamas, The\t1987\tNY.GDP.MKTP.KD.ZG\t2.98451934490475\nBahamas, The\t1988\tNY.GDP.MKTP.KD.ZG\t2.309707660833\nBahamas, The\t1989\tNY.GDP.MKTP.KD.ZG\t6.72732979931732\nBahamas, The\t1990\tNY.GDP.MKTP.KD.ZG\t-1.59624908649569\nBahamas, The\t1991\tNY.GDP.MKTP.KD.ZG\t-4.18178463830372\nBahamas, The\t1992\tNY.GDP.MKTP.KD.ZG\t-3.82558272775211\nBahamas, The\t1993\tNY.GDP.MKTP.KD.ZG\t0.307806938390144\nBahamas, The\t1994\tNY.GDP.MKTP.KD.ZG\t3.14891619118119\nBahamas, The\t1995\tNY.GDP.MKTP.KD.ZG\t4.37875139876522\nBahamas, The\t1996\tNY.GDP.MKTP.KD.ZG\t4.22353068025446\nBahamas, The\t1997\tNY.GDP.MKTP.KD.ZG\t2.06223948963316\nBahamas, The\t1998\tNY.GDP.MKTP.KD.ZG\t4.7164738248118\nBahamas, The\t1999\tNY.GDP.MKTP.KD.ZG\t7.14412993221747\nBahamas, The\t2000\tNY.GDP.MKTP.KD.ZG\t4.149246399763\nBahamas, The\t2001\tNY.GDP.MKTP.KD.ZG\t2.62562712099302\nBahamas, The\t2002\tNY.GDP.MKTP.KD.ZG\t2.7046295125315\nBahamas, The\t2003\tNY.GDP.MKTP.KD.ZG\t-1.26474462878853\nBahamas, The\t2004\tNY.GDP.MKTP.KD.ZG\t0.882884232581944\nBahamas, The\t2005\tNY.GDP.MKTP.KD.ZG\t3.39529266953875\nBahamas, The\t2006\tNY.GDP.MKTP.KD.ZG\t2.51686384101369\nBahamas, The\t2007\tNY.GDP.MKTP.KD.ZG\t1.44652221530914\nBahamas, The\t2008\tNY.GDP.MKTP.KD.ZG\t-2.32393724789044\nBahamas, The\t2009\tNY.GDP.MKTP.KD.ZG\t-4.17525917522813\nBahamas, The\t2010\tNY.GDP.MKTP.KD.ZG\t1.53877885334302\nBahamas, The\t2011\tNY.GDP.MKTP.KD.ZG\t0.612902595753823\nBahamas, The\t2012\tNY.GDP.MKTP.KD.ZG\t2.21731297852183\nBahamas, The\t2013\tNY.GDP.MKTP.KD.ZG\t0.0220301965625538\nBahamas, The\t2014\tNY.GDP.MKTP.KD.ZG\t1.02278610479254\nBahamas, The\t2015\tNY.GDP.MKTP.KD.ZG\t1.22048360020888\nBahamas, The\t2016\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1960\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1961\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1962\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1963\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1964\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1965\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1966\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1967\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1968\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1969\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1970\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1971\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1972\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1973\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1974\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1975\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1976\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1977\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1978\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1979\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1980\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1981\tNY.GDP.MKTP.KD.ZG\t-5.31669735282962\nBahrain\t1982\tNY.GDP.MKTP.KD.ZG\t-7.55621771215945\nBahrain\t1983\tNY.GDP.MKTP.KD.ZG\t6.37637679964398\nBahrain\t1984\tNY.GDP.MKTP.KD.ZG\t5.00364604500774\nBahrain\t1985\tNY.GDP.MKTP.KD.ZG\t-4.75826853805688\nBahrain\t1986\tNY.GDP.MKTP.KD.ZG\t1.18299391598423\nBahrain\t1987\tNY.GDP.MKTP.KD.ZG\t10.3990093325468\nBahrain\t1988\tNY.GDP.MKTP.KD.ZG\t6.99999164945328\nBahrain\t1989\tNY.GDP.MKTP.KD.ZG\t0.364007138161824\nBahrain\t1990\tNY.GDP.MKTP.KD.ZG\t4.43799717642636\nBahrain\t1991\tNY.GDP.MKTP.KD.ZG\t11.2299987800123\nBahrain\t1992\tNY.GDP.MKTP.KD.ZG\t6.68999836660538\nBahrain\t1993\tNY.GDP.MKTP.KD.ZG\t12.8700066696584\nBahrain\t1994\tNY.GDP.MKTP.KD.ZG\t-0.250001484542878\nBahrain\t1995\tNY.GDP.MKTP.KD.ZG\t3.92999154532021\nBahrain\t1996\tNY.GDP.MKTP.KD.ZG\t4.11000611512114\nBahrain\t1997\tNY.GDP.MKTP.KD.ZG\t3.09299978673204\nBahrain\t1998\tNY.GDP.MKTP.KD.ZG\t4.79000278855499\nBahrain\t1999\tNY.GDP.MKTP.KD.ZG\t4.29999896037758\nBahrain\t2000\tNY.GDP.MKTP.KD.ZG\t5.29999479407712\nBahrain\t2001\tNY.GDP.MKTP.KD.ZG\t2.49103356534492\nBahrain\t2002\tNY.GDP.MKTP.KD.ZG\t3.61414828908676\nBahrain\t2003\tNY.GDP.MKTP.KD.ZG\t6.02395119599457\nBahrain\t2004\tNY.GDP.MKTP.KD.ZG\t6.98094698388441\nBahrain\t2005\tNY.GDP.MKTP.KD.ZG\t6.768939708829\nBahrain\t2006\tNY.GDP.MKTP.KD.ZG\t6.46856767156123\nBahrain\t2007\tNY.GDP.MKTP.KD.ZG\t8.29244382201286\nBahrain\t2008\tNY.GDP.MKTP.KD.ZG\t6.24512834138467\nBahrain\t2009\tNY.GDP.MKTP.KD.ZG\t2.53977246949495\nBahrain\t2010\tNY.GDP.MKTP.KD.ZG\t4.33440708785902\nBahrain\t2011\tNY.GDP.MKTP.KD.ZG\t2.10018410872759\nBahrain\t2012\tNY.GDP.MKTP.KD.ZG\t3.5887045713562\nBahrain\t2013\tNY.GDP.MKTP.KD.ZG\t5.41293824262871\nBahrain\t2014\tNY.GDP.MKTP.KD.ZG\t4.48093515168384\nBahrain\t2015\tNY.GDP.MKTP.KD.ZG\t2.92656721719055\nBahrain\t2016\tNY.GDP.MKTP.KD.ZG\t0\nBangladesh\t1960\tNY.GDP.MKTP.KD.ZG\t0\nBangladesh\t1961\tNY.GDP.MKTP.KD.ZG\t6.05816082548087\nBangladesh\t1962\tNY.GDP.MKTP.KD.ZG\t5.45303096987186\nBangladesh\t1963\tNY.GDP.MKTP.KD.ZG\t-0.455894289938712\nBangladesh\t1964\tNY.GDP.MKTP.KD.ZG\t10.9527885460418\nBangladesh\t1965\tNY.GDP.MKTP.KD.ZG\t1.60625822891573\nBangladesh\t1966\tNY.GDP.MKTP.KD.ZG\t2.56681200128052\nBangladesh\t1967\tNY.GDP.MKTP.KD.ZG\t-1.87586391964774\nBangladesh\t1968\tNY.GDP.MKTP.KD.ZG\t9.48945401547951\nBangladesh\t1969\tNY.GDP.MKTP.KD.ZG\t1.22085790909685\nBangladesh\t1970\tNY.GDP.MKTP.KD.ZG\t5.61985229280111\nBangladesh\t1971\tNY.GDP.MKTP.KD.ZG\t-5.47948302721956\nBangladesh\t1972\tNY.GDP.MKTP.KD.ZG\t-13.9737287020439\nBangladesh\t1973\tNY.GDP.MKTP.KD.ZG\t3.32568019878394\nBangladesh\t1974\tNY.GDP.MKTP.KD.ZG\t9.59195630041845\nBangladesh\t1975\tNY.GDP.MKTP.KD.ZG\t-4.08821409181661\nBangladesh\t1976\tNY.GDP.MKTP.KD.ZG\t5.66136120119667\nBangladesh\t1977\tNY.GDP.MKTP.KD.ZG\t2.67305605001984\nBangladesh\t1978\tNY.GDP.MKTP.KD.ZG\t7.07383773260692\nBangladesh\t1979\tNY.GDP.MKTP.KD.ZG\t4.80163460055662\nBangladesh\t1980\tNY.GDP.MKTP.KD.ZG\t0.81914186889891\nBangladesh\t1981\tNY.GDP.MKTP.KD.ZG\t7.23394369490723\nBangladesh\t1982\tNY.GDP.MKTP.KD.ZG\t2.13432783577075\nBangladesh\t1983\tNY.GDP.MKTP.KD.ZG\t3.88104639981715\nBangladesh\t1984\tNY.GDP.MKTP.KD.ZG\t4.80331001525438\nBangladesh\t1985\tNY.GDP.MKTP.KD.ZG\t3.34201465415414\nBangladesh\t1986\tNY.GDP.MKTP.KD.ZG\t4.173382559004\nBangladesh\t1987\tNY.GDP.MKTP.KD.ZG\t3.77240185252705\nBangladesh\t1988\tNY.GDP.MKTP.KD.ZG\t2.41625685566223\nBangladesh\t1989\tNY.GDP.MKTP.KD.ZG\t2.83658212907926\nBangladesh\t1990\tNY.GDP.MKTP.KD.ZG\t5.62225816160702\nBangladesh\t1991\tNY.GDP.MKTP.KD.ZG\t3.4852278153552\nBangladesh\t1992\tNY.GDP.MKTP.KD.ZG\t5.44268555072129\nBangladesh\t1993\tNY.GDP.MKTP.KD.ZG\t4.71156172449447\nBangladesh\t1994\tNY.GDP.MKTP.KD.ZG\t3.89012644065643\nBangladesh\t1995\tNY.GDP.MKTP.KD.ZG\t5.12127789716162\nBangladesh\t1996\tNY.GDP.MKTP.KD.ZG\t4.52291921762344\nBangladesh\t1997\tNY.GDP.MKTP.KD.ZG\t4.48989649735631\nBangladesh\t1998\tNY.GDP.MKTP.KD.ZG\t5.17702687345256\nBangladesh\t1999\tNY.GDP.MKTP.KD.ZG\t4.67015636827865\nBangladesh\t2000\tNY.GDP.MKTP.KD.ZG\t5.2932947184604\nBangladesh\t2001\tNY.GDP.MKTP.KD.ZG\t5.07728777597312\nBangladesh\t2002\tNY.GDP.MKTP.KD.ZG\t3.83312394005608\nBangladesh\t2003\tNY.GDP.MKTP.KD.ZG\t4.73956739916446\nBangladesh\t2004\tNY.GDP.MKTP.KD.ZG\t5.2395329104527\nBangladesh\t2005\tNY.GDP.MKTP.KD.ZG\t6.53594494052352\nBangladesh\t2006\tNY.GDP.MKTP.KD.ZG\t6.67186826509662\nBangladesh\t2007\tNY.GDP.MKTP.KD.ZG\t7.05863620607012\nBangladesh\t2008\tNY.GDP.MKTP.KD.ZG\t6.01378975923306\nBangladesh\t2009\tNY.GDP.MKTP.KD.ZG\t5.04512479417738\nBangladesh\t2010\tNY.GDP.MKTP.KD.ZG\t5.57180227396866\nBangladesh\t2011\tNY.GDP.MKTP.KD.ZG\t6.46438388047517\nBangladesh\t2012\tNY.GDP.MKTP.KD.ZG\t6.52143507837333\nBangladesh\t2013\tNY.GDP.MKTP.KD.ZG\t6.01359606747023\nBangladesh\t2014\tNY.GDP.MKTP.KD.ZG\t6.06109305375394\nBangladesh\t2015\tNY.GDP.MKTP.KD.ZG\t6.55263331602802\nBangladesh\t2016\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1960\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1961\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1962\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1963\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1964\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1965\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1966\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1967\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1968\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1969\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1970\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1971\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1972\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1973\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1974\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1975\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1976\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1977\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1978\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1979\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1980\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1981\tNY.GDP.MKTP.KD.ZG\t-1.98265179677819\nBarbados\t1982\tNY.GDP.MKTP.KD.ZG\t-4.80404551201012\nBarbados\t1983\tNY.GDP.MKTP.KD.ZG\t0.398406374501988\nBarbados\t1984\tNY.GDP.MKTP.KD.ZG\t3.7037037037037\nBarbados\t1985\tNY.GDP.MKTP.KD.ZG\t1.0204081632653\nBarbados\t1986\tNY.GDP.MKTP.KD.ZG\t5.17676767676767\nBarbados\t1987\tNY.GDP.MKTP.KD.ZG\t2.52100840336134\nBarbados\t1988\tNY.GDP.MKTP.KD.ZG\t3.51288056206087\nBarbados\t1989\tNY.GDP.MKTP.KD.ZG\t3.61990950226246\nBarbados\t1990\tNY.GDP.MKTP.KD.ZG\t-3.27510917030568\n"
+          },
+          {
+            "type": "HTML",
+            "data": "<div class=\"result-alert alert-warning\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button><strong>Output is truncated</strong> to 1000 rows. Learn more about <strong>zeppelin.spark.maxResult</strong></div>\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=21",
+              "$$hashKey": "object:53507"
+            },
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=22",
+              "$$hashKey": "object:53508"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842893_402500026",
+      "id": "20200925-000433_1826008639",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T23:25:07+0000",
+      "dateFinished": "2025-03-24T23:25:09+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51977"
+    },
+    {
+      "text": "%spark.pyspark\n\n#Rewritten solution\nwdi_country_df = wdi_table.filter(\n        col('indicatorCode') == 'NY.GDP.MKTP.KD.ZG'\n    ).select(\n        'countryName',\n        'year',\n        'indicatorCode',\n        'indicatorValue'\n        )\n        \nwdi_country_df = wdi_country_df.repartition(col('countryName')).sort(\n        col('countryName'),\n        col('year')\n    )\n        \nz.show(wdi_country_df)\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T23:24:53+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "countryName": "string",
+                      "year": "string",
+                      "indicatorCode": "string",
+                      "indicatorValue": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "countryName\tyear\tindicatorCode\tindicatorValue\nAfghanistan\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1978\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1979\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1980\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1981\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1982\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1983\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1984\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1985\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1986\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1987\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1988\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1989\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1990\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1991\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1992\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1993\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1994\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1995\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1996\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1997\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1998\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t1999\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t2000\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t2001\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t2002\tNY.GDP.MKTP.KD.ZG\t0\nAfghanistan\t2003\tNY.GDP.MKTP.KD.ZG\t8.44416322679218\nAfghanistan\t2004\tNY.GDP.MKTP.KD.ZG\t1.05555578746555\nAfghanistan\t2005\tNY.GDP.MKTP.KD.ZG\t11.1752702416587\nAfghanistan\t2006\tNY.GDP.MKTP.KD.ZG\t5.55413762257501\nAfghanistan\t2007\tNY.GDP.MKTP.KD.ZG\t13.7402049898513\nAfghanistan\t2008\tNY.GDP.MKTP.KD.ZG\t3.61136839226168\nAfghanistan\t2009\tNY.GDP.MKTP.KD.ZG\t21.0206487363678\nAfghanistan\t2010\tNY.GDP.MKTP.KD.ZG\t8.43329048161792\nAfghanistan\t2011\tNY.GDP.MKTP.KD.ZG\t6.11368516942299\nAfghanistan\t2012\tNY.GDP.MKTP.KD.ZG\t14.4347412879524\nAfghanistan\t2013\tNY.GDP.MKTP.KD.ZG\t1.95912289275337\nAfghanistan\t2014\tNY.GDP.MKTP.KD.ZG\t1.31253090764642\nAfghanistan\t2015\tNY.GDP.MKTP.KD.ZG\t1.51991126448578\nAfghanistan\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1978\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1979\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1980\tNY.GDP.MKTP.KD.ZG\t0\nAlbania\t1981\tNY.GDP.MKTP.KD.ZG\t5.74563526610041\nAlbania\t1982\tNY.GDP.MKTP.KD.ZG\t2.94859680232911\nAlbania\t1983\tNY.GDP.MKTP.KD.ZG\t1.10493826600218\nAlbania\t1984\tNY.GDP.MKTP.KD.ZG\t-1.25159664394278\nAlbania\t1985\tNY.GDP.MKTP.KD.ZG\t1.78064395791648\nAlbania\t1986\tNY.GDP.MKTP.KD.ZG\t5.63724319559962\nAlbania\t1987\tNY.GDP.MKTP.KD.ZG\t-0.78784264870842\nAlbania\t1988\tNY.GDP.MKTP.KD.ZG\t-1.42003967816675\nAlbania\t1989\tNY.GDP.MKTP.KD.ZG\t9.83654899260358\nAlbania\t1990\tNY.GDP.MKTP.KD.ZG\t-9.57564018741695\nAlbania\t1991\tNY.GDP.MKTP.KD.ZG\t-29.5889976817695\nAlbania\t1992\tNY.GDP.MKTP.KD.ZG\t-7.19999998650893\nAlbania\t1993\tNY.GDP.MKTP.KD.ZG\t9.60000001192878\nAlbania\t1994\tNY.GDP.MKTP.KD.ZG\t8.29999999672621\nAlbania\t1995\tNY.GDP.MKTP.KD.ZG\t13.2999999863389\nAlbania\t1996\tNY.GDP.MKTP.KD.ZG\t9.09999999999984\nAlbania\t1997\tNY.GDP.MKTP.KD.ZG\t-10.8378557343801\nAlbania\t1998\tNY.GDP.MKTP.KD.ZG\t9.00885253954446\nAlbania\t1999\tNY.GDP.MKTP.KD.ZG\t13.501173375611\nAlbania\t2000\tNY.GDP.MKTP.KD.ZG\t6.66662051466618\nAlbania\t2001\tNY.GDP.MKTP.KD.ZG\t7.94033142118306\nAlbania\t2002\tNY.GDP.MKTP.KD.ZG\t4.23137101197186\nAlbania\t2003\tNY.GDP.MKTP.KD.ZG\t5.77349056968094\nAlbania\t2004\tNY.GDP.MKTP.KD.ZG\t5.70955658121406\nAlbania\t2005\tNY.GDP.MKTP.KD.ZG\t5.72081995256856\nAlbania\t2006\tNY.GDP.MKTP.KD.ZG\t5.43101273397926\nAlbania\t2007\tNY.GDP.MKTP.KD.ZG\t5.90000000867104\nAlbania\t2008\tNY.GDP.MKTP.KD.ZG\t7.52999998948079\nAlbania\t2009\tNY.GDP.MKTP.KD.ZG\t3.35000000887302\nAlbania\t2010\tNY.GDP.MKTP.KD.ZG\t3.70999999380066\nAlbania\t2011\tNY.GDP.MKTP.KD.ZG\t2.55000000544001\nAlbania\t2012\tNY.GDP.MKTP.KD.ZG\t1.41999999814648\nAlbania\t2013\tNY.GDP.MKTP.KD.ZG\t1.10999999256572\nAlbania\t2014\tNY.GDP.MKTP.KD.ZG\t2\nAlbania\t2015\tNY.GDP.MKTP.KD.ZG\t2.55999999999999\nAlbania\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAlgeria\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAlgeria\t1961\tNY.GDP.MKTP.KD.ZG\t-13.6054413317701\nAlgeria\t1962\tNY.GDP.MKTP.KD.ZG\t-19.6850418177625\nAlgeria\t1963\tNY.GDP.MKTP.KD.ZG\t34.3137287655079\nAlgeria\t1964\tNY.GDP.MKTP.KD.ZG\t5.83941301154115\nAlgeria\t1965\tNY.GDP.MKTP.KD.ZG\t6.20689820871414\nAlgeria\t1966\tNY.GDP.MKTP.KD.ZG\t-4.80497094020372\nAlgeria\t1967\tNY.GDP.MKTP.KD.ZG\t9.45296255852286\nAlgeria\t1968\tNY.GDP.MKTP.KD.ZG\t10.7962385787696\nAlgeria\t1969\tNY.GDP.MKTP.KD.ZG\t8.43328027567706\nAlgeria\t1970\tNY.GDP.MKTP.KD.ZG\t8.86265711302651\nAlgeria\t1971\tNY.GDP.MKTP.KD.ZG\t-11.3317191643427\nAlgeria\t1972\tNY.GDP.MKTP.KD.ZG\t27.423969476936\nAlgeria\t1973\tNY.GDP.MKTP.KD.ZG\t3.81317629773889\nAlgeria\t1974\tNY.GDP.MKTP.KD.ZG\t7.49491770360042\nAlgeria\t1975\tNY.GDP.MKTP.KD.ZG\t5.04534161211801\nAlgeria\t1976\tNY.GDP.MKTP.KD.ZG\t8.38675648316108\nAlgeria\t1977\tNY.GDP.MKTP.KD.ZG\t5.25858598509484\nAlgeria\t1978\tNY.GDP.MKTP.KD.ZG\t9.21483570036614\nAlgeria\t1979\tNY.GDP.MKTP.KD.ZG\t7.47782655326378\nAlgeria\t1980\tNY.GDP.MKTP.KD.ZG\t0.790606970518297\nAlgeria\t1981\tNY.GDP.MKTP.KD.ZG\t2.99999608984621\nAlgeria\t1982\tNY.GDP.MKTP.KD.ZG\t6.40000411531005\nAlgeria\t1983\tNY.GDP.MKTP.KD.ZG\t5.40000302470133\nAlgeria\t1984\tNY.GDP.MKTP.KD.ZG\t5.59999652985009\nAlgeria\t1985\tNY.GDP.MKTP.KD.ZG\t3.69999725338795\nAlgeria\t1986\tNY.GDP.MKTP.KD.ZG\t0.400001001999243\nAlgeria\t1987\tNY.GDP.MKTP.KD.ZG\t-0.69999752446148\nAlgeria\t1988\tNY.GDP.MKTP.KD.ZG\t-1.00000549123267\nAlgeria\t1989\tNY.GDP.MKTP.KD.ZG\t4.40000215933378\nAlgeria\t1990\tNY.GDP.MKTP.KD.ZG\t0.800000580914457\nAlgeria\t1991\tNY.GDP.MKTP.KD.ZG\t-1.20000058417291\nAlgeria\t1992\tNY.GDP.MKTP.KD.ZG\t1.80000230116705\nAlgeria\t1993\tNY.GDP.MKTP.KD.ZG\t-2.10000076099048\nAlgeria\t1994\tNY.GDP.MKTP.KD.ZG\t-0.899996545968492\nAlgeria\t1995\tNY.GDP.MKTP.KD.ZG\t3.7999947880281\nAlgeria\t1996\tNY.GDP.MKTP.KD.ZG\t4.09999847018592\nAlgeria\t1997\tNY.GDP.MKTP.KD.ZG\t1.09999993807601\nAlgeria\t1998\tNY.GDP.MKTP.KD.ZG\t5.10000360875516\nAlgeria\t1999\tNY.GDP.MKTP.KD.ZG\t3.20000155285518\nAlgeria\t2000\tNY.GDP.MKTP.KD.ZG\t3.8\nAlgeria\t2001\tNY.GDP.MKTP.KD.ZG\t2.99999999999999\nAlgeria\t2002\tNY.GDP.MKTP.KD.ZG\t5.59999999999994\nAlgeria\t2003\tNY.GDP.MKTP.KD.ZG\t7.20000000000012\nAlgeria\t2004\tNY.GDP.MKTP.KD.ZG\t4.29999999999981\nAlgeria\t2005\tNY.GDP.MKTP.KD.ZG\t5.90000000000006\nAlgeria\t2006\tNY.GDP.MKTP.KD.ZG\t1.70000000000007\nAlgeria\t2007\tNY.GDP.MKTP.KD.ZG\t3.40000000000001\nAlgeria\t2008\tNY.GDP.MKTP.KD.ZG\t2.39999999999986\nAlgeria\t2009\tNY.GDP.MKTP.KD.ZG\t1.60000000000011\nAlgeria\t2010\tNY.GDP.MKTP.KD.ZG\t3.60000000000002\nAlgeria\t2011\tNY.GDP.MKTP.KD.ZG\t2.90000000000006\nAlgeria\t2012\tNY.GDP.MKTP.KD.ZG\t3.39999999999989\nAlgeria\t2013\tNY.GDP.MKTP.KD.ZG\t2.80000000000014\nAlgeria\t2014\tNY.GDP.MKTP.KD.ZG\t3.79999999999987\nAlgeria\t2015\tNY.GDP.MKTP.KD.ZG\t3.89999999999992\nAlgeria\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1978\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1979\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1980\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1981\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1982\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1983\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1984\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1985\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1986\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1987\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1988\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1989\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1990\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1991\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1992\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1993\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1994\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1995\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1996\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1997\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1998\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t1999\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2000\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2001\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2002\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2003\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2004\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2005\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2006\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2007\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2008\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2009\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2010\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2011\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2012\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2013\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2014\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2015\tNY.GDP.MKTP.KD.ZG\t0\nAmerican Samoa\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t1971\tNY.GDP.MKTP.KD.ZG\t4.64947352511373\nAndorra\t1972\tNY.GDP.MKTP.KD.ZG\t8.14974570911613\nAndorra\t1973\tNY.GDP.MKTP.KD.ZG\t7.78846541379028\nAndorra\t1974\tNY.GDP.MKTP.KD.ZG\t5.61878578419557\nAndorra\t1975\tNY.GDP.MKTP.KD.ZG\t0.542203244600969\nAndorra\t1976\tNY.GDP.MKTP.KD.ZG\t3.30379145669792\nAndorra\t1977\tNY.GDP.MKTP.KD.ZG\t2.83857430718224\nAndorra\t1978\tNY.GDP.MKTP.KD.ZG\t1.46300341337702\nAndorra\t1979\tNY.GDP.MKTP.KD.ZG\t0.0415465175962453\nAndorra\t1980\tNY.GDP.MKTP.KD.ZG\t2.20872814446003\nAndorra\t1981\tNY.GDP.MKTP.KD.ZG\t-0.132468704037194\nAndorra\t1982\tNY.GDP.MKTP.KD.ZG\t1.24646173311282\nAndorra\t1983\tNY.GDP.MKTP.KD.ZG\t1.77011580714547\nAndorra\t1984\tNY.GDP.MKTP.KD.ZG\t1.78468756916817\nAndorra\t1985\tNY.GDP.MKTP.KD.ZG\t2.32143585364256\nAndorra\t1986\tNY.GDP.MKTP.KD.ZG\t3.25332168107124\nAndorra\t1987\tNY.GDP.MKTP.KD.ZG\t5.54712259348614\nAndorra\t1988\tNY.GDP.MKTP.KD.ZG\t5.094324231523\nAndorra\t1989\tNY.GDP.MKTP.KD.ZG\t4.8270302776809\nAndorra\t1990\tNY.GDP.MKTP.KD.ZG\t3.78139347786568\nAndorra\t1991\tNY.GDP.MKTP.KD.ZG\t2.54600064090229\nAndorra\t1992\tNY.GDP.MKTP.KD.ZG\t0.929215382801402\nAndorra\t1993\tNY.GDP.MKTP.KD.ZG\t-1.03149171388272\nAndorra\t1994\tNY.GDP.MKTP.KD.ZG\t2.38319527748475\nAndorra\t1995\tNY.GDP.MKTP.KD.ZG\t2.7574939772792\nAndorra\t1996\tNY.GDP.MKTP.KD.ZG\t4.64974195875254\nAndorra\t1997\tNY.GDP.MKTP.KD.ZG\t9.06767396402095\nAndorra\t1998\tNY.GDP.MKTP.KD.ZG\t3.19478796475406\nAndorra\t1999\tNY.GDP.MKTP.KD.ZG\t4.09908114794879\nAndorra\t2000\tNY.GDP.MKTP.KD.ZG\t1.16578706437875\nAndorra\t2001\tNY.GDP.MKTP.KD.ZG\t6.06678059681872\nAndorra\t2002\tNY.GDP.MKTP.KD.ZG\t6.42684513850158\nAndorra\t2003\tNY.GDP.MKTP.KD.ZG\t12.0239197396079\nAndorra\t2004\tNY.GDP.MKTP.KD.ZG\t8.06950429074125\nAndorra\t2005\tNY.GDP.MKTP.KD.ZG\t7.83970449604648\nAndorra\t2006\tNY.GDP.MKTP.KD.ZG\t4.58531059335641\nAndorra\t2007\tNY.GDP.MKTP.KD.ZG\t0.078039377902499\nAndorra\t2008\tNY.GDP.MKTP.KD.ZG\t-8.59425600818136\nAndorra\t2009\tNY.GDP.MKTP.KD.ZG\t-3.81798602402674\nAndorra\t2010\tNY.GDP.MKTP.KD.ZG\t-5.34797718118854\nAndorra\t2011\tNY.GDP.MKTP.KD.ZG\t-4.80267503725287\nAndorra\t2012\tNY.GDP.MKTP.KD.ZG\t-1.76001032768896\nAndorra\t2013\tNY.GDP.MKTP.KD.ZG\t-0.0635143126218196\nAndorra\t2014\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t2015\tNY.GDP.MKTP.KD.ZG\t0\nAndorra\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1978\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1979\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1980\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1981\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1982\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1983\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1984\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1985\tNY.GDP.MKTP.KD.ZG\t0\nAngola\t1986\tNY.GDP.MKTP.KD.ZG\t2.80000000794205\nAngola\t1987\tNY.GDP.MKTP.KD.ZG\t7.90000000367507\nAngola\t1988\tNY.GDP.MKTP.KD.ZG\t5.59999998070748\nAngola\t1989\tNY.GDP.MKTP.KD.ZG\t0.400000018928679\nAngola\t1990\tNY.GDP.MKTP.KD.ZG\t-0.300000018689033\nAngola\t1991\tNY.GDP.MKTP.KD.ZG\t-1.19999998948089\nAngola\t1992\tNY.GDP.MKTP.KD.ZG\t-6.90000000175168\nAngola\t1993\tNY.GDP.MKTP.KD.ZG\t-24.6999999862023\nAngola\t1994\tNY.GDP.MKTP.KD.ZG\t3.49999998931119\nAngola\t1995\tNY.GDP.MKTP.KD.ZG\t10.4000000186697\nAngola\t1996\tNY.GDP.MKTP.KD.ZG\t11.1999999665668\nAngola\t1997\tNY.GDP.MKTP.KD.ZG\t7.90000000976701\nAngola\t1998\tNY.GDP.MKTP.KD.ZG\t6.8047621164026\nAngola\t1999\tNY.GDP.MKTP.KD.ZG\t3.23979967059962\nAngola\t2000\tNY.GDP.MKTP.KD.ZG\t3.01207617104589\nAngola\t2001\tNY.GDP.MKTP.KD.ZG\t4.22096514726003\nAngola\t2002\tNY.GDP.MKTP.KD.ZG\t-6.94046155293243\nAngola\t2003\tNY.GDP.MKTP.KD.ZG\t5.24749454056162\nAngola\t2004\tNY.GDP.MKTP.KD.ZG\t10.8795774758584\nAngola\t2005\tNY.GDP.MKTP.KD.ZG\t18.2614503245644\nAngola\t2006\tNY.GDP.MKTP.KD.ZG\t20.7351248827892\nAngola\t2007\tNY.GDP.MKTP.KD.ZG\t22.5930542991417\nAngola\t2008\tNY.GDP.MKTP.KD.ZG\t13.8171458087553\nAngola\t2009\tNY.GDP.MKTP.KD.ZG\t2.41286969254453\nAngola\t2010\tNY.GDP.MKTP.KD.ZG\t3.40765479391563\nAngola\t2011\tNY.GDP.MKTP.KD.ZG\t3.91859698579799\nAngola\t2012\tNY.GDP.MKTP.KD.ZG\t5.15544054479086\nAngola\t2013\tNY.GDP.MKTP.KD.ZG\t6.81358576983935\nAngola\t2014\tNY.GDP.MKTP.KD.ZG\t4.80447270408375\nAngola\t2015\tNY.GDP.MKTP.KD.ZG\t2.99770407322555\nAngola\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAntigua and Barbuda\t1978\tNY.GDP.MKTP.KD.ZG\t4.18412369241072\nAntigua and Barbuda\t1979\tNY.GDP.MKTP.KD.ZG\t7.3435710853441\nAntigua and Barbuda\t1980\tNY.GDP.MKTP.KD.ZG\t8.59506428983356\nAntigua and Barbuda\t1981\tNY.GDP.MKTP.KD.ZG\t4.08371877510336\nAntigua and Barbuda\t1982\tNY.GDP.MKTP.KD.ZG\t0.167303078434315\nAntigua and Barbuda\t1983\tNY.GDP.MKTP.KD.ZG\t4.67838938623611\nAntigua and Barbuda\t1984\tNY.GDP.MKTP.KD.ZG\t9.75361582028521\nAntigua and Barbuda\t1985\tNY.GDP.MKTP.KD.ZG\t7.99031164631295\nAntigua and Barbuda\t1986\tNY.GDP.MKTP.KD.ZG\t12.7194263697446\nAntigua and Barbuda\t1987\tNY.GDP.MKTP.KD.ZG\t8.26317513832319\nAntigua and Barbuda\t1988\tNY.GDP.MKTP.KD.ZG\t5.42179951397377\nAntigua and Barbuda\t1989\tNY.GDP.MKTP.KD.ZG\t5.77288342482856\nAntigua and Barbuda\t1990\tNY.GDP.MKTP.KD.ZG\t2.54510196146892\nAntigua and Barbuda\t1991\tNY.GDP.MKTP.KD.ZG\t2.0364360939451\nAntigua and Barbuda\t1992\tNY.GDP.MKTP.KD.ZG\t0.848187899110314\nAntigua and Barbuda\t1993\tNY.GDP.MKTP.KD.ZG\t5.39010158752733\nAntigua and Barbuda\t1994\tNY.GDP.MKTP.KD.ZG\t6.32762207439725\nAntigua and Barbuda\t1995\tNY.GDP.MKTP.KD.ZG\t-4.17681867690712\nAntigua and Barbuda\t1996\tNY.GDP.MKTP.KD.ZG\t6.7395611559254\nAntigua and Barbuda\t1997\tNY.GDP.MKTP.KD.ZG\t4.88584151541207\nAntigua and Barbuda\t1998\tNY.GDP.MKTP.KD.ZG\t4.40767395547452\nAntigua and Barbuda\t1999\tNY.GDP.MKTP.KD.ZG\t4.12160455415504\nAntigua and Barbuda\t2000\tNY.GDP.MKTP.KD.ZG\t5.04176929743556\nAntigua and Barbuda\t2001\tNY.GDP.MKTP.KD.ZG\t-3.19424189288979\nAntigua and Barbuda\t2002\tNY.GDP.MKTP.KD.ZG\t2.92425143016098\nAntigua and Barbuda\t2003\tNY.GDP.MKTP.KD.ZG\t5.91363142470426\nAntigua and Barbuda\t2004\tNY.GDP.MKTP.KD.ZG\t5.28642014860594\nAntigua and Barbuda\t2005\tNY.GDP.MKTP.KD.ZG\t6.08322843204205\nAntigua and Barbuda\t2006\tNY.GDP.MKTP.KD.ZG\t13.3764001850193\nAntigua and Barbuda\t2007\tNY.GDP.MKTP.KD.ZG\t9.49894448015539\nAntigua and Barbuda\t2008\tNY.GDP.MKTP.KD.ZG\t0.07111102052761\nAntigua and Barbuda\t2009\tNY.GDP.MKTP.KD.ZG\t-12.0360150576178\nAntigua and Barbuda\t2010\tNY.GDP.MKTP.KD.ZG\t-7.14299133491195\nAntigua and Barbuda\t2011\tNY.GDP.MKTP.KD.ZG\t-1.79343560355176\nAntigua and Barbuda\t2012\tNY.GDP.MKTP.KD.ZG\t4.01954183888284\nAntigua and Barbuda\t2013\tNY.GDP.MKTP.KD.ZG\t-0.346259915794363\nAntigua and Barbuda\t2014\tNY.GDP.MKTP.KD.ZG\t4.8219802933227\nAntigua and Barbuda\t2015\tNY.GDP.MKTP.KD.ZG\t3.66412072919201\nAntigua and Barbuda\t2016\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1960\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1961\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1962\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1963\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1964\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1965\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1966\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1967\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1968\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1969\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1970\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1971\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1972\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1973\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1974\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1975\tNY.GDP.MKTP.KD.ZG\t0\nArab World\t1976\tNY.GDP.MKTP.KD.ZG\t12.8963334764839\nArab World\t1977\tNY.GDP.MKTP.KD.ZG\t8.6488693136165\nArab World\t1978\tNY.GDP.MKTP.KD.ZG\t1.91012841623584\nArab World\t1979\tNY.GDP.MKTP.KD.ZG\t10.5867781345448\nArab World\t1980\tNY.GDP.MKTP.KD.ZG\t10.0738569854381\nArab World\t1981\tNY.GDP.MKTP.KD.ZG\t3.97701471197497\nArab World\t1982\tNY.GDP.MKTP.KD.ZG\t-3.11052920082138\nArab World\t1983\tNY.GDP.MKTP.KD.ZG\t-2.78641375028106\nArab World\t1984\tNY.GDP.MKTP.KD.ZG\t1.70543504044156\nArab World\t1985\tNY.GDP.MKTP.KD.ZG\t-0.532066508021643\nArab World\t1986\tNY.GDP.MKTP.KD.ZG\t0.468922565241854\nArab World\t1987\tNY.GDP.MKTP.KD.ZG\t0.604706661297854\nArab World\t1988\tNY.GDP.MKTP.KD.ZG\t3.77814205447694\nArab World\t1989\tNY.GDP.MKTP.KD.ZG\t2.42781001560668\nArab World\t1990\tNY.GDP.MKTP.KD.ZG\t10.7821246999374\nArab World\t1991\tNY.GDP.MKTP.KD.ZG\t-1.19233071945639\nArab World\t1992\tNY.GDP.MKTP.KD.ZG\t5.09904102387704\nArab World\t1993\tNY.GDP.MKTP.KD.ZG\t4.04835785911477\nArab World\t1994\tNY.GDP.MKTP.KD.ZG\t3.43766138069736\nArab World\t1995\tNY.GDP.MKTP.KD.ZG\t2.92586224392333\nArab World\t1996\tNY.GDP.MKTP.KD.ZG\t4.8582177480192\nArab World\t1997\tNY.GDP.MKTP.KD.ZG\t4.86018110602386\nArab World\t1998\tNY.GDP.MKTP.KD.ZG\t5.28330287028811\nArab World\t1999\tNY.GDP.MKTP.KD.ZG\t3.04791589284952\nArab World\t2000\tNY.GDP.MKTP.KD.ZG\t5.13235495889286\nArab World\t2001\tNY.GDP.MKTP.KD.ZG\t2.20141443936836\nArab World\t2002\tNY.GDP.MKTP.KD.ZG\t1.49855443787776\nArab World\t2003\tNY.GDP.MKTP.KD.ZG\t4.23361602662584\nArab World\t2004\tNY.GDP.MKTP.KD.ZG\t9.73882570851472\nArab World\t2005\tNY.GDP.MKTP.KD.ZG\t6.15104233372202\nArab World\t2006\tNY.GDP.MKTP.KD.ZG\t7.31209078222616\nArab World\t2007\tNY.GDP.MKTP.KD.ZG\t5.65008395785689\nArab World\t2008\tNY.GDP.MKTP.KD.ZG\t6.30550695986682\nArab World\t2009\tNY.GDP.MKTP.KD.ZG\t1.51529983052367\nArab World\t2010\tNY.GDP.MKTP.KD.ZG\t4.61579881738106\nArab World\t2011\tNY.GDP.MKTP.KD.ZG\t3.33067447890171\nArab World\t2012\tNY.GDP.MKTP.KD.ZG\t6.64109130027622\nArab World\t2013\tNY.GDP.MKTP.KD.ZG\t2.90357914809545\nArab World\t2014\tNY.GDP.MKTP.KD.ZG\t2.14118616558636\nArab World\t2015\tNY.GDP.MKTP.KD.ZG\t2.97164832223424\nArab World\t2016\tNY.GDP.MKTP.KD.ZG\t0\nArgentina\t1960\tNY.GDP.MKTP.KD.ZG\t0\nArgentina\t1961\tNY.GDP.MKTP.KD.ZG\t5.42784287951248\nArgentina\t1962\tNY.GDP.MKTP.KD.ZG\t-0.852021523482009\nArgentina\t1963\tNY.GDP.MKTP.KD.ZG\t-5.30819682651725\nArgentina\t1964\tNY.GDP.MKTP.KD.ZG\t10.1302976614338\nArgentina\t1965\tNY.GDP.MKTP.KD.ZG\t10.5694333403428\nArgentina\t1966\tNY.GDP.MKTP.KD.ZG\t-0.659726171593704\nArgentina\t1967\tNY.GDP.MKTP.KD.ZG\t3.1919966233703\nArgentina\t1968\tNY.GDP.MKTP.KD.ZG\t4.82250078158644\nArgentina\t1969\tNY.GDP.MKTP.KD.ZG\t9.67952600806899\nArgentina\t1970\tNY.GDP.MKTP.KD.ZG\t3.04564331900328\nArgentina\t1971\tNY.GDP.MKTP.KD.ZG\t5.65813108318036\nArgentina\t1972\tNY.GDP.MKTP.KD.ZG\t1.62841651625511\nArgentina\t1973\tNY.GDP.MKTP.KD.ZG\t2.81175404095775\nArgentina\t1974\tNY.GDP.MKTP.KD.ZG\t5.5338043948322\nArgentina\t1975\tNY.GDP.MKTP.KD.ZG\t-0.0284121027670778\nArgentina\t1976\tNY.GDP.MKTP.KD.ZG\t-2.01825151667566\nArgentina\t1977\tNY.GDP.MKTP.KD.ZG\t6.93414775537975\nArgentina\t1978\tNY.GDP.MKTP.KD.ZG\t-4.50612480247695\nArgentina\t1979\tNY.GDP.MKTP.KD.ZG\t10.2227634648727\nArgentina\t1980\tNY.GDP.MKTP.KD.ZG\t4.15176234244556\nArgentina\t1981\tNY.GDP.MKTP.KD.ZG\t-5.68952800019454\nArgentina\t1982\tNY.GDP.MKTP.KD.ZG\t-4.95717851904021\nArgentina\t1983\tNY.GDP.MKTP.KD.ZG\t3.87512342400915\nArgentina\t1984\tNY.GDP.MKTP.KD.ZG\t2.21177350377243\nArgentina\t1985\tNY.GDP.MKTP.KD.ZG\t-7.58667718413531\nArgentina\t1986\tNY.GDP.MKTP.KD.ZG\t7.87577983041486\nArgentina\t1987\tNY.GDP.MKTP.KD.ZG\t2.90999313057101\nArgentina\t1988\tNY.GDP.MKTP.KD.ZG\t-2.55690487694625\nArgentina\t1989\tNY.GDP.MKTP.KD.ZG\t-7.49618958372476\nArgentina\t1990\tNY.GDP.MKTP.KD.ZG\t-2.39895921890088\nArgentina\t1991\tNY.GDP.MKTP.KD.ZG\t12.6697100866107\nArgentina\t1992\tNY.GDP.MKTP.KD.ZG\t11.9407747350582\nArgentina\t1993\tNY.GDP.MKTP.KD.ZG\t5.90691950110389\nArgentina\t1994\tNY.GDP.MKTP.KD.ZG\t5.83620069792453\nArgentina\t1995\tNY.GDP.MKTP.KD.ZG\t-2.84520961517036\nArgentina\t1996\tNY.GDP.MKTP.KD.ZG\t5.52668982269238\nArgentina\t1997\tNY.GDP.MKTP.KD.ZG\t8.11104677397105\nArgentina\t1998\tNY.GDP.MKTP.KD.ZG\t3.85017886550885\nArgentina\t1999\tNY.GDP.MKTP.KD.ZG\t-3.38545705440335\nArgentina\t2000\tNY.GDP.MKTP.KD.ZG\t-0.788998929008514\nArgentina\t2001\tNY.GDP.MKTP.KD.ZG\t-4.40883969595714\nArgentina\t2002\tNY.GDP.MKTP.KD.ZG\t-10.894484811485\nArgentina\t2003\tNY.GDP.MKTP.KD.ZG\t8.83704077566961\nArgentina\t2004\tNY.GDP.MKTP.KD.ZG\t9.02957332125889\nArgentina\t2005\tNY.GDP.MKTP.KD.ZG\t8.88930814130993\nArgentina\t2006\tNY.GDP.MKTP.KD.ZG\t8.14253597906148\nArgentina\t2007\tNY.GDP.MKTP.KD.ZG\t9.01574459002907\nArgentina\t2008\tNY.GDP.MKTP.KD.ZG\t4.09386150040511\nArgentina\t2009\tNY.GDP.MKTP.KD.ZG\t-6.01335533140711\nArgentina\t2010\tNY.GDP.MKTP.KD.ZG\t10.3535674488731\nArgentina\t2011\tNY.GDP.MKTP.KD.ZG\t6.14748633986851\nArgentina\t2012\tNY.GDP.MKTP.KD.ZG\t-1.05287445030977\nArgentina\t2013\tNY.GDP.MKTP.KD.ZG\t2.30248415836283\nArgentina\t2014\tNY.GDP.MKTP.KD.ZG\t-2.55847744625616\nArgentina\t2015\tNY.GDP.MKTP.KD.ZG\t2.37229601701262\nArgentina\t2016\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1960\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1961\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1962\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1963\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1964\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1965\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1966\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1967\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1968\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1969\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1970\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1971\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1972\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1973\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1974\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1975\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1976\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1977\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1978\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1979\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1980\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1981\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1982\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1983\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1984\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1985\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1986\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1987\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1988\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1989\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1990\tNY.GDP.MKTP.KD.ZG\t0\nArmenia\t1991\tNY.GDP.MKTP.KD.ZG\t-11.6999984817524\nArmenia\t1992\tNY.GDP.MKTP.KD.ZG\t-41.8000027485614\nArmenia\t1993\tNY.GDP.MKTP.KD.ZG\t-8.79999879239085\nArmenia\t1994\tNY.GDP.MKTP.KD.ZG\t5.40000279013701\nArmenia\t1995\tNY.GDP.MKTP.KD.ZG\t6.89999840719999\nArmenia\t1996\tNY.GDP.MKTP.KD.ZG\t5.86540074820616\nArmenia\t1997\tNY.GDP.MKTP.KD.ZG\t3.32107969582276\nArmenia\t1998\tNY.GDP.MKTP.KD.ZG\t7.3\nArmenia\t1999\tNY.GDP.MKTP.KD.ZG\t3.30000000000001\nArmenia\t2000\tNY.GDP.MKTP.KD.ZG\t5.89999999999978\nArmenia\t2001\tNY.GDP.MKTP.KD.ZG\t9.55664149553445\nArmenia\t2002\tNY.GDP.MKTP.KD.ZG\t13.186300532067\nArmenia\t2003\tNY.GDP.MKTP.KD.ZG\t14.0407950559649\nArmenia\t2004\tNY.GDP.MKTP.KD.ZG\t10.4678418639969\nArmenia\t2005\tNY.GDP.MKTP.KD.ZG\t13.8657112498155\nArmenia\t2006\tNY.GDP.MKTP.KD.ZG\t13.1980035154758\nArmenia\t2007\tNY.GDP.MKTP.KD.ZG\t13.7492019586216\nArmenia\t2008\tNY.GDP.MKTP.KD.ZG\t6.90000000168239\nArmenia\t2009\tNY.GDP.MKTP.KD.ZG\t-14.149988640087\nArmenia\t2010\tNY.GDP.MKTP.KD.ZG\t2.1999999991457\nArmenia\t2011\tNY.GDP.MKTP.KD.ZG\t4.69999999861844\nArmenia\t2012\tNY.GDP.MKTP.KD.ZG\t7.20000000328227\nArmenia\t2013\tNY.GDP.MKTP.KD.ZG\t3.30000000179984\nArmenia\t2014\tNY.GDP.MKTP.KD.ZG\t3.49999999884847\nArmenia\t2015\tNY.GDP.MKTP.KD.ZG\t3.00000000125773\nArmenia\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1978\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1979\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1980\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1981\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1982\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1983\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1984\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1985\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1986\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1987\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1988\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1989\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1990\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1991\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1992\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1993\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1994\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t1995\tNY.GDP.MKTP.KD.ZG\t1.24508591166203\nAruba\t1996\tNY.GDP.MKTP.KD.ZG\t7.81443171889218\nAruba\t1997\tNY.GDP.MKTP.KD.ZG\t6.66662183020206\nAruba\t1998\tNY.GDP.MKTP.KD.ZG\t1.15446939174406\nAruba\t1999\tNY.GDP.MKTP.KD.ZG\t4.51406203251221\nAruba\t2000\tNY.GDP.MKTP.KD.ZG\t-0.364695778713454\nAruba\t2001\tNY.GDP.MKTP.KD.ZG\t-2.16445940890385\nAruba\t2002\tNY.GDP.MKTP.KD.ZG\t0.465289865491144\nAruba\t2003\tNY.GDP.MKTP.KD.ZG\t7.51947237328494\nAruba\t2004\tNY.GDP.MKTP.KD.ZG\t1.17669048367502\nAruba\t2005\tNY.GDP.MKTP.KD.ZG\t0.380390971382511\nAruba\t2006\tNY.GDP.MKTP.KD.ZG\t2.35511944298051\nAruba\t2007\tNY.GDP.MKTP.KD.ZG\t-3.65462624193272\nAruba\t2008\tNY.GDP.MKTP.KD.ZG\t-6.88130206359888\nAruba\t2009\tNY.GDP.MKTP.KD.ZG\t-5.65350208612952\nAruba\t2010\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t2011\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t2012\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t2013\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t2014\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t2015\tNY.GDP.MKTP.KD.ZG\t0\nAruba\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAustralia\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAustralia\t1961\tNY.GDP.MKTP.KD.ZG\t2.47592903011602\nAustralia\t1962\tNY.GDP.MKTP.KD.ZG\t1.32757523914135\nAustralia\t1963\tNY.GDP.MKTP.KD.ZG\t6.21244438552095\nAustralia\t1964\tNY.GDP.MKTP.KD.ZG\t6.97615507461865\nAustralia\t1965\tNY.GDP.MKTP.KD.ZG\t5.98001969888841\nAustralia\t1966\tNY.GDP.MKTP.KD.ZG\t2.36519306244575\nAustralia\t1967\tNY.GDP.MKTP.KD.ZG\t6.29705551126803\nAustralia\t1968\tNY.GDP.MKTP.KD.ZG\t5.09282130336703\nAustralia\t1969\tNY.GDP.MKTP.KD.ZG\t7.0497118665666\nAustralia\t1970\tNY.GDP.MKTP.KD.ZG\t7.16689151654633\nAustralia\t1971\tNY.GDP.MKTP.KD.ZG\t4.00915277582364\nAustralia\t1972\tNY.GDP.MKTP.KD.ZG\t3.91086112989925\nAustralia\t1973\tNY.GDP.MKTP.KD.ZG\t2.59864243885953\nAustralia\t1974\tNY.GDP.MKTP.KD.ZG\t4.09686079488536\nAustralia\t1975\tNY.GDP.MKTP.KD.ZG\t1.33824894253101\nAustralia\t1976\tNY.GDP.MKTP.KD.ZG\t2.58966329312659\nAustralia\t1977\tNY.GDP.MKTP.KD.ZG\t3.60727832218465\nAustralia\t1978\tNY.GDP.MKTP.KD.ZG\t0.896974943070489\nAustralia\t1979\tNY.GDP.MKTP.KD.ZG\t4.052844192668\nAustralia\t1980\tNY.GDP.MKTP.KD.ZG\t3.05139105308542\nAustralia\t1981\tNY.GDP.MKTP.KD.ZG\t3.35814322205586\nAustralia\t1982\tNY.GDP.MKTP.KD.ZG\t3.3212959214834\nAustralia\t1983\tNY.GDP.MKTP.KD.ZG\t-2.23060017080476\nAustralia\t1984\tNY.GDP.MKTP.KD.ZG\t4.6271332407684\nAustralia\t1985\tNY.GDP.MKTP.KD.ZG\t5.24948051140859\nAustralia\t1986\tNY.GDP.MKTP.KD.ZG\t4.10152789814649\nAustralia\t1987\tNY.GDP.MKTP.KD.ZG\t2.57449271362755\nAustralia\t1988\tNY.GDP.MKTP.KD.ZG\t5.7690381847342\nAustralia\t1989\tNY.GDP.MKTP.KD.ZG\t3.87870000593526\nAustralia\t1990\tNY.GDP.MKTP.KD.ZG\t3.52913488445492\nAustralia\t1991\tNY.GDP.MKTP.KD.ZG\t-0.379883393800185\nAustralia\t1992\tNY.GDP.MKTP.KD.ZG\t0.399007033076032\nAustralia\t1993\tNY.GDP.MKTP.KD.ZG\t4.06013476851687\nAustralia\t1994\tNY.GDP.MKTP.KD.ZG\t4.03794657229683\nAustralia\t1995\tNY.GDP.MKTP.KD.ZG\t3.87904043958818\nAustralia\t1996\tNY.GDP.MKTP.KD.ZG\t3.94914072165129\nAustralia\t1997\tNY.GDP.MKTP.KD.ZG\t3.94734180401746\nAustralia\t1998\tNY.GDP.MKTP.KD.ZG\t4.43824342820818\nAustralia\t1999\tNY.GDP.MKTP.KD.ZG\t5.00709635409926\nAustralia\t2000\tNY.GDP.MKTP.KD.ZG\t3.86865768166436\nAustralia\t2001\tNY.GDP.MKTP.KD.ZG\t1.92938679706415\nAustralia\t2002\tNY.GDP.MKTP.KD.ZG\t3.856686720792\nAustralia\t2003\tNY.GDP.MKTP.KD.ZG\t3.07079872147182\nAustralia\t2004\tNY.GDP.MKTP.KD.ZG\t4.14937434487798\nAustralia\t2005\tNY.GDP.MKTP.KD.ZG\t3.2066423006508\nAustralia\t2006\tNY.GDP.MKTP.KD.ZG\t2.9828702853226\nAustralia\t2007\tNY.GDP.MKTP.KD.ZG\t3.75765786437918\nAustralia\t2008\tNY.GDP.MKTP.KD.ZG\t3.70669950604605\nAustralia\t2009\tNY.GDP.MKTP.KD.ZG\t1.81967826084417\nAustralia\t2010\tNY.GDP.MKTP.KD.ZG\t2.01818214420197\nAustralia\t2011\tNY.GDP.MKTP.KD.ZG\t2.37956133560841\nAustralia\t2012\tNY.GDP.MKTP.KD.ZG\t3.63272030319823\nAustralia\t2013\tNY.GDP.MKTP.KD.ZG\t2.44004906206246\nAustralia\t2014\tNY.GDP.MKTP.KD.ZG\t2.4998512224341\nAustralia\t2015\tNY.GDP.MKTP.KD.ZG\t2.25782511179634\nAustralia\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAustria\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAustria\t1961\tNY.GDP.MKTP.KD.ZG\t5.53797931684524\nAustria\t1962\tNY.GDP.MKTP.KD.ZG\t2.64867511295262\nAustria\t1963\tNY.GDP.MKTP.KD.ZG\t4.13826758157035\nAustria\t1964\tNY.GDP.MKTP.KD.ZG\t6.12435373762838\nAustria\t1965\tNY.GDP.MKTP.KD.ZG\t3.48017491799565\nAustria\t1966\tNY.GDP.MKTP.KD.ZG\t5.64286141093264\nAustria\t1967\tNY.GDP.MKTP.KD.ZG\t3.00804779775493\nAustria\t1968\tNY.GDP.MKTP.KD.ZG\t4.47231278246076\nAustria\t1969\tNY.GDP.MKTP.KD.ZG\t6.27586716606969\nAustria\t1970\tNY.GDP.MKTP.KD.ZG\t5.54602841063007\nAustria\t1971\tNY.GDP.MKTP.KD.ZG\t5.11496873516448\nAustria\t1972\tNY.GDP.MKTP.KD.ZG\t6.20786097184929\nAustria\t1973\tNY.GDP.MKTP.KD.ZG\t4.89043542102145\nAustria\t1974\tNY.GDP.MKTP.KD.ZG\t3.94213808630408\nAustria\t1975\tNY.GDP.MKTP.KD.ZG\t-0.363735687508665\nAustria\t1976\tNY.GDP.MKTP.KD.ZG\t4.57844539632157\nAustria\t1977\tNY.GDP.MKTP.KD.ZG\t5.07998083944021\nAustria\t1978\tNY.GDP.MKTP.KD.ZG\t-0.210653522029688\nAustria\t1979\tNY.GDP.MKTP.KD.ZG\t5.356699873455\nAustria\t1980\tNY.GDP.MKTP.KD.ZG\t1.73148536881487\nAustria\t1981\tNY.GDP.MKTP.KD.ZG\t-0.14429447402668\nAustria\t1982\tNY.GDP.MKTP.KD.ZG\t2.0112543759392\nAustria\t1983\tNY.GDP.MKTP.KD.ZG\t2.97308801257286\nAustria\t1984\tNY.GDP.MKTP.KD.ZG\t0.0512752530666916\nAustria\t1985\tNY.GDP.MKTP.KD.ZG\t2.49867849370824\nAustria\t1986\tNY.GDP.MKTP.KD.ZG\t2.30139275532899\nAustria\t1987\tNY.GDP.MKTP.KD.ZG\t1.35716799724619\nAustria\t1988\tNY.GDP.MKTP.KD.ZG\t3.2958802564421\nAustria\t1989\tNY.GDP.MKTP.KD.ZG\t3.8870747605712\nAustria\t1990\tNY.GDP.MKTP.KD.ZG\t4.34564156450476\nAustria\t1991\tNY.GDP.MKTP.KD.ZG\t3.44162738717691\nAustria\t1992\tNY.GDP.MKTP.KD.ZG\t2.09352471906863\nAustria\t1993\tNY.GDP.MKTP.KD.ZG\t0.526809483408996\nAustria\t1994\tNY.GDP.MKTP.KD.ZG\t2.40211875392227\nAustria\t1995\tNY.GDP.MKTP.KD.ZG\t2.66798367090327\nAustria\t1996\tNY.GDP.MKTP.KD.ZG\t2.39831429528101\nAustria\t1997\tNY.GDP.MKTP.KD.ZG\t2.20501964036377\nAustria\t1998\tNY.GDP.MKTP.KD.ZG\t3.55996691871002\nAustria\t1999\tNY.GDP.MKTP.KD.ZG\t3.58998775085415\nAustria\t2000\tNY.GDP.MKTP.KD.ZG\t3.36840771488365\nAustria\t2001\tNY.GDP.MKTP.KD.ZG\t1.35051607992412\nAustria\t2002\tNY.GDP.MKTP.KD.ZG\t1.65585494261917\nAustria\t2003\tNY.GDP.MKTP.KD.ZG\t0.756156575984136\nAustria\t2004\tNY.GDP.MKTP.KD.ZG\t2.70574308750665\nAustria\t2005\tNY.GDP.MKTP.KD.ZG\t2.14068259595112\nAustria\t2006\tNY.GDP.MKTP.KD.ZG\t3.35083135763318\nAustria\t2007\tNY.GDP.MKTP.KD.ZG\t3.621510423492\nAustria\t2008\tNY.GDP.MKTP.KD.ZG\t1.54726383930861\nAustria\t2009\tNY.GDP.MKTP.KD.ZG\t-3.79907504838874\nAustria\t2010\tNY.GDP.MKTP.KD.ZG\t1.92867305613767\nAustria\t2011\tNY.GDP.MKTP.KD.ZG\t2.80799993211767\nAustria\t2012\tNY.GDP.MKTP.KD.ZG\t0.757314345720772\nAustria\t2013\tNY.GDP.MKTP.KD.ZG\t0.321250821811844\nAustria\t2014\tNY.GDP.MKTP.KD.ZG\t0.353471065680438\nAustria\t2015\tNY.GDP.MKTP.KD.ZG\t0.862105018651633\nAustria\t2016\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1960\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1961\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1962\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1963\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1964\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1965\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1966\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1967\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1968\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1969\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1970\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1971\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1972\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1973\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1974\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1975\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1976\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1977\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1978\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1979\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1980\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1981\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1982\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1983\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1984\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1985\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1986\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1987\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1988\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1989\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1990\tNY.GDP.MKTP.KD.ZG\t0\nAzerbaijan\t1991\tNY.GDP.MKTP.KD.ZG\t-0.699999960061689\nAzerbaijan\t1992\tNY.GDP.MKTP.KD.ZG\t-22.6000003946572\nAzerbaijan\t1993\tNY.GDP.MKTP.KD.ZG\t-23.099999548566\nAzerbaijan\t1994\tNY.GDP.MKTP.KD.ZG\t-19.7000000190049\nAzerbaijan\t1995\tNY.GDP.MKTP.KD.ZG\t-11.8000008993603\nAzerbaijan\t1996\tNY.GDP.MKTP.KD.ZG\t1.30000019976242\nAzerbaijan\t1997\tNY.GDP.MKTP.KD.ZG\t5.80000052390139\nAzerbaijan\t1998\tNY.GDP.MKTP.KD.ZG\t10.0000002781915\nAzerbaijan\t1999\tNY.GDP.MKTP.KD.ZG\t7.40000058167318\nAzerbaijan\t2000\tNY.GDP.MKTP.KD.ZG\t11.0999992535406\nAzerbaijan\t2001\tNY.GDP.MKTP.KD.ZG\t9.89999999999999\nAzerbaijan\t2002\tNY.GDP.MKTP.KD.ZG\t10.5999992015725\nAzerbaijan\t2003\tNY.GDP.MKTP.KD.ZG\t11.2000002371477\nAzerbaijan\t2004\tNY.GDP.MKTP.KD.ZG\t10.2000003982988\nAzerbaijan\t2005\tNY.GDP.MKTP.KD.ZG\t26.4000008082431\nAzerbaijan\t2006\tNY.GDP.MKTP.KD.ZG\t34.4999995102935\nAzerbaijan\t2007\tNY.GDP.MKTP.KD.ZG\t25.0489995231791\nAzerbaijan\t2008\tNY.GDP.MKTP.KD.ZG\t10.7724207826314\nAzerbaijan\t2009\tNY.GDP.MKTP.KD.ZG\t9.41065376397619\nAzerbaijan\t2010\tNY.GDP.MKTP.KD.ZG\t4.85433932383958\nAzerbaijan\t2011\tNY.GDP.MKTP.KD.ZG\t0.0659227678492726\nAzerbaijan\t2012\tNY.GDP.MKTP.KD.ZG\t2.20000018843571\nAzerbaijan\t2013\tNY.GDP.MKTP.KD.ZG\t5.79667839631929\nAzerbaijan\t2014\tNY.GDP.MKTP.KD.ZG\t2\nAzerbaijan\t2015\tNY.GDP.MKTP.KD.ZG\t1.09999999999999\nAzerbaijan\t2016\tNY.GDP.MKTP.KD.ZG\t0\nBahamas, The\t1960\tNY.GDP.MKTP.KD.ZG\t0\nBahamas, The\t1961\tNY.GDP.MKTP.KD.ZG\t10.6670974291829\nBahamas, The\t1962\tNY.GDP.MKTP.KD.ZG\t10.4519718906978\nBahamas, The\t1963\tNY.GDP.MKTP.KD.ZG\t10.5240552039871\nBahamas, The\t1964\tNY.GDP.MKTP.KD.ZG\t10.501567201834\nBahamas, The\t1965\tNY.GDP.MKTP.KD.ZG\t10.4255964880827\nBahamas, The\t1966\tNY.GDP.MKTP.KD.ZG\t9.07192871148771\nBahamas, The\t1967\tNY.GDP.MKTP.KD.ZG\t9.59811386676546\nBahamas, The\t1968\tNY.GDP.MKTP.KD.ZG\t8.42176356379973\nBahamas, The\t1969\tNY.GDP.MKTP.KD.ZG\t8.9816625781348\nBahamas, The\t1970\tNY.GDP.MKTP.KD.ZG\t-5.6496495193161\nBahamas, The\t1971\tNY.GDP.MKTP.KD.ZG\t1.6265087407437\nBahamas, The\t1972\tNY.GDP.MKTP.KD.ZG\t-3.49733593336903\nBahamas, The\t1973\tNY.GDP.MKTP.KD.ZG\t7.56756882392715\nBahamas, The\t1974\tNY.GDP.MKTP.KD.ZG\t-16.7542290749632\nBahamas, The\t1975\tNY.GDP.MKTP.KD.ZG\t-14.8031263125012\nBahamas, The\t1976\tNY.GDP.MKTP.KD.ZG\t5.18518497170824\nBahamas, The\t1977\tNY.GDP.MKTP.KD.ZG\t9.15492921913146\nBahamas, The\t1978\tNY.GDP.MKTP.KD.ZG\t14.1795201387168\nBahamas, The\t1979\tNY.GDP.MKTP.KD.ZG\t26.139295769424\nBahamas, The\t1980\tNY.GDP.MKTP.KD.ZG\t6.49528192139535\nBahamas, The\t1981\tNY.GDP.MKTP.KD.ZG\t-9.22640507988643\nBahamas, The\t1982\tNY.GDP.MKTP.KD.ZG\t6.69889775608137\nBahamas, The\t1983\tNY.GDP.MKTP.KD.ZG\t3.59705186796597\nBahamas, The\t1984\tNY.GDP.MKTP.KD.ZG\t14.1711486244798\nBahamas, The\t1985\tNY.GDP.MKTP.KD.ZG\t4.82918011397481\nBahamas, The\t1986\tNY.GDP.MKTP.KD.ZG\t1.79700022744103\nBahamas, The\t1987\tNY.GDP.MKTP.KD.ZG\t2.98451934490475\nBahamas, The\t1988\tNY.GDP.MKTP.KD.ZG\t2.309707660833\nBahamas, The\t1989\tNY.GDP.MKTP.KD.ZG\t6.72732979931732\nBahamas, The\t1990\tNY.GDP.MKTP.KD.ZG\t-1.59624908649569\nBahamas, The\t1991\tNY.GDP.MKTP.KD.ZG\t-4.18178463830372\nBahamas, The\t1992\tNY.GDP.MKTP.KD.ZG\t-3.82558272775211\nBahamas, The\t1993\tNY.GDP.MKTP.KD.ZG\t0.307806938390144\nBahamas, The\t1994\tNY.GDP.MKTP.KD.ZG\t3.14891619118119\nBahamas, The\t1995\tNY.GDP.MKTP.KD.ZG\t4.37875139876522\nBahamas, The\t1996\tNY.GDP.MKTP.KD.ZG\t4.22353068025446\nBahamas, The\t1997\tNY.GDP.MKTP.KD.ZG\t2.06223948963316\nBahamas, The\t1998\tNY.GDP.MKTP.KD.ZG\t4.7164738248118\nBahamas, The\t1999\tNY.GDP.MKTP.KD.ZG\t7.14412993221747\nBahamas, The\t2000\tNY.GDP.MKTP.KD.ZG\t4.149246399763\nBahamas, The\t2001\tNY.GDP.MKTP.KD.ZG\t2.62562712099302\nBahamas, The\t2002\tNY.GDP.MKTP.KD.ZG\t2.7046295125315\nBahamas, The\t2003\tNY.GDP.MKTP.KD.ZG\t-1.26474462878853\nBahamas, The\t2004\tNY.GDP.MKTP.KD.ZG\t0.882884232581944\nBahamas, The\t2005\tNY.GDP.MKTP.KD.ZG\t3.39529266953875\nBahamas, The\t2006\tNY.GDP.MKTP.KD.ZG\t2.51686384101369\nBahamas, The\t2007\tNY.GDP.MKTP.KD.ZG\t1.44652221530914\nBahamas, The\t2008\tNY.GDP.MKTP.KD.ZG\t-2.32393724789044\nBahamas, The\t2009\tNY.GDP.MKTP.KD.ZG\t-4.17525917522813\nBahamas, The\t2010\tNY.GDP.MKTP.KD.ZG\t1.53877885334302\nBahamas, The\t2011\tNY.GDP.MKTP.KD.ZG\t0.612902595753823\nBahamas, The\t2012\tNY.GDP.MKTP.KD.ZG\t2.21731297852183\nBahamas, The\t2013\tNY.GDP.MKTP.KD.ZG\t0.0220301965625538\nBahamas, The\t2014\tNY.GDP.MKTP.KD.ZG\t1.02278610479254\nBahamas, The\t2015\tNY.GDP.MKTP.KD.ZG\t1.22048360020888\nBahamas, The\t2016\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1960\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1961\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1962\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1963\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1964\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1965\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1966\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1967\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1968\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1969\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1970\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1971\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1972\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1973\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1974\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1975\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1976\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1977\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1978\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1979\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1980\tNY.GDP.MKTP.KD.ZG\t0\nBahrain\t1981\tNY.GDP.MKTP.KD.ZG\t-5.31669735282962\nBahrain\t1982\tNY.GDP.MKTP.KD.ZG\t-7.55621771215945\nBahrain\t1983\tNY.GDP.MKTP.KD.ZG\t6.37637679964398\nBahrain\t1984\tNY.GDP.MKTP.KD.ZG\t5.00364604500774\nBahrain\t1985\tNY.GDP.MKTP.KD.ZG\t-4.75826853805688\nBahrain\t1986\tNY.GDP.MKTP.KD.ZG\t1.18299391598423\nBahrain\t1987\tNY.GDP.MKTP.KD.ZG\t10.3990093325468\nBahrain\t1988\tNY.GDP.MKTP.KD.ZG\t6.99999164945328\nBahrain\t1989\tNY.GDP.MKTP.KD.ZG\t0.364007138161824\nBahrain\t1990\tNY.GDP.MKTP.KD.ZG\t4.43799717642636\nBahrain\t1991\tNY.GDP.MKTP.KD.ZG\t11.2299987800123\nBahrain\t1992\tNY.GDP.MKTP.KD.ZG\t6.68999836660538\nBahrain\t1993\tNY.GDP.MKTP.KD.ZG\t12.8700066696584\nBahrain\t1994\tNY.GDP.MKTP.KD.ZG\t-0.250001484542878\nBahrain\t1995\tNY.GDP.MKTP.KD.ZG\t3.92999154532021\nBahrain\t1996\tNY.GDP.MKTP.KD.ZG\t4.11000611512114\nBahrain\t1997\tNY.GDP.MKTP.KD.ZG\t3.09299978673204\nBahrain\t1998\tNY.GDP.MKTP.KD.ZG\t4.79000278855499\nBahrain\t1999\tNY.GDP.MKTP.KD.ZG\t4.29999896037758\nBahrain\t2000\tNY.GDP.MKTP.KD.ZG\t5.29999479407712\nBahrain\t2001\tNY.GDP.MKTP.KD.ZG\t2.49103356534492\nBahrain\t2002\tNY.GDP.MKTP.KD.ZG\t3.61414828908676\nBahrain\t2003\tNY.GDP.MKTP.KD.ZG\t6.02395119599457\nBahrain\t2004\tNY.GDP.MKTP.KD.ZG\t6.98094698388441\nBahrain\t2005\tNY.GDP.MKTP.KD.ZG\t6.768939708829\nBahrain\t2006\tNY.GDP.MKTP.KD.ZG\t6.46856767156123\nBahrain\t2007\tNY.GDP.MKTP.KD.ZG\t8.29244382201286\nBahrain\t2008\tNY.GDP.MKTP.KD.ZG\t6.24512834138467\nBahrain\t2009\tNY.GDP.MKTP.KD.ZG\t2.53977246949495\nBahrain\t2010\tNY.GDP.MKTP.KD.ZG\t4.33440708785902\nBahrain\t2011\tNY.GDP.MKTP.KD.ZG\t2.10018410872759\nBahrain\t2012\tNY.GDP.MKTP.KD.ZG\t3.5887045713562\nBahrain\t2013\tNY.GDP.MKTP.KD.ZG\t5.41293824262871\nBahrain\t2014\tNY.GDP.MKTP.KD.ZG\t4.48093515168384\nBahrain\t2015\tNY.GDP.MKTP.KD.ZG\t2.92656721719055\nBahrain\t2016\tNY.GDP.MKTP.KD.ZG\t0\nBangladesh\t1960\tNY.GDP.MKTP.KD.ZG\t0\nBangladesh\t1961\tNY.GDP.MKTP.KD.ZG\t6.05816082548087\nBangladesh\t1962\tNY.GDP.MKTP.KD.ZG\t5.45303096987186\nBangladesh\t1963\tNY.GDP.MKTP.KD.ZG\t-0.455894289938712\nBangladesh\t1964\tNY.GDP.MKTP.KD.ZG\t10.9527885460418\nBangladesh\t1965\tNY.GDP.MKTP.KD.ZG\t1.60625822891573\nBangladesh\t1966\tNY.GDP.MKTP.KD.ZG\t2.56681200128052\nBangladesh\t1967\tNY.GDP.MKTP.KD.ZG\t-1.87586391964774\nBangladesh\t1968\tNY.GDP.MKTP.KD.ZG\t9.48945401547951\nBangladesh\t1969\tNY.GDP.MKTP.KD.ZG\t1.22085790909685\nBangladesh\t1970\tNY.GDP.MKTP.KD.ZG\t5.61985229280111\nBangladesh\t1971\tNY.GDP.MKTP.KD.ZG\t-5.47948302721956\nBangladesh\t1972\tNY.GDP.MKTP.KD.ZG\t-13.9737287020439\nBangladesh\t1973\tNY.GDP.MKTP.KD.ZG\t3.32568019878394\nBangladesh\t1974\tNY.GDP.MKTP.KD.ZG\t9.59195630041845\nBangladesh\t1975\tNY.GDP.MKTP.KD.ZG\t-4.08821409181661\nBangladesh\t1976\tNY.GDP.MKTP.KD.ZG\t5.66136120119667\nBangladesh\t1977\tNY.GDP.MKTP.KD.ZG\t2.67305605001984\nBangladesh\t1978\tNY.GDP.MKTP.KD.ZG\t7.07383773260692\nBangladesh\t1979\tNY.GDP.MKTP.KD.ZG\t4.80163460055662\nBangladesh\t1980\tNY.GDP.MKTP.KD.ZG\t0.81914186889891\nBangladesh\t1981\tNY.GDP.MKTP.KD.ZG\t7.23394369490723\nBangladesh\t1982\tNY.GDP.MKTP.KD.ZG\t2.13432783577075\nBangladesh\t1983\tNY.GDP.MKTP.KD.ZG\t3.88104639981715\nBangladesh\t1984\tNY.GDP.MKTP.KD.ZG\t4.80331001525438\nBangladesh\t1985\tNY.GDP.MKTP.KD.ZG\t3.34201465415414\nBangladesh\t1986\tNY.GDP.MKTP.KD.ZG\t4.173382559004\nBangladesh\t1987\tNY.GDP.MKTP.KD.ZG\t3.77240185252705\nBangladesh\t1988\tNY.GDP.MKTP.KD.ZG\t2.41625685566223\nBangladesh\t1989\tNY.GDP.MKTP.KD.ZG\t2.83658212907926\nBangladesh\t1990\tNY.GDP.MKTP.KD.ZG\t5.62225816160702\nBangladesh\t1991\tNY.GDP.MKTP.KD.ZG\t3.4852278153552\nBangladesh\t1992\tNY.GDP.MKTP.KD.ZG\t5.44268555072129\nBangladesh\t1993\tNY.GDP.MKTP.KD.ZG\t4.71156172449447\nBangladesh\t1994\tNY.GDP.MKTP.KD.ZG\t3.89012644065643\nBangladesh\t1995\tNY.GDP.MKTP.KD.ZG\t5.12127789716162\nBangladesh\t1996\tNY.GDP.MKTP.KD.ZG\t4.52291921762344\nBangladesh\t1997\tNY.GDP.MKTP.KD.ZG\t4.48989649735631\nBangladesh\t1998\tNY.GDP.MKTP.KD.ZG\t5.17702687345256\nBangladesh\t1999\tNY.GDP.MKTP.KD.ZG\t4.67015636827865\nBangladesh\t2000\tNY.GDP.MKTP.KD.ZG\t5.2932947184604\nBangladesh\t2001\tNY.GDP.MKTP.KD.ZG\t5.07728777597312\nBangladesh\t2002\tNY.GDP.MKTP.KD.ZG\t3.83312394005608\nBangladesh\t2003\tNY.GDP.MKTP.KD.ZG\t4.73956739916446\nBangladesh\t2004\tNY.GDP.MKTP.KD.ZG\t5.2395329104527\nBangladesh\t2005\tNY.GDP.MKTP.KD.ZG\t6.53594494052352\nBangladesh\t2006\tNY.GDP.MKTP.KD.ZG\t6.67186826509662\nBangladesh\t2007\tNY.GDP.MKTP.KD.ZG\t7.05863620607012\nBangladesh\t2008\tNY.GDP.MKTP.KD.ZG\t6.01378975923306\nBangladesh\t2009\tNY.GDP.MKTP.KD.ZG\t5.04512479417738\nBangladesh\t2010\tNY.GDP.MKTP.KD.ZG\t5.57180227396866\nBangladesh\t2011\tNY.GDP.MKTP.KD.ZG\t6.46438388047517\nBangladesh\t2012\tNY.GDP.MKTP.KD.ZG\t6.52143507837333\nBangladesh\t2013\tNY.GDP.MKTP.KD.ZG\t6.01359606747023\nBangladesh\t2014\tNY.GDP.MKTP.KD.ZG\t6.06109305375394\nBangladesh\t2015\tNY.GDP.MKTP.KD.ZG\t6.55263331602802\nBangladesh\t2016\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1960\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1961\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1962\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1963\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1964\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1965\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1966\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1967\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1968\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1969\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1970\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1971\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1972\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1973\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1974\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1975\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1976\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1977\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1978\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1979\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1980\tNY.GDP.MKTP.KD.ZG\t0\nBarbados\t1981\tNY.GDP.MKTP.KD.ZG\t-1.98265179677819\nBarbados\t1982\tNY.GDP.MKTP.KD.ZG\t-4.80404551201012\nBarbados\t1983\tNY.GDP.MKTP.KD.ZG\t0.398406374501988\nBarbados\t1984\tNY.GDP.MKTP.KD.ZG\t3.7037037037037\nBarbados\t1985\tNY.GDP.MKTP.KD.ZG\t1.0204081632653\nBarbados\t1986\tNY.GDP.MKTP.KD.ZG\t5.17676767676767\nBarbados\t1987\tNY.GDP.MKTP.KD.ZG\t2.52100840336134\nBarbados\t1988\tNY.GDP.MKTP.KD.ZG\t3.51288056206087\nBarbados\t1989\tNY.GDP.MKTP.KD.ZG\t3.61990950226246\nBarbados\t1990\tNY.GDP.MKTP.KD.ZG\t-3.27510917030568\n"
+          },
+          {
+            "type": "HTML",
+            "data": "<div class=\"result-alert alert-warning\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button><strong>Output is truncated</strong> to 1000 rows. Learn more about <strong>zeppelin.spark.maxResult</strong></div>\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=19",
+              "$$hashKey": "object:53616"
+            },
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=20",
+              "$$hashKey": "object:53617"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842895_1829061443",
+      "id": "20200925-000527_506398891",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T23:24:53+0000",
+      "dateFinished": "2025-03-24T23:24:55+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51978"
+    },
+    {
+      "text": "%md\n\n# Find the highest GDP for each country\n\n- Re-write the hive query (left cell) using PySpark df\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T23:25:40+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 5,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Find the highest GDP for each country</h1>\n<ul>\n<li>Re-write the hive query (left cell) using PySpark df</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842895_1053357364",
+      "id": "20200925-000950_546215538",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T23:25:40+0000",
+      "dateFinished": "2025-03-24T23:25:40+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51979"
+    },
+    {
+      "text": "%sql\n\nSELECT wdi_csv_parquet.indicatorvalue AS value, \n       wdi_csv_parquet.year           AS year, \n       wdi_csv_parquet.countryname    AS country \nFROM   (SELECT Max(indicatorvalue) AS ind, \n               countryname \n        FROM   wdi_csv_parquet \n        WHERE  indicatorcode = 'NY.GDP.MKTP.KD.ZG' \n               AND indicatorvalue <> 0 \n        GROUP  BY countryname) t1 \n       INNER JOIN wdi_csv_parquet \n               ON t1.ind = wdi_csv_parquet.indicatorvalue \n                  AND t1.countryname = wdi_csv_parquet.countryname\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T23:47:35+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 7,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "value": "string",
+                      "year": "string",
+                      "country": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "value\tyear\tcountry\n5.49341639529945\t2010\tSouth Sudan\n9.37499451269413\t1986\tMongolia\n8.29244382201286\t2007\tBahrain\n9.94317818653509\t1963\tNicaragua\n7.20168341855494\t2007\tPoland\n9.04651306211595\t2004\tSerbia\n7.81443171889218\t1996\tAruba\n9.41710256708754\t1993\tJamaica\n9.89173930643229\t1968\tMorocco\n6.53997636395913\t1973\tUnited Kingdom\n5.89832966146942\t2007\tChannel Islands\n9.8373197726593\t2006\tUnited Arab Emirates\n9.97380327785579\t1984\tHong Kong SAR, China\n9.12984643026029\t1970\tMiddle East & North Africa (excluding high income)\n9.91654401442996\t1964\tIceland\n8.7093389296957\t2011\tMaldives\n9.72347258685926\t1970\tGhana\n8.53319194028632\t2007\tIDA & IBRD total\n5.25500608609781\t1990\tGermany\n9.73882570851472\t2004\tArab World\n8.0747823315386\t1974\tTunisia\n8.44416322679218\t2003\tAfghanistan\n9.16129947173891\t2004\tOther small states\n9.09946450793426\t1994\tCambodia\n9.01026730550454\t1975\tChad\n9.50372451430779\t1971\tPre-demographic dividend\n9.40000000000001\t2005\tBelarus\n9.82522417020562\t1972\tOman\n9.86427304043545\t1970\tSub-Saharan Africa\n9.53489285750719\t2007\tLiberia\n9.22034844375779\t2009\tZambia\n5.52373775433308\t2011\tHaiti\n9.62843608199742\t2011\tKuwait\n9.0939656324885\t1965\tIsrael\n8.90897299558068\t1962\tJapan\n9.81322473908004\t1979\tCongo, Rep.\n6.00833067966553\t1973\tEurope & Central Asia\n8.21102091734038\t2004\tEcuador\n9.45735874175013\t1962\tKenya\n9.2352695361471\t2006\tRwanda\n9.258838371491\t1996\tEritrea\n6.95354168034517\t1969\tEuro area\n6.6795013949793\t1984\tPacific island small states\n9.52074975257433\t1983\tCabo Verde\n9.95343810301792\t1962\tSpain\n8.46438124155671\t2007\tTanzania\n8.41423950062321\t1988\tMalta\n9.37373678411686\t2005\tEstonia\n8.15206633955856\t1997\tFragile and conflict affected situations\n6.99053053392915\t1969\tFrance\n9.61199193043205\t1969\tIDA total\n9.04235173026559\t1976\tNigeria\n9.72614643050372\t1987\tPeru\n7.90000000976701\t1997\tAngola\n9.91516840247384\t1997\tKyrgyz Republic\n9.12006813947504\t1979\tJordan\n9.68082343928285\t1971\tIDA blend\n9.31715557653585\t2000\tBermuda\n9.97163846384962\t1982\tFrench Polynesia\n9.52890792291221\t2011\tTimor-Leste\n9.59999979508615\t1999\tBosnia and Herzegovina\n9.82961727761065\t1965\tCosta Rica\n8.9205037042523\t1976\tSenegal\n9.87996467609035\t1969\tLate-demographic dividend\n9.50902935656717\t1988\tSt. Kitts and Nevis\n7.78260477012753\t2006\tEurope & Central Asia (IDA & IBRD countries)\n8.64309493574996\t1965\tNetherlands\n8.48550950358506\t2006\tSlovak Republic\n9.91600377495254\t1971\tSyrian Arab Republic\n9.36309199782252\t2015\tPalau\n8.67934217556071\t1970\tGabon\n9.04793855903381\t1966\tEast Asia & Pacific\n4.93771437534933\t2004\tHungary\n9.30528139113682\t1987\tIraq\n6.56721374015885\t2006\tCentral Europe and the Baltics\n8.39432220144072\t2004\tLower middle income\n7.11677926679127\t1962\tCanada\n9.98393482335551\t1986\tLuxembourg\n9.49643187506129\t2003\tWest Bank and Gaza\n9.26275007449469\t2005\tDominican Republic\n5.30520278574356\t1994\tCayman Islands\n9.45296255852286\t1967\tAlgeria\n9.67952600806899\t1969\tArgentina\n9.92115384638549\t2007\tUzbekistan\n7.25908695936059\t1984\tUnited States\n9.96049930993709\t2007\tLatvia\n9.08356998607383\t2010\tSouth Asia (IDA & IBRD)\n9.80000000214156\t2000\tKazakhstan\n8.53092343286595\t1992\tComoros\n9.86482514760245\t1970\tSub-Saharan Africa (excluding high income)\n6.89277005775078\t1962\tHeavily indebted poor countries (HIPC)\n9.25603195892108\t2004\tSuriname\n8.64522404526167\t2007\tMiddle income\n9.23519874187009\t1994\tZimbabwe\n9.04897906308224\t2007\tUpper middle income\n9.48155506230968\t1984\tCentral African Republic\n6.47348685752347\t2007\tMacedonia, FYR\n8.16561248089252\t1991\tNamibia\n9.04884184704909\t1972\tCaribbean small states\n9.74203332123133\t1986\tMauritius\n9.01867216597543\t1973\tSwaziland\n6.00019432397339\t2014\tDjibouti\n9.5876732094865\t2008\tNiger\n9.89049560297303\t1988\tEast Asia & Pacific (IDA & IBRD countries)\n8.61824430637689\t2007\tLow & middle income\n9.11616736529923\t2007\tIran, Islamic Rep.\n9.57614346404307\t1968\tGambia, The\n6.30811669713411\t1988\tGuinea\n9.75361582028521\t1984\tAntigua and Barbuda\n9.84348271246741\t1980\tVirgin Islands (U.S.)\n6.27333551040728\t1961\tNorway\n9.68113001523064\t1984\tNepal\n9.89999999999999\t2001\tAzerbaijan\n9.26993821451796\t1964\tDenmark\n9.334094818503\t2011\tGuinea-Bissau\n9.39680640946558\t2013\tMoldova\n9.12179155081758\t1977\tTrinidad and Tobago\n9.3292487028497\t2003\tBelize\n9.67322495938208\t2011\tUganda\n9.62778291902082\t1988\tIndia\n8.89603061616384\t1965\tSouth Africa\n8.4533239264984\t2011\tTuvalu\n8.46344999951035\t1978\tColombia\n6.77583495588348\t1978\tBrunei Darussalam\n9.89634672589703\t1987\tIsle of Man\n8.20759813306009\t1992\tYemen, Rep.\n6.87654426975558\t2006\tCzech Republic\n9.59811386676546\t1967\tBahamas, The\n6.41638825463373\t1993\tNew Zealand\n9.90556938358075\t1979\tCyprus\n8.31272603913349\t1964\tEarly-demographic dividend\n9.66826032723131\t2006\tSmall states\n6.55846345871053\t1985\tTonga\n9.19381987558782\t1994\tSolomon Islands\n8.69285761898229\t2007\tIBRD only\n9.50658609462478\t2000\tKiribati\n9.7761638793003\t1973\tIndonesia\n6.27586716606969\t1969\tAustria\n9.99999980819788\t1983\tMacao SAR, China\n9.69817013836949\t1979\tMexico\n9.89049560297303\t1988\tEast Asia & Pacific (excluding high income)\n7.54333748944214\t1992\tEl Salvador\n9.99999999999939\t2008\tMonaco\n9.86029265708798\t2013\tBotswana\n9.85907100875349\t1984\tKorea, Rep.\n9.11564654457058\t2006\tSao Tome and Principe\n9.23076798213556\t1987\tLiechtenstein\n9.08356998607383\t2010\tSouth Asia\n7.28608298590432\t2007\tKosovo\n6.73450773195971\t2010\tLow income\n9.74506803915094\t1978\tMalawi\n9.84346323531113\t1977\tThailand\n9.06315793459677\t1962\tBurundi\n9.22717502570205\t1973\tLatin America & Caribbean (excluding high income)\n8.14065510597301\t1993\tMicronesia, Fed. Sts.\n9.48553884135801\t1987\tTurkey\n6.82145671417409\t1964\tSweden\n4.33079405580314\t1989\tSwitzerland\n9.3288374385548\t1969\tCongo, Dem. Rep.\n6.50054722695921\t2006\tLibya\n8.55901728010429\t1988\tDominica\n8.06316167187164\t1985\tCameroon\n8.8223146507293\t1977\tGreenland\n9.93772418585131\t1988\tMalaysia\n8.52330935250967\t1994\tGuyana\n8.75504886890666\t1973\tLatin America & the Caribbean (IDA & IBRD countries)\n9.36382091797276\t1987\tMarshall Islands\n9.59195630041845\t1974\tBangladesh\n8.92064682244886\t1973\tPhilippines\n8.61926620854456\t2006\tLao PDR\n8.45898402039865\t2008\tRomania\n9.95423117120322\t1981\tBenin\n9.47642633140822\t1975\tCuba\n6.46251941660105\t1964\tHigh income\n9.29203540819358\t1995\tSan Marino\n9.0179648320581\t1971\tChile\n9.17045884929605\t1981\tParaguay\n8.87550923376716\t1968\tPortugal\n9.85105546470831\t2006\tMozambique\n9.63442230266678\t1995\tIreland\n8.80980829474463\t1986\tUruguay\n9.40408660047237\t2007\tLebanon\n9.86427304043546\t1970\tSub-Saharan Africa (IDA & IBRD countries)\n8.62214891513216\t1973\tLatin America & Caribbean\n9.66161235926681\t1986\tEthiopia\n9.95893280986544\t2011\tSaudi Arabia\n9.93255515642173\t1961\tCote d'Ivoire\n9.54689788728653\t1991\tPapua New Guinea\n9.55664149553445\t2001\tArmenia\n9.85465029024215\t1979\tMadagascar\n9.9083756130895\t2008\tEquatorial Guinea\n8.93139368696023\t1989\tSudan\n6.95668473344004\t1964\tBelgium\n7.96748548215676\t1972\tBolivia\n9.06372568116001\t1989\tSt. Lucia\n6.46670098366874\t1964\tPost-demographic dividend\n9.40000001219448\t2003\tUkraine\n8.29322871946646\t1997\tLithuania\n9.40871910128624\t1966\tTogo\n9.84945203233822\t2001\tPuerto Rico\n9.38238496666379\t2003\tSierra Leone\n8.20377386131203\t2001\tBhutan\n9.38534470703205\t1973\tMiddle East & North Africa\n9.03715648855948\t1965\tHonduras\n9.14457938763533\t2012\tSri Lanka\n7.67535068452476\t2007\tBulgaria\n9.09865470772144\t1966\tSomalia\n8.56624279092367\t2006\tMontenegro\n8.79999867201795\t1999\tFiji\n9.46397343076488\t2003\tGrenada\n8.1955893767834\t2004\tEurope & Central Asia (excluding high income)\n9.37862445411035\t2007\tLeast developed countries: UN classification\n9.59964080415956\t2005\tGeorgia\n9.58603662650081\t1984\tVanuatu\n6.645996809363\t1964\tWorld\n8.20724591384771\t1961\tItaly\n8.68883151825305\t1963\tPakistan\n9.56219662276685\t1982\tBurkina Faso\n9.54104392925011\t1963\tGuatemala\n9.19999998805483\t2010\tTurkmenistan\n9.54048017490108\t1995\tVietnam\n9.79041016147607\t1976\tBrazil\n9.81980046004915\t1995\tMauritania\n9.87214910851037\t2006\tVenezuela, RB\n9.06767396402095\t1997\tAndorra\n9.90717089584501\t1982\tEgypt, Arab Rep.\n9.83654899260358\t1989\tAlbania\n9.80000719720397\t1978\tNew Caledonia\n6.10062699108383\t1973\tEuropean Union\n9.73992051786665\t1978\tPanama\n9.92472266262089\t1996\tChina\n9.66094245314923\t1992\tMyanmar\n7.11672712888681\t1984\tNorth America\n6.6454741071244\t1997\tCroatia\n9.98491088345075\t1963\tSingapore\n8.29999854530227\t2000\tTajikistan\n6.55649649895463\t1964\tOECD members\n7.17896589673916\t1996\tSamoa\n6.94157234976376\t2007\tSlovenia\n9.99999999924692\t2000\tRussian Federation\n8.55667696482428\t1988\tLesotho\n9.7770570183808\t1978\tSt. Vincent and the Grenadines\n9.59328778480032\t1969\tFinland\n9.40612787953086\t2006\tSeychelles\n7.49275850742066\t2005\tQatar\n7.16689151654633\t1970\tAustralia\n9.54585858520933\t2008\tMali\n6.95909992166295\t2007\tIDA only\n9.89973017189723\t1969\tGreece\n5.67644276253547\t2006\tBarbados\n9.12984643026029\t1970\tMiddle East & North Africa (IDA & IBRD countries)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=31",
+              "$$hashKey": "object:59189"
+            },
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=32",
+              "$$hashKey": "object:59190"
+            },
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=33",
+              "$$hashKey": "object:59191"
+            },
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=34",
+              "$$hashKey": "object:59192"
+            },
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=35",
+              "$$hashKey": "object:59193"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842896_1962548321",
+      "id": "20200925-001035_102671005",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51980",
+      "dateFinished": "2025-03-24T23:47:52+0000",
+      "dateStarted": "2025-03-24T23:47:35+0000"
+    },
+    {
+      "text": "%spark.pyspark\nfrom pyspark.sql.functions import max\n\n#Rewritten solution using PySpark\nwdi_gdp_df = wdi_table.filter(\n        col('indicatorCode') == 'NY.GDP.MKTP.KD.ZG'\n    ).groupBy('countryName').agg(\n            max(col('indicatorValue')).alias('value')\n        ).select(\n                'value',\n                'countryName'\n            ).filter(\n                col('value') > 0\n                )\n            \nwdi_join_df = wdi_table.filter(col('indicatorCode') == 'NY.GDP.MKTP.KD.ZG').select(\n        col('indicatorValue').alias('value'),\n        col('year'),\n        col('countryName')\n    )\n\nwdi_gdp_df = wdi_join_df.join(\n        wdi_gdp_df,\n        (wdi_join_df.value == wdi_gdp_df.value) & (wdi_join_df.countryName == wdi_gdp_df.countryName)\n    ).select(\n        wdi_gdp_df.value, wdi_join_df.year, wdi_join_df.countryName\n    )\n\nz.show(wdi_gdp_df)",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T23:50:48+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "value": "string",
+                      "year": "string",
+                      "countryName": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "value",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "countryName",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "value\tyear\tcountryName\n8.44416322679218\t2003\tAfghanistan\n9.83654899260358\t1989\tAlbania\n9.45296255852286\t1967\tAlgeria\n9.06767396402095\t1997\tAndorra\n7.90000000976701\t1997\tAngola\n9.75361582028521\t1984\tAntigua and Barbuda\n9.73882570851472\t2004\tArab World\n9.67952600806899\t1969\tArgentina\n9.55664149553445\t2001\tArmenia\n7.81443171889218\t1996\tAruba\n7.16689151654633\t1970\tAustralia\n6.27586716606969\t1969\tAustria\n9.89999999999999\t2001\tAzerbaijan\n9.59811386676546\t1967\tBahamas, The\n8.29244382201286\t2007\tBahrain\n9.59195630041845\t1974\tBangladesh\n5.67644276253547\t2006\tBarbados\n9.40000000000001\t2005\tBelarus\n6.95668473344004\t1964\tBelgium\n9.3292487028497\t2003\tBelize\n9.95423117120322\t1981\tBenin\n9.31715557653585\t2000\tBermuda\n8.20377386131203\t2001\tBhutan\n7.96748548215676\t1972\tBolivia\n9.59999979508615\t1999\tBosnia and Herzegovina\n9.86029265708798\t2013\tBotswana\n9.79041016147607\t1976\tBrazil\n6.77583495588348\t1978\tBrunei Darussalam\n7.67535068452476\t2007\tBulgaria\n9.56219662276685\t1982\tBurkina Faso\n9.06315793459677\t1962\tBurundi\n9.52074975257433\t1983\tCabo Verde\n9.09946450793426\t1994\tCambodia\n8.06316167187164\t1985\tCameroon\n7.11677926679127\t1962\tCanada\n9.04884184704909\t1972\tCaribbean small states\n5.30520278574356\t1994\tCayman Islands\n9.48155506230968\t1984\tCentral African Republic\n6.56721374015885\t2006\tCentral Europe and the Baltics\n9.01026730550454\t1975\tChad\n5.89832966146942\t2007\tChannel Islands\n9.0179648320581\t1971\tChile\n9.92472266262089\t1996\tChina\n8.46344999951035\t1978\tColombia\n8.53092343286595\t1992\tComoros\n9.3288374385548\t1969\tCongo, Dem. Rep.\n9.81322473908004\t1979\tCongo, Rep.\n9.82961727761065\t1965\tCosta Rica\n9.93255515642173\t1961\tCote d'Ivoire\n6.6454741071244\t1997\tCroatia\n9.47642633140822\t1975\tCuba\n9.90556938358075\t1979\tCyprus\n6.87654426975558\t2006\tCzech Republic\n9.26993821451796\t1964\tDenmark\n6.00019432397339\t2014\tDjibouti\n8.55901728010429\t1988\tDominica\n9.26275007449469\t2005\tDominican Republic\n8.31272603913349\t1964\tEarly-demographic dividend\n9.04793855903381\t1966\tEast Asia & Pacific\n9.89049560297303\t1988\tEast Asia & Pacific (IDA & IBRD countries)\n9.89049560297303\t1988\tEast Asia & Pacific (excluding high income)\n8.21102091734038\t2004\tEcuador\n9.90717089584501\t1982\tEgypt, Arab Rep.\n7.54333748944214\t1992\tEl Salvador\n9.9083756130895\t2008\tEquatorial Guinea\n9.258838371491\t1996\tEritrea\n9.37373678411686\t2005\tEstonia\n9.66161235926681\t1986\tEthiopia\n6.95354168034517\t1969\tEuro area\n6.00833067966553\t1973\tEurope & Central Asia\n7.78260477012753\t2006\tEurope & Central Asia (IDA & IBRD countries)\n8.1955893767834\t2004\tEurope & Central Asia (excluding high income)\n6.10062699108383\t1973\tEuropean Union\n8.79999867201795\t1999\tFiji\n9.59328778480032\t1969\tFinland\n8.15206633955856\t1997\tFragile and conflict affected situations\n6.99053053392915\t1969\tFrance\n9.97163846384962\t1982\tFrench Polynesia\n8.67934217556071\t1970\tGabon\n9.57614346404307\t1968\tGambia, The\n9.59964080415956\t2005\tGeorgia\n5.25500608609781\t1990\tGermany\n9.72347258685926\t1970\tGhana\n9.89973017189723\t1969\tGreece\n8.8223146507293\t1977\tGreenland\n9.46397343076488\t2003\tGrenada\n9.54104392925011\t1963\tGuatemala\n6.30811669713411\t1988\tGuinea\n9.334094818503\t2011\tGuinea-Bissau\n8.52330935250967\t1994\tGuyana\n5.52373775433308\t2011\tHaiti\n6.89277005775078\t1962\tHeavily indebted poor countries (HIPC)\n6.46251941660105\t1964\tHigh income\n9.03715648855948\t1965\tHonduras\n9.97380327785579\t1984\tHong Kong SAR, China\n4.93771437534933\t2004\tHungary\n8.69285761898229\t2007\tIBRD only\n8.53319194028632\t2007\tIDA & IBRD total\n9.68082343928285\t1971\tIDA blend\n6.95909992166295\t2007\tIDA only\n9.61199193043205\t1969\tIDA total\n9.91654401442996\t1964\tIceland\n9.62778291902082\t1988\tIndia\n9.7761638793003\t1973\tIndonesia\n9.11616736529923\t2007\tIran, Islamic Rep.\n9.30528139113682\t1987\tIraq\n9.63442230266678\t1995\tIreland\n9.89634672589703\t1987\tIsle of Man\n9.0939656324885\t1965\tIsrael\n8.20724591384771\t1961\tItaly\n9.41710256708754\t1993\tJamaica\n8.90897299558068\t1962\tJapan\n9.12006813947504\t1979\tJordan\n9.80000000214156\t2000\tKazakhstan\n9.45735874175013\t1962\tKenya\n9.50658609462478\t2000\tKiribati\n9.85907100875349\t1984\tKorea, Rep.\n7.28608298590432\t2007\tKosovo\n9.62843608199742\t2011\tKuwait\n9.91516840247384\t1997\tKyrgyz Republic\n8.61926620854456\t2006\tLao PDR\n9.87996467609035\t1969\tLate-demographic dividend\n8.62214891513216\t1973\tLatin America & Caribbean\n9.22717502570205\t1973\tLatin America & Caribbean (excluding high income)\n8.75504886890666\t1973\tLatin America & the Caribbean (IDA & IBRD countries)\n9.96049930993709\t2007\tLatvia\n9.37862445411035\t2007\tLeast developed countries: UN classification\n9.40408660047237\t2007\tLebanon\n8.55667696482428\t1988\tLesotho\n9.53489285750719\t2007\tLiberia\n6.50054722695921\t2006\tLibya\n9.23076798213556\t1987\tLiechtenstein\n8.29322871946646\t1997\tLithuania\n8.61824430637689\t2007\tLow & middle income\n6.73450773195971\t2010\tLow income\n8.39432220144072\t2004\tLower middle income\n9.98393482335551\t1986\tLuxembourg\n9.99999980819788\t1983\tMacao SAR, China\n6.47348685752347\t2007\tMacedonia, FYR\n9.85465029024215\t1979\tMadagascar\n9.74506803915094\t1978\tMalawi\n9.93772418585131\t1988\tMalaysia\n8.7093389296957\t2011\tMaldives\n9.54585858520933\t2008\tMali\n8.41423950062321\t1988\tMalta\n9.36382091797276\t1987\tMarshall Islands\n9.81980046004915\t1995\tMauritania\n9.74203332123133\t1986\tMauritius\n9.69817013836949\t1979\tMexico\n8.14065510597301\t1993\tMicronesia, Fed. Sts.\n9.38534470703205\t1973\tMiddle East & North Africa\n9.12984643026029\t1970\tMiddle East & North Africa (IDA & IBRD countries)\n9.12984643026029\t1970\tMiddle East & North Africa (excluding high income)\n8.64522404526167\t2007\tMiddle income\n9.39680640946558\t2013\tMoldova\n9.99999999999939\t2008\tMonaco\n9.37499451269413\t1986\tMongolia\n8.56624279092367\t2006\tMontenegro\n9.89173930643229\t1968\tMorocco\n9.85105546470831\t2006\tMozambique\n9.66094245314923\t1992\tMyanmar\n8.16561248089252\t1991\tNamibia\n9.68113001523064\t1984\tNepal\n8.64309493574996\t1965\tNetherlands\n9.80000719720397\t1978\tNew Caledonia\n6.41638825463373\t1993\tNew Zealand\n9.94317818653509\t1963\tNicaragua\n9.5876732094865\t2008\tNiger\n9.04235173026559\t1976\tNigeria\n7.11672712888681\t1984\tNorth America\n6.27333551040728\t1961\tNorway\n6.55649649895463\t1964\tOECD members\n9.82522417020562\t1972\tOman\n9.16129947173891\t2004\tOther small states\n6.6795013949793\t1984\tPacific island small states\n8.68883151825305\t1963\tPakistan\n9.36309199782252\t2015\tPalau\n9.73992051786665\t1978\tPanama\n9.54689788728653\t1991\tPapua New Guinea\n9.17045884929605\t1981\tParaguay\n9.72614643050372\t1987\tPeru\n8.92064682244886\t1973\tPhilippines\n7.20168341855494\t2007\tPoland\n8.87550923376716\t1968\tPortugal\n6.46670098366874\t1964\tPost-demographic dividend\n9.50372451430779\t1971\tPre-demographic dividend\n9.84945203233822\t2001\tPuerto Rico\n7.49275850742066\t2005\tQatar\n8.45898402039865\t2008\tRomania\n9.99999999924692\t2000\tRussian Federation\n9.2352695361471\t2006\tRwanda\n7.17896589673916\t1996\tSamoa\n9.29203540819358\t1995\tSan Marino\n9.11564654457058\t2006\tSao Tome and Principe\n9.95893280986544\t2011\tSaudi Arabia\n8.9205037042523\t1976\tSenegal\n9.04651306211595\t2004\tSerbia\n9.40612787953086\t2006\tSeychelles\n9.38238496666379\t2003\tSierra Leone\n9.98491088345075\t1963\tSingapore\n8.48550950358506\t2006\tSlovak Republic\n6.94157234976376\t2007\tSlovenia\n9.66826032723131\t2006\tSmall states\n9.19381987558782\t1994\tSolomon Islands\n9.09865470772144\t1966\tSomalia\n8.89603061616384\t1965\tSouth Africa\n9.08356998607383\t2010\tSouth Asia\n9.08356998607383\t2010\tSouth Asia (IDA & IBRD)\n5.49341639529945\t2010\tSouth Sudan\n9.95343810301792\t1962\tSpain\n9.14457938763533\t2012\tSri Lanka\n9.50902935656717\t1988\tSt. Kitts and Nevis\n9.06372568116001\t1989\tSt. Lucia\n9.7770570183808\t1978\tSt. Vincent and the Grenadines\n9.86427304043545\t1970\tSub-Saharan Africa\n9.86427304043546\t1970\tSub-Saharan Africa (IDA & IBRD countries)\n9.86482514760245\t1970\tSub-Saharan Africa (excluding high income)\n8.93139368696023\t1989\tSudan\n9.25603195892108\t2004\tSuriname\n9.01867216597543\t1973\tSwaziland\n6.82145671417409\t1964\tSweden\n4.33079405580314\t1989\tSwitzerland\n9.91600377495254\t1971\tSyrian Arab Republic\n8.29999854530227\t2000\tTajikistan\n8.46438124155671\t2007\tTanzania\n9.84346323531113\t1977\tThailand\n9.52890792291221\t2011\tTimor-Leste\n9.40871910128624\t1966\tTogo\n6.55846345871053\t1985\tTonga\n9.12179155081758\t1977\tTrinidad and Tobago\n8.0747823315386\t1974\tTunisia\n9.48553884135801\t1987\tTurkey\n9.19999998805483\t2010\tTurkmenistan\n8.4533239264984\t2011\tTuvalu\n9.67322495938208\t2011\tUganda\n9.40000001219448\t2003\tUkraine\n9.8373197726593\t2006\tUnited Arab Emirates\n6.53997636395913\t1973\tUnited Kingdom\n7.25908695936059\t1984\tUnited States\n9.04897906308224\t2007\tUpper middle income\n8.80980829474463\t1986\tUruguay\n9.92115384638549\t2007\tUzbekistan\n9.58603662650081\t1984\tVanuatu\n9.87214910851037\t2006\tVenezuela, RB\n9.54048017490108\t1995\tVietnam\n9.84348271246741\t1980\tVirgin Islands (U.S.)\n9.49643187506129\t2003\tWest Bank and Gaza\n6.645996809363\t1964\tWorld\n8.20759813306009\t1992\tYemen, Rep.\n9.22034844375779\t2009\tZambia\n9.23519874187009\t1994\tZimbabwe\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=36",
+              "$$hashKey": "object:60561"
+            },
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=37",
+              "$$hashKey": "object:60562"
+            },
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=38",
+              "$$hashKey": "object:60563"
+            },
+            {
+              "jobUrl": "http://jarvis-bootcamp-m.us-east1-c.c.fleet-authority-447102-p0.internal:43261/jobs/job?id=39",
+              "$$hashKey": "object:60564"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742842842896_2042555931",
+      "id": "20200925-001040_676373300",
+      "dateCreated": "2025-03-24T19:00:42+0000",
+      "dateStarted": "2025-03-24T23:50:48+0000",
+      "dateFinished": "2025-03-24T23:50:53+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:51981"
+    },
+    {
+      "text": "%spark.pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-24T23:50:48+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742860248995_769423395",
+      "id": "paragraph_1742860248995_769423395",
+      "dateCreated": "2025-03-24T23:50:48+0000",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:60326"
+    }
+  ],
+  "name": "Spark Data Frame Data Analytics",
+  "id": "2KSW1C5CU",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Spark Data Frame Data Analytics"
+}
