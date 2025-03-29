@@ -41,6 +41,11 @@
       "name": "Core Java Apps - Stock Quote App"
     },
     {
+      "description": "Built a local PostgreSQL data warehouse that housed historical retail data from our client, London Gift Shop. Connected to data warehouse and extracted data to ‘pandas’ dataframes using a psql driver. Performed data transformations, aggregations, and visualisations through the use of ‘pandas’ dataframes and ‘matplotlib’ library inside of a Jupyter Notebook. Supplemented code with detailed markdown cells that highlighted key steps and findings. Reported on the results of our analysis and our findings of RFM segmentation. Results showed key customer demographics and how LGS could increase their sales potential by tapping into these demographics.",
+      "git_url": "/python_data_analytics",
+      "name": "Python Data Analytics"
+    },
+    {
       "description": "Provisioned and configured a Hadoop cluster through Google Cloud Platform’s Dataproc service. Performed ETL process on publicly available WDI data by leveraging cluster jobs using HiveQL. Analysed the benefits/tradeoffs of storage formats such as columnar vs textfile format, external vs HDFS tables, as well as various optimisation strategies such as partitioned tables. Monitored the progress of jobs, the status of resources and any error logs using YARN and Tez web interfaces. Reported on findings of differences in performance and optimal setups for big data processing with Hadoop clusters.",
       "git_url": "/hadoop",
       "name": "Hadoop"
