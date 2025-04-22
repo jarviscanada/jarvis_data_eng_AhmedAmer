@@ -4,13 +4,13 @@ Our team of developers and analysts were approached by an online store based in 
 
 # Implementation
 
-The code, data wrangling, transformation, and analysis were all implemented through a Jupyter Notebook file and using Python 3 and Python libraries such as NumPy and Pandas for manipulating Data Frames, Matplotlib for data visualisation, and SQLAlchemy for creating and engine with which to interface with the local PostgreSQL database.
+The code, data wrangling, transformation, and analysis were all implemented through a Jupyter Notebook file and using Python 3 and Python libraries such as NumPy and Pandas for manipulating Data Frames, Matplotlib for data visualisation, and SQLAlchemy for creating an engine with which to interface with the local PostgreSQL database.
 
 ## Project Architecture
 
-For the purposes of this project, the Jarvis team was not allowed access to utilize the LGS Azure environment but, briefly, we will touch upon the architecture of their cloud system. The LGS Online Store consists of a front-end built on Azure Blob, HTML and JavaScript scripts. This connects to an API backend housed on an Azure SQL server that employs AKS Cluster for microservices.
+For the purposes of this project, the Jarvis team was not allowed access to utilise the LGS Azure environment, but briefly, we will touch upon the architecture of their cloud system. The LGS Online Store consists of a front-end built on Azure Blob, HTML and JavaScript scripts. This connects to an API backend housed on an Azure SQL server that employs an AKS Cluster for microservices.
 
-![LGS Achitecture](python_data_wrangling\data\LGS_Jarvis.png "LGS Architecture")
+![LGS Achitecture](/python_data_analytics/python_data_wrangling/data/LGS_Jarvis.png "LGS Architecture")
 
 Transactional data from between 01/12/2009 and 09/12/2011 was transformed to omit the personal information of LGS's customers and then transferred to us for analysis via an SQL file. The data was then housed and shared via a data warehouse built locally on PostgreSQL for ease of access to our team members.
 
@@ -22,10 +22,10 @@ From our analysis regarding monthly earnings and growth in monthly earnings, we 
 
 More importantly, through our RFM Segmentation analysis, we were able to determine that a substantial number of LGS's customers were in the 'Hibernating' group - meaning they were customers that had not made any purchases in quite some time. We recommended to LGS that offering promotions to these customers might incentivise them to make new purchases and that LGS should focus on pushing these customers to become 'Champions' i.e. consumers that make up the majority of spenders. LGS was advised to offer promotions to this demographic as well.
 
-Finally, we looked at a batch of customers that had previously made big purchases but have since then not revisited the online store, Labelled "Can't lose". LGS was advised to heavily market in favour of this demographic as they had huge spending potential.
+Finally, we looked at a batch of customers that had previously made big purchases but have since then not revisited the online store, labelled "Can't lose". LGS was advised to heavily market in favour of this demographic as they had huge spending potential.
 
 ## Improvements
 
-- It might benefit us to expand upon the insights we saw through RFM segmentation by graphing the data (for example, using a tree graph to visualize these findings)
-- Something we did not address but could be addressed in the future is shipping costs and whether this affects customers' motivation to finalize purchases.
+- It might benefit us to expand upon the insights we saw through RFM segmentation by graphing the data (for example, using a tree graph to visualise these findings)
+- Something we did not address but could be addressed in the future is shipping costs and whether this affects customers' motivation to finalise purchases.
 - For wholesalers, it might be beneficial to look at their data and analyse whether the quantity of items purchased might be affected by discounts for products purchased in bulk.
