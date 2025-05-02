@@ -6,7 +6,7 @@ Self-taught programmer with a degree in Neuroscience and an incredible passion f
 
 **Proficient:** Python, Java, SQL, JavaScript, HTML/CSS
 
-**Competent:** Hadoop Ecosystem Tools (HDFS, MapReduce), PySpark ETL and Data Processing, Agile Software Development, Data Structures/Algorithms, PostgreSQL, Linux CLI and Bash
+**Competent:** Salesforce (Apex, Visualforce, LWC), Hadoop Ecosystem Tools (HDFS, MapReduce), PySpark ETL and Data Processing, Agile Software Development, Data Structures/Algorithms, Linux CLI and Bash
 
 **Familiar:** React, Machine Learning Models, Tableau/Power BI, MongoDB, Maven
 
@@ -24,6 +24,10 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer]
 **Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer/tree/master/python_data_analytics)]: Built a local PostgreSQL data warehouse that housed historical retail data from our client, London Gift Shop. Connected to data warehouse and extracted data to ‘pandas’ dataframes using a psql driver. Performed data transformations, aggregations, and visualisations through the use of ‘pandas’ dataframes and ‘matplotlib’ library inside of a Jupyter Notebook. Supplemented code with detailed markdown cells that highlighted key steps and findings. Reported on the results of our analysis and our findings of RFM segmentation. Results showed key customer demographics and how LGS could increase their sales potential by tapping into these demographics.
 
 **Hadoop** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer/tree/master/hadoop)]: Provisioned and configured a Hadoop cluster through Google Cloud Platform’s Dataproc service. Performed ETL process on publicly available WDI data by leveraging cluster jobs using HiveQL. Analysed the benefits/tradeoffs of storage formats such as columnar vs textfile format, external vs HDFS tables, as well as various optimisation strategies such as partitioned tables. Monitored the progress of jobs, the status of resources and any error logs using YARN and Tez web interfaces. Reported on findings of differences in performance and optimal setups for big data processing with Hadoop clusters.
+
+**Spark** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer/tree/master/spark)]: Leveraged an Apache Spark cluster through Azure Databricks. Completed ETL process for historical retail data from London Gift Shop. Performed data transformations, aggregations, and visualizations using PySpark/Scala in Databricks notebooks. Evaluated the benefits of Scala vs Spark from a performance standpoint. Provided a more scalable data architecture for future data analysis with much bigger data sets.
+
+**Salesforce** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_AhmedAmer/tree/master/salesforce)]: Leveraged Salesforce's Lightning Web Components and Lightning Data Service to build reusable web components that would be incorporated in a bear-tracking application for Ursus park. Used Salesforce's app UI for adding and structuring components to the application's page. Built child components that would allow user-interaction to edit and view bear profiles within the park.
 
 
 ## Highlighted Projects
