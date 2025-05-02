@@ -19,11 +19,11 @@ skills:
     - HTML/CSS
   # At least 5 skills
   competent:
+    - Salesforce (Apex, Visualforce, LWC)
     - Hadoop Ecosystem Tools (HDFS, MapReduce)
     - PySpark ETL and Data Processing
     - Agile Software Development
     - Data Structures/Algorithms
-    - PostgreSQL
     - Linux CLI and Bash
   # At least 5 skills
   familiar:
@@ -55,12 +55,15 @@ jarvis_projects:
   - name: "Hadoop"
     git_url: "/hadoop"
     description: "Provisioned and configured a Hadoop cluster through Google Cloud Platform’s Dataproc service. Performed ETL process on publicly available WDI data by leveraging cluster jobs using HiveQL. Analysed the benefits/tradeoffs of storage formats such as columnar vs textfile format, external vs HDFS tables, as well as various optimisation strategies such as partitioned tables. Monitored the progress of jobs, the status of resources and any error logs using YARN and Tez web interfaces. Reported on findings of differences in performance and optimal setups for big data processing with Hadoop clusters."
-#  - name: "Spark"
-#    git_url: "/spark"
-#    description: ""
-#  - name: "Cloud/DevOps"
-#    git_url: "/cloud_devops"
-#    description: ""
+  - name: "Spark"
+    git_url: "/spark"
+    description: "Leveraged an Apache Spark cluster through Azure Databricks. Completed ETL process for historical retail data from London Gift Shop. Performed data transformations, aggregations, and visualizations using PySpark/Scala in Databricks notebooks. Evaluated the benefits of Scala vs Spark from a performance standpoint. Provided a more scalable data architecture for future data analysis with much bigger data sets."
+  #  - name: "Cloud/DevOps"
+  #    git_url: "/cloud_devops"
+  #    description: ""
+  - name: "Salesforce"
+    git_url: "/salesforce"
+    description: "Leveraged Salesforce's Lightning Web Components and Lightning Data Service to build reusable web components that would be incorporated in a bear-tracking application for Ursus park. Used Salesforce's app UI for adding and structuring components to the application's page. Built child components that would allow user-interaction to edit and view bear profiles within the park."
 
 # List of personal or academic projects
 # Feel free to add more projects
